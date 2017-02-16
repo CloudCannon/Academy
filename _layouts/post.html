@@ -54,13 +54,15 @@ layout: default
 		{% include listings.html listings=series_posts numbered=true%}
 	</div>
 {% endif %}
-{% assign related_posts = site.related_posts %}
+
+{% assign first_category = page.categories | first %}
+{% assign related_posts = site.categories[first_category] | shuffle %}
 {% assign related_posts_size = related_posts | size %}
 {% if related_posts_size > 0 %}
 	<div class="related">
 		<h3>Related tutorials</h3>
 
-		{% include listings.html listings=site.related_posts limit=10 %}
+		{% include listings.html listings=related_posts limit=10 %}
 	</div>
 {% endif %}
 

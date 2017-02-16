@@ -9,5 +9,6 @@ group :jekyll_plugins do
 	gem 'jekyll-seo-tag', '2.1.0'
 	gem 'jekyll-feed', '0.8.0'
 	gem 'jekyll-extract-element', '0.0.6'
+	gem 'jekyll-shuffle', '0.0.1'
 	gem 'classifier-reborn'
 end

@@ -32,6 +32,8 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.1.0)
       jekyll (~> 3.3)
+    jekyll-shuffle (0.0.1)
+      jekyll (~> 3.3)
     jekyll-sitemap (0.12.0)
       jekyll (~> 3.3)
     jekyll-watch (1.5.0)
@@ -68,6 +70,7 @@ DEPENDENCIES
   jekyll-feed (= 0.8.0)
   jekyll-paginate (= 1.1.0)
   jekyll-seo-tag (= 2.1.0)
+  jekyll-shuffle (= 0.0.1)
   jekyll-sitemap (= 0.12.0)
 
 BUNDLED WITH
