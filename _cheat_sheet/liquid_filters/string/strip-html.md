@@ -1,0 +1,17 @@
+---
+title: "strip_html"
+description: "Strip all html tags from the input string."
+sub_category: String
+---
+##### Input
+{% raw %}
+~~~liquid
+{{ "<p>Jekyll is cool</p>" | strip_html }}
+~~~
+{% endraw %}
+
+##### Output
+
+~~~html
+Jekyll is cool
+~~~

@@ -1,0 +1,8 @@
+<h4>{{ include.cheat.title | markdownify | remove: '<p>' | remove: '</p>' }}</h4>
+<div class="inner-content">
+	{% if include.cheat.description %}
+		<p class="description">{{ include.cheat.description | markdownify | remove: '<p>' | remove: '</p>'  }}</p>
+	{% endif %}
+
+	{{ include.cheat.content }}
+</div>
