@@ -46,6 +46,8 @@ collections:
 
 jekyll-archives:
   enabled: ['categories']
+  permalinks:
+    category: '/:name/'
 
 defaults:
   -
