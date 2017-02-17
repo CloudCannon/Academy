@@ -3,7 +3,7 @@ date: 2017-02-06
 title: Gems, Gemfiles and the Bundler
 video_id: cAsROHcZfzw
 description: Overview of the Ruby ecosystem
-categories:
+tags:
   - jekyll-set-up
 resources:
   - name: Source code

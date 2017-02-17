@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Install Jekyll on Linux
 video_id: GLrFH3sPj0M
 description: Set up Jekyll on a Linux environment
-categories:
+tags:
   - jekyll-set-up
 type: Video
 set: setup

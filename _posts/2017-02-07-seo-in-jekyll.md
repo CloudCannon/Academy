@@ -3,7 +3,7 @@ date: 2017-02-07
 title: SEO
 video_id: xO-Ultmyitg
 description: Search Engine Optimization for Jekyll sites
-categories:
+tags:
   - jekyll-plugins
   - jekyll-front-matter
   - jekyll-collections
@@ -34,7 +34,7 @@ Facebook's [Sharing Debugger](https://developers.facebook.com/tools/debug/sharin
 
 Here's more information on creating SEO friendly [title tags](https://moz.com/learn/seo/title-tag) and [description tags](https://moz.com/learn/seo/meta-description).
 
-## Improve the Structure of URLs
+## Structured URLs
 
 With permalinks, we can control how Jekyll builds site URLs. Head over to our [permalink tutorial](/front-matter/permalinks/) to review how they work. Google recommends using descriptive keywords in the URL.
 
@@ -48,9 +48,7 @@ For more information check out [Google's sitemap documentation](https://support.
 
 ## Custom 404 Pages
 
-Custom 404 Pages in Jekyll can help users navigate our site if they've gone to a page which doesn't exist. We'll create `404.html` with the content for our 404 page.
-
-[GitHub Pages](https://pages.github.com), [CloudCannon](http://cloudcannon.com) and the Jekyll Server will show `404.html` when they can't find a page. Other services may require configuration to get custom 404 pages working.
+Custom 404 Pages in Jekyll can help users navigate our site if they've gone to a page which doesn't exist. [GitHub Pages](https://pages.github.com), [CloudCannon](http://cloudcannon.com) and the Jekyll Server will show `404.html` (if the file exists) when they can't find a page. Other services may require configuration to get custom 404 pages working.
 
 Have a look at [404 page best practices](https://searchenginewatch.com/sew/how-to/2293339/404-page-best-practices) to help create useful 404 pages for your visitors.
 

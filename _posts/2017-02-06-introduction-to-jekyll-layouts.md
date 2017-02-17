@@ -3,7 +3,7 @@ date: 2017-02-06
 title: Introduction to layouts
 video_id: qf_hnJ77JQE
 description: Use Jekyll layouts to reduce repetition on your site
-categories:
+tags:
   - jekyll-layouts
 resources:
   - name: "Layout documentation"

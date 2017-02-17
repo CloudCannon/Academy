@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Permalinks
 video_id: AFOcB_9-diM
 description: A flexible way to build your site URLs
-categories:
+tags:
   - jekyll-front-matter
 resources:
   - name: Permalink documentation

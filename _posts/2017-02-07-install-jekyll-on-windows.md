@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Install Jekyll on Windows
 video_id: ichYzFwmwZ8
 description: Set up Jekyll on a Windows environment
-categories:
+tags:
   - jekyll-set-up
 resources:
   - name: Chocolatey

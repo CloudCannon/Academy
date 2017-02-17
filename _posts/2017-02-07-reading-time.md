@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Reading time
 video_id: Unp720eGA9k
 description: A simple way to calculate the read time of a post
-categories:
+tags:
   - jekyll-liquid
 resources:
   - name: Source code

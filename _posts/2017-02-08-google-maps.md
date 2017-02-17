@@ -2,7 +2,7 @@
 date: 2017-02-08
 title: Google Maps
 description: Embed a responsive Google Map on your Jekyll site.
-categories:
+tags:
   - jekyll-third-parties
   - jekyll-includes
 type: Document

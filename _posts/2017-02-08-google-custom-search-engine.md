@@ -2,7 +2,7 @@
 date: 2017-02-08
 title: Google Custom Search Engine
 description: Add Search to your Jekyll site using Google Custom Search Engine
-categories:
+tags:
   - jekyll-third-parties
   - jekyll-search
 type: Document

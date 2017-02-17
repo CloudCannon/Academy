@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Client editable Jekyll sites
 video_id: e2cTcT_tVLc
 description: Have non-technical people update Jekyll sites
-categories:
+tags:
   - jekyll-cloudcannon
 resources:
   - name: Source code

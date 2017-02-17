@@ -2,10 +2,10 @@
 ---
 
 <section class="categories">
-	{% assign categories = site.categories | sort %}
-	{% for category in categories %}
-		{% assign name = category[0] %}
-		{% assign posts = category[1] %}
+	{% assign tags = site.tags | sort %}
+	{% for tag in tags %}
+		{% assign name = tag[0] %}
+		{% assign posts = tag[1] %}
 		{% assign size = posts | size %}
 		<section class="category">
 				<h3>

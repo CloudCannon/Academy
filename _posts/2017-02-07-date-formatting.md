@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Date formatting
 video_id: lH4tdIQ8umE
 description: Format Jekyll dates
-categories:
+tags:
   - jekyll-liquid
 resources:
   - name: Source code

@@ -2,7 +2,7 @@
 date: 2017-02-08
 title: List data in a data file
 description: Output all the data from a data file
-categories:
+tags:
   - jekyll-data-files
   - jekyll-liquid
 type: Document

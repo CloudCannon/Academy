@@ -14,8 +14,8 @@ layout: default
 	<section class="main-content">
 		<h1>{{ page.title }}</h1>
 		<div class="category-buttons">
-			{% for category in page.categories %}
-				<a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category | replace: "jekyll-", "" | replace: "-", " " }}</a>
+			{% for tag in page.tags %}
+				<a href="{{ site.baseurl }}/{{ tag | slugify }}/">{{ tag | replace: "jekyll-", "" | replace: "-", " " }}</a>
 			{% endfor %}
 		</div>
 
@@ -55,8 +55,8 @@ layout: default
 	</div>
 {% endif %}
 
-{% assign first_category = page.categories | first %}
-{% assign related_posts = site.categories[first_category] | shuffle %}
+{% assign first_tag = page.tags | first %}
+{% assign related_posts = site.tags[first_tag] | shuffle %}
 {% assign related_posts_size = related_posts | size %}
 {% if related_posts_size > 0 %}
 	<div class="related">

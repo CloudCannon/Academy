@@ -3,7 +3,7 @@ date: 2017-02-06
 title: Why use a static site generator?
 video_id: n9jseG1K49Y
 description: Introduction to the world of static site generators
-categories:
+tags:
   - jekyll-set-up
 type: Video
 set: introduction

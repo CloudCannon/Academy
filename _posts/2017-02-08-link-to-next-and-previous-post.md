@@ -2,7 +2,7 @@
 date: 2017-02-08
 title: Next/previous posts
 description: How to link to the next and previous posts on a blog
-categories:
+tags:
   - jekyll-blogging
   - jekyll-liquid
   - jekyll-layouts

@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Output JSON
 video_id: Pk_awmSgrzg
 description: Turn Jekyll Data into JSON
-categories:
+tags:
   - jekyll-liquid
   - jekyll-front-matter
   - jekyll-collections

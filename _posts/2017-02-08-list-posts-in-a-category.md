@@ -2,7 +2,7 @@
 date: 2017-02-08
 title: List posts in a category
 description: List all the posts in a particular category
-categories:
+tags:
   - jekyll-blogging
   - jekyll-liquid
 type: Document

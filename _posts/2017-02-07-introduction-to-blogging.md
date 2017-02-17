@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Introduction to blogging
 video_id: yk2smlFpyn4
 description: Write articles in Markdown and publish them as a blog
-categories:
+tags:
   - jekyll-blogging
   - jekyll-layouts
 resources:

@@ -2,7 +2,7 @@
 date: 2017-02-09
 title: Advanced navigation
 description: An easy way to manage navigation menus in Jekyll
-categories:
+tags:
   - jekyll-liquid
   - jekyll-data-files
   - jekyll-includes

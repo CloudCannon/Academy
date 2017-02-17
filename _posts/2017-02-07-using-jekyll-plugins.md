@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Introduction to plugins
 video_id: tZARlFX7mno
 description: How to add Jekyll plugins to your site
-categories:
+tags:
   - jekyll-set-up
 resources:
   - name: Source code

@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Running Jekyll
 video_id: 5cv2Cf5mbMQ
 description: How to have Jekyll build your site
-categories:
+tags:
   - jekyll-set-up
 resources:
   - name: Configuration documentation

@@ -3,7 +3,7 @@ date: 2017-02-06
 title: Looping in liquid
 video_id: H23f8bE_PMU
 description: Control how liquid loops over your content
-categories:
+tags:
   - jekyll-liquid
 resources:
   - name: "Liquid documentation"

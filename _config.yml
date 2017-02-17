@@ -22,7 +22,7 @@ social:
 # -----
 # Build
 
-permalink: /:categories/:title/
+permalink: /jekyll/:title/
 
 gems:
   - jekyll-sitemap
@@ -45,9 +45,9 @@ collections:
 
 
 jekyll-archives:
-  enabled: ['categories']
+  enabled: ['tags']
   permalinks:
-    category: '/:name/'
+    tag: '/:name/'
 
 defaults:
   -

@@ -2,7 +2,7 @@
 date: 2017-02-08
 title: Disqus
 description: Add commenting to your posts and other pages using Disqus
-categories:
+tags:
   - jekyll-blogging
   - jekyll-third-parties
 type: Document

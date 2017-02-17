@@ -3,7 +3,7 @@ date: 2017-02-07
 title: Advanced blogging
 video_id: DXBwhszBrpg
 description: Advanced tips and tricks for creating your Jekyll blog
-categories:
+tags:
   - jekyll-blogging
 resources:
   - name: Posts documentation

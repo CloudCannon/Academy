@@ -3,7 +3,7 @@ date: 2017-02-06
 title: Introduction to front matter
 video_id: _KRVwwKRzFo
 description: Use front matter to set variables on your page.
-categories:
+tags:
   - jekyll-front-matter
 resources:
   - name: "Front matter documentation"

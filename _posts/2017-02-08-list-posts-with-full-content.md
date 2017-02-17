@@ -2,7 +2,7 @@
 date: 2017-02-08
 title: List posts with full content
 description: List all the posts with their full content
-categories:
+tags:
   - jekyll-blogging
   - jekyll-liquid
 type: Document
