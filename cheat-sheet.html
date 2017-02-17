@@ -2,14 +2,7 @@
 permalink: /jekyll-cheat-sheet/
 full_width: true
 ---
-<h1>Jekyll cheat sheet</h1>
-<!--
-<div style="text-align: center">
-	<select id="jekyll-version">
-		<option selected="selected" value="3">Jekyll 3</option>
-		<option value="2">Jekyll 2</option>
-	</select>
-</div> -->
+<h1>Jekyll Cheat Sheet</h1>
 
 {% assign cheats = site.cheat_sheet | sort: "path" %}
 <div class="cheats" id="grid" data-columns>
@@ -22,7 +15,7 @@ full_width: true
 
 			{% if previous_category != category  %}
 				{% if previous_category %}
-						</ul> <!-- endsub -->
+						</ul>
 					</section>
 				{% endif %}
 				{% assign previous_category = category %}
@@ -39,8 +32,7 @@ full_width: true
 
 			{% if previous_sub_category != sub_category %}
 				{% if previous_sub_category %}
-					<!-- he {{ previous_sub_category }} -->
-					</ul><!-- endsub -->
+					</ul>
 				{% endif %}
 				{% if sub_category != "N/A" %}
 					<h3>{{ sub_category }}</h3>
@@ -53,25 +45,17 @@ full_width: true
 			<li {% if cheat.version %}data-version="{{ cheat.version}}"{% endif %}>{% include render_cheat.html cheat=cheat %}</li>
 			{% endif %}
 	{% endfor %}
-		</ul> <!-- end3sub -->
+		</ul>
 	</section>
 </div>
 <script src="/js/main.js"></script>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
 <script src="/js/salvattore.js"></script>
 <script>
 	$(document).ready(function () {
 		$('.list-items h4').click(function () {
-			console.log("hi");
 			$(this).parent().toggleClass('show');
 			$(this).parent().find('.inner-content').slideToggle(200);
 		});
-
-		// $(".list-items li[data-version][data-version!='" + $("#jekyll-version").val() + "']").hide();
-
-		// $("#jekyll-version").change(function() {
-			// $(".list-items li[data-version]").toggle();
-		// });
 	});
 </script>

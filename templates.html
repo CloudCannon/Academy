@@ -10,11 +10,9 @@ permalink: /jekyll-templates/
 	<li>
 		<a href="{{ template.url }}">
 			{% assign first_image = template.images | first %}
-			<img src="{{ first_image.image }}" alt="{{ template.name }} Jekyll template">
-
-			<div class="description">
-				<h2>{{ template.name }}</h2><p> - {{ template.description }}</p>
-			</div>
+			<h2>{{ template.name }}</h2>
+			<p>{{ template.description }}</p>
+			<div><img class="screenshot" src="{{ first_image.image }}" alt="{{ template.name }} Jekyll template"></div>
 		</a>
 	</li>
 {% endfor %}
