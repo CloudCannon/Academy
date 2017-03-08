@@ -1,7 +1,7 @@
 ---
 date: 2017-02-07
 title: Convert a static site to Jekyll
-video_id: eFv3wklQNuY
+video_id: yXXj9oYFXRI
 description: Add a layout, collection and blog to a static site
 tags:
   - jekyll-liquid

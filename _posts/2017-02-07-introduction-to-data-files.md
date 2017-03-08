@@ -1,7 +1,7 @@
 ---
 date: 2017-02-07
 title: Introduction to Data files
-video_id: 1gvIlcVLk5g
+video_id: 1ckg2ttXX0s
 description: Read data from CSV, JSON or YAML files into your liquid templates
 tags:
   - jekyll-data-files

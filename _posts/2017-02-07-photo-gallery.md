@@ -1,7 +1,7 @@
 ---
 date: 2017-02-07
 title: Photo gallery
-video_id: IJzga3-lKrw
+video_id: xdxboa6WUeA
 description: Display photos in a gallery on your Jekyll site
 tags:
   - jekyll-liquid

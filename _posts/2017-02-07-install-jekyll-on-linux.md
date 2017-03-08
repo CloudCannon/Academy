@@ -1,7 +1,7 @@
 ---
 date: 2017-02-07
 title: Install Jekyll on Linux
-video_id: GLrFH3sPj0M
+video_id: 1wj4OvFkR9g
 description: Set up Jekyll on a Linux environment
 tags:
   - jekyll-set-up

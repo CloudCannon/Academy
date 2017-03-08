@@ -1,7 +1,7 @@
 ---
 date: 2017-02-06
 title: Control flow statements in liquid
-video_id: fxQ_FYsMK1A
+video_id: VFZteTaikNI
 description: Use Liquid to control which content is displayed on the page
 tags:
   - jekyll-liquid

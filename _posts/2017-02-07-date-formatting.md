@@ -1,7 +1,7 @@
 ---
 date: 2017-02-07
 title: Date formatting
-video_id: lH4tdIQ8umE
+video_id: nHCzJsc4KdU
 description: Format Jekyll dates
 tags:
   - jekyll-liquid

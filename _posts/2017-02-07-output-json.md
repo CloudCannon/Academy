@@ -1,7 +1,7 @@
 ---
 date: 2017-02-07
 title: Output JSON
-video_id: Pk_awmSgrzg
+video_id: lmoq_Kd1pXs
 description: Turn Jekyll Data into JSON
 tags:
   - jekyll-liquid

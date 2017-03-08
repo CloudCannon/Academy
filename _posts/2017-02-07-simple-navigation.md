@@ -1,7 +1,7 @@
 ---
 date: 2017-02-07
 title: Simple navigation
-video_id: jIthwk39bDo
+video_id: gtILjIPk4Ug
 description: An easy way to manage navigation menus in Jekyll
 tags:
   - jekyll-liquid

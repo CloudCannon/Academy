@@ -1,7 +1,7 @@
 ---
 date: 2017-02-07
 title: File structure
-video_id: KJVBuNi4FVw
+video_id: iF6emJkKTHk
 description: Overview of Jekyll's file structure
 tags:
   - jekyll-set-up

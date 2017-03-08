@@ -1,7 +1,7 @@
 ---
 date: 2017-02-06
 title: Why use a static site generator?
-video_id: n9jseG1K49Y
+video_id: t3yEhIAOeg8
 description: Introduction to the world of static site generators
 tags:
   - jekyll-set-up

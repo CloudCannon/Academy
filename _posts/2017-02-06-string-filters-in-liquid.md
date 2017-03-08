@@ -1,7 +1,7 @@
 ---
 date: 2017-02-06
 title: String filters in liquid
-video_id: hx3N8q_Cwxw
+video_id: 9co6Qp3ZoWo
 description: Modify string variables in liquid
 tags:
   - jekyll-liquid
