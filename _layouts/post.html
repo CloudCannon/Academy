@@ -15,7 +15,7 @@ layout: default
 		<h1>{{ page.title }}</h1>
 		<div class="category-buttons">
 			{% for tag in page.tags %}
-				<a href="{{ site.baseurl }}/{{ tag | slugify }}/">{{ tag | replace: "jekyll-", "" | replace: "-", " " }}</a>
+				<a href="{{ site.baseurl }}/{{ tag | slugify }}/">{{ tag | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
 			{% endfor %}
 		</div>
 
@@ -27,7 +27,11 @@ layout: default
 					<h3>Resources</h3>
 					<ul>
 						{% for resource in page.resources %}
-							<li><a href="{{ resource.link }}">{{ resource.name }}</a></li>
+							{% assign icon = "Link" %}
+							{% if resource.name == "Source code" %}
+								{% assign icon = "Source" %}
+							{% endif %}
+							<li>{% include document-icon.html icon=icon %}<a href="{{ resource.link }}">{{ resource.name }}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -42,17 +46,22 @@ layout: default
 	</section>
 </section>
 
+{% include post-cta.html %}
+
 {% if page.set %}
 	{% assign set_file_name = "_sets/" | append: page.set | append: ".md" %}
 	{% assign set = site.sets | where: "path", set_file_name | first %}
 	{% assign series_posts = site.posts | where: "set", page.set | sort: "set_order" %}
+	{% assign series_posts_size = series_posts | size %}
+	{% unless series_posts_size < 2 %}
+		<div class="tutorial-series">
+			<h3>{{ set.title }} - Series</h3>
+			<p>{{ set.description }}</p>
 
-	<div class="tutorial-series">
-		<h3>{{ set.title }} - Series</h3>
-		<p>{{ set.description }}</p>
+			{% include listings.html listings=series_posts numbered=true %}
+		</div>
+	{% endunless %}
 
-		{% include listings.html listings=series_posts numbered=true%}
-	</div>
 {% endif %}
 
 {% assign first_tag = page.tags | first %}

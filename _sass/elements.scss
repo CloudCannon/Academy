@@ -4,6 +4,10 @@ html, body {
 	background: #343642;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	min-height: 100vh;
 	color: $dark-grey;

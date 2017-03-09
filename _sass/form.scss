@@ -52,3 +52,25 @@ input:-moz-placeholder {
 input::-webkit-input-placeholder {
 	color: #ccc;
 }
+
+.btn, input[type=submit] {
+	display: inline-block;
+	border-radius: 2px;
+	-webkit-appearance: none;
+	padding: 10px 25px;
+	margin-bottom: 0;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #006dcc;
+	border: 1px solid #0065bd;
+	border-bottom: 2px solid #003f75;
+	color: #fff;
+	text-decoration: none;
+
+	&:hover {
+		background-color: #005fb3;
+		color: #fff;
+	}
+}

@@ -15,9 +15,11 @@ jQuery(function() {
 		setActiveSidebarLink();
 
 		$(window).on("scroll", function() {
+			throttle(function(){
 				setActiveSidebarLink();
 				setSidebar();
-			});
+			}, 100)();
+		});
 	}
 
 	function setSidebar() {
@@ -44,8 +46,6 @@ function getClosestHeader() {
 	top = window.scrollY,
 	$last = $links.first(),
 	$content = $(".main-content");
-
-	console.log(top);
 
 	if (top < 300) {
 		return $last;

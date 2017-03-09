@@ -42,9 +42,10 @@
 
 .main-content {
 	width: 100%;
+	box-sizing: border-box;
 
 	@media #{$mid-point} {
-		margin-left: 230px;
+		padding-left: 230px;
 	}
 }
 
@@ -392,6 +393,38 @@
 
 	ul {
 		margin-bottom: 0;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		svg {
+			position: relative;
+			top: 5px;
+			width: 20px;
+		}
+	}
+}
+
+.post-cta {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin: 50px -50vw 0 -50vw;
+	background: #26abe2;
+	padding: 55px 0;
+	text-align: center;
+
+	h3, p {
+		color: #fff;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		margin-top: 0;
 	}
 }
 
