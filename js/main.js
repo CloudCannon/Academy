@@ -35,8 +35,8 @@ jQuery(function() {
 	}
 
 	function setActiveSidebarLink() {
-		$('.sidebar a').removeClass('active');
 		var $closest = getClosestHeader();
+		$('.sidebar a').removeClass('active');
 		$closest.addClass('active');
 	}
 });

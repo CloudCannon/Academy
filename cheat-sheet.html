@@ -1,8 +1,8 @@
 ---
 permalink: /jekyll-cheat-sheet/
-full_width: true
 ---
 <h1>Jekyll Cheat Sheet</h1>
+<p>There's so many Jekyll variables and filters to remember it can be tricky to keep it all in your head. This cheat sheet serves as a quick reference of everything Jekyll can do.</p>
 
 {% assign cheats = site.cheat_sheet | sort: "path" %}
 <div class="cheats" id="grid" data-columns>
@@ -42,7 +42,7 @@ full_width: true
 
 			{% assign previous_sub_category = sub_category %}
 
-			<li {% if cheat.version %}data-version="{{ cheat.version}}"{% endif %}>{% include render_cheat.html cheat=cheat %}</li>
+			<li>{% include render_cheat.html cheat=cheat %}</li>
 			{% endif %}
 	{% endfor %}
 		</ul>

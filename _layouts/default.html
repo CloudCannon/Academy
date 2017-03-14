@@ -33,11 +33,11 @@
 		<header>
 			<div class="wrapper">
 				<section class="top-bar">
-					<div class="logo"><a href="/">{% include logo.html %}</a></div>
+					<div class="logo"><a href="/">{% include logo.html %}<span>Academy</span></a></div>
 					{% include navigation.html %}
 				</section>
 				<section class="hero_search">
-					<h1>Tutorials</h1>
+					<h1>CloudCannon Academy</h1>
 					<p>{{ site.posts | size }} tutorials to help you with Jekyll and CloudCannon.</p>
 					{% include search.html %}
 				</section>
@@ -45,7 +45,7 @@
 
 		</header>
 		<section class="content">
-			<div class="wrapper" {% if page.full_width %}style="max-width: 100%;box-sizing:content-box;"{% endif %}>
+			<div class="wrapper">
 				{{ content }}
 			</div>
 		</section>
@@ -62,7 +62,10 @@
 				});
 
 				$('svg').click(function() {
-					$(this).parent('form').submit();
+					var $form = $(this).parent('form');
+					if ($form.find('input[type="search"]').first().val().length > 0) {
+						$form.submit();
+					}
 				});
 			});
 

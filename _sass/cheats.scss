@@ -9,7 +9,7 @@
 
 	.inner-content {
 		display: none;
-		background: #e7fcff;
+		background: #f9f9f9;
 		padding: 10px;
 
 		p {
@@ -24,11 +24,15 @@
 			padding: 0;
 		}
 	}
+	li {
+		border-left: 2px solid rgba(255,255,255,0);
+		&.show {
+			border-color: #26abe2;
+		}
+	}
 
 	h4:hover, .show h4 {
-		background: #85D5FF;
 		padding-left: 10px;
-		color: #0A5090;
 	}
 
 	h2 + ul.list-items li:first-child h4 {
@@ -49,7 +53,6 @@
 		a {
 			font-size: .5em;
 			float: right;
-			color: #fff;
 			margin: 0 3px 0 0;
 		}
 	}
@@ -57,7 +60,12 @@
 	h3 {
 		font-size: 1.2em;
 		text-transform: capitalize;
-		padding: 21px 0 5px 5px;
+		padding: 0 0 5px 5px;
+	}
+
+	h2 + h3 {
+		padding-top: 0;
+		margin-top: 12px;
 	}
 
 	h4 {
@@ -67,7 +75,7 @@
 		border: 1px solid #eee;
 		border-left: 0;
 		border-right: 0;
-		padding: 5px;
+		padding: 10px 5px;
 		cursor: pointer;
 		transition: all .4s ease;
 	}

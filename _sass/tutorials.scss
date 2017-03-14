@@ -9,7 +9,7 @@
 	display: flex;
 	flex-wrap:wrap;
 	flex-direction:row;
-	justify-content:flex-start;
+	justify-content: space-between;
 	align-items:stretch;
 	font-size: .9em;
 
@@ -45,7 +45,7 @@
 	box-sizing: border-box;
 
 	@media #{$mid-point} {
-		padding-left: 230px;
+		padding-left: 300px;
 	}
 }
 
@@ -54,7 +54,8 @@
 	padding: 0 20px 0 0;
 	position: absolute;
 	top: 85px;
-	width: 200px;
+	width: 260px;
+	text-align: right;
 
 	@media #{$mid-point} {
 		display: block;
@@ -78,30 +79,23 @@
 		color: $medium-grey;
 		text-decoration: none;
 		display: block;
-		-webkit-transition: transform .2s ease;
+		-webkit-transition: transform .2s;
 		line-height: 1.3em;
 
 		&.active {
 			color: $link-color;
-			transform: translateX(10px);
+			transform: translateX(-10px);
 		}
 	}
 }
 
 .category {
-	flex: 0 0 100%;
+	flex: 1 0 350px;
 
 	h3 {
 		text-transform:capitalize;
 	}
 
-	@media #{$mid-point} {
-		flex: 0 0 50%;
-	}
-
-	@media #{$desktop} {
-		flex: 0 0 33%;
-	}
 	margin: 0 0 30px 0;
 
 	ul {
@@ -116,20 +110,22 @@
 			padding: 2px 0;
 			display: flex;
 			font-size: 1.1em;
-			align-items: center;
+			line-height: 24px;
+			margin: 0 0 12px 0;
+			color: #4A4A4A;
 
 			svg {
 				margin: 0 5px 0 0;
-				fill: $link-color;
-				width: 25px;
-				height: 25px;
+				fill: #4A4A4A;
 				-webkit-transition: all .2s ease;
 			}
 
 			&:hover {
 				text-decoration: none;
+				color: #000;
 				svg {
-					fill: $link-hover-color;
+					fill: #000;
+					transform: translateX(2px);
 				}
 			}
 		}
@@ -178,15 +174,11 @@
 
 		article {
 			display: flex;
-			align-items: center;
 			flex-wrap: wrap;
 		}
 
 		.icon {
-			flex: 0 0 50px;
-			display: flex;
-			align-items: center;
-			padding: 0 5px 0 0;
+			padding: 0 12px 0 0;
 			svg {
 				width: 35px;
 				height: 35px;
@@ -204,6 +196,7 @@
 		&:hover {
 			svg {
 				fill: $link-hover-color;
+				transform: translateX(4px);
 			}
 		}
 
@@ -215,6 +208,10 @@
 			width: 100%;
 		}
 	}
+}
+
+h1 + .tutorial-share {
+	float: right;
 }
 
 .tutorial-share {
@@ -349,7 +346,7 @@
 				content: "\25BA";
 				position: absolute;
 				display: block;
-				top: 50%;
+				top: 25%;
 				-webkit-transform: translateY(-50%);
 				-moz-transform: translateY(-50%);
 				-ms-transform: translateY(-50%);
@@ -365,9 +362,9 @@
 				left: -22px;
 				background: #e0e0e0;
 				position: absolute;
-				bottom: -43px;
+				bottom: -15px;
 				width: 2px;
-				top: 39px;
+				top: 20px;
 			}
 		}
 
@@ -392,9 +389,8 @@
 	}
 
 	ul {
-		margin-bottom: 0;
 		padding: 0;
-		margin: 0;
+		margin: 0 0 3px 0;
 		list-style: none;
 
 		svg {

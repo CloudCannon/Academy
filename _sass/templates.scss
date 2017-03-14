@@ -1,21 +1,55 @@
+h1 span {
+	display: block;
+	@media only screen and (min-width: 500px) {
+		float: right;
+	}
+	.btn {
+		padding: 10px 30px;
+		width: 65px;
+
+		svg {
+			display: inline;
+			width: 13px;
+			height: 13px;
+			position: relative;
+			top: 1px;
+			right: -2px;
+		}
+	}
+}
+
+@media #{$mid-point} {
+	.template-content {
+		display: flex;
+
+		.split {
+			flex: 1;
+			&:first-child {
+				padding-right: 50px;
+			}
+		}
+	}
+}
 .templates {
 	padding: 0;
 	margin: 0;
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 
 	a {
 		text-decoration: none;
 		display:block;
 		transition: all 0.2s ease;
-		border: 3px solid rgba(0,0,0,0);
-		border-radius: 10px;
+		border: 1px solid rgba(0,0,0,0);
+		border-radius: 2px;
 		padding: 20px;
+		flex-direction: column;
+		display: flex;
 
 		&:hover {
 			border-color: #f6f6f6;
-			background: #fbfbfb;
 		}
 	}
 
@@ -24,23 +58,18 @@
 		line-height: 0;
 		padding: 0;
 		@media #{$desktop} {
-			flex: 0 0 50%;
+			flex: 1 0 500px;
+			display: flex;
 		}
 		margin: 0;
 		box-sizing: border-box;
-		padding: 10px;
+
 		img {
 			border-radius: 3px;
 		}
 
 		p, h2 {
 			line-height: 1.4em;
-		}
-
-		p {
-			@media #{$desktop} {
-				min-height: 50px;
-			}
 		}
 	}
 

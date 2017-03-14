@@ -2,33 +2,40 @@
 layout: default
 ---
 
-<h1>{{ page.name }} <span><a target="_blank" href="{{ page.demo_url }}">Demo</a></h1>
+<h1>{{ page.name }} <span><a class="btn" target="_blank" href="{{ page.demo_url }}">Demo {% include document-icon.html icon="External Link" %}</a></h1>
 
 {{ content }}
 
-<h2>Features</h2>
-<ul class="features">
-	{% for feature in page.features %}
-		<li>{{ feature }}</li>
-	{% endfor %}
-</ul>
+<div class="template-content">
+	<div class="split">
+		<h2>Features</h2>
+		<ul class="features">
+			{% for feature in page.features %}
+				<li>{{ feature }}</li>
+			{% endfor %}
+		</ul>
+	</div>
 
-<h2>Gallery</h2>
+	<div class="split">
+		<h2>Usage</h2>
+
+		You can start using {{ page.name }} in a number of ways:
+
+		<ul>
+			<li>Select {{ page.name }} as a template in <a href="https://cloudcannon.com">CloudCannon</a></li>
+			<li><a href="{{ page.repository }}">Fork {{ page.name }}</a> on GitHub</li>
+			<li><a href="{{ page.repository }}/archive/master.zip">Download {{ page.name }}</a></li>
+		</ul>
+	</div>
+</div>
+
 <ul class="photo-gallery">
 	{% for image in page.images %}
 		<li><img class="screenshot" src="{{ image.image }}" alt="{{ template.name }} Jekyll template"></li>
 	{% endfor %}
 </ul>
 
-<h2>Usage</h2>
 
-You can start using {{ page.name }} in a number of ways:
-
-<ul>
-	<li>Select {{ page.name }} as a template in <a href="https://cloudcannon.com">CloudCannon</a></li>
-	<li><a href="{{ page.repository }}">Fork {{ page.name }}</a> on GitHub</li>
-	<li><a href="{{ page.repository }}/archive/master.zip">Download {{ page.name }}</a></li>
-</ul>
 
 <script src="/js/lightslider.min.js"></script>
 <script type="text/javascript">
@@ -45,7 +52,7 @@ You can start using {{ page.name }} in a number of ways:
 			item: 1,
 			loop: true,
 			thumbItem: 5,
-			thumbMargin: 20,
+			thumbMargin: 50,
 			slideMargin: 0,
 			enableDrag: false,
 			currentPagerPosition: "left",

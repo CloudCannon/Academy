@@ -14,8 +14,15 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-		margin: 0 0 20px 0;
+		margin: 30px 0 20px 0;
 }
+
+.lightSlider li .screenshot {
+	padding-left: 1px;
+	padding-right: 1px;
+	border-bottom: 1px solid #eee;
+}
+
 .lightSlider:before, .lightSlider:after {
     content: " ";
     display: table;
@@ -135,6 +142,7 @@
     -webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
     transition: border-radius 0.12s linear 0s 0.35s linear 0s;
 		opacity: .7;
+		margin-top: 30px;
 }
 .lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover {
     opacity: 1;

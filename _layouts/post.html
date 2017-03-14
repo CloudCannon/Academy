@@ -13,6 +13,7 @@ layout: default
 	</section>
 	<section class="main-content">
 		<h1>{{ page.title }}</h1>
+		{% include share-section.html %}
 		<div class="category-buttons">
 			{% for tag in page.tags %}
 				<a href="{{ site.baseurl }}/{{ tag | slugify }}/">{{ tag | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
@@ -39,10 +40,7 @@ layout: default
 		{% endif %}
 		{{ content }}
 
-		<div class="tutorial-share">
-			<a class="modalOpen no-smooth" href="#subscribe">{% include social-icon.html icon="Email" %} Subscribe</a>
-			<a class="modalOpen no-smooth" href="#share">{% include social-icon.html icon="Share" %} Share</a>
-		</div>
+		{% include share-section.html %}
 	</section>
 </section>
 
