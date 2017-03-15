@@ -9,8 +9,9 @@ resources:
   - name: Homebrew
     link: http://brew.sh/
 type: Video
-set: setup
-set_order: 2
+set: basics
+set_order: 3
+icon: apple
 ---
 ## Introduction
 

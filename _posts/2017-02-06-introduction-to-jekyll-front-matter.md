@@ -12,7 +12,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/frontmatter
 type: Video
 set: basics
-set_order: 3
+set_order: 7
+icon: book
 ---
 
 ## Introduction

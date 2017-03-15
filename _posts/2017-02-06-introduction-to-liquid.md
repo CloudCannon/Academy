@@ -12,7 +12,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/intro-to-liquid
 type: Video
 set: basics
-set_order: 6
+set_order: 10
+icon: liquid
 ---
 ## Introduction
 

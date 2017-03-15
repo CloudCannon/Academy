@@ -13,7 +13,8 @@ resources:
     link: https://github.com/CloudCannon/creative-jekyll-theme/
 type: Video
 set: basics
-set_order: 14
+set_order: 18
+icon: convert
 ---
 ## Introduction
 

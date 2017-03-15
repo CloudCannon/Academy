@@ -14,7 +14,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/liquid-string-filters
 type: Video
 set: basics
-set_order: 8
+set_order: 12
+icon: string
 ---
 ## Introduction
 

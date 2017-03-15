@@ -11,8 +11,9 @@ resources:
   - name: CloudCannon
     link: https://cloudcannon.com
 type: Video
-set: intermediate
-set_order: 2
+set: basics
+set_order: 20
+icon: client
 ---
 ## Introduction
 

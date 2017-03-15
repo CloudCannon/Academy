@@ -9,8 +9,9 @@ resources:
   - name: Chocolatey
     link: http://chocolatey.org
 type: Video
-set: setup
-set_order: 1
+set: basics
+set_order: 2
+icon: windows
 ---
 ## Introduction
 

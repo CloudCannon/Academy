@@ -6,8 +6,9 @@ description: Set up Jekyll on a Linux environment
 tags:
   - jekyll-set-up
 type: Video
-set: setup
-set_order: 3
+set: basics
+set_order: 4
+icon: linux
 ---
 ## Introduction
 

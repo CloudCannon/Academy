@@ -12,7 +12,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/layouts
 type: Video
 set: basics
-set_order: 4
+set_order: 8
+icon: layout
 ---
 ## Introduction
 

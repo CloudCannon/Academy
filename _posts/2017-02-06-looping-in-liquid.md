@@ -12,7 +12,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/liquid-loops
 type: Video
 set: basics
-set_order: 9
+set_order: 13
+icon: loop
 ---
 ## Introduction
 

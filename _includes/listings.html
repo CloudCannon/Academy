@@ -4,11 +4,11 @@
 	{% else %}
 		{% assign limit = 10000 %}
 	{% endif %}
-	
+
 	{% for item in include.listings limit: limit %}
 		<li {% if item.url == page.url %}class="active"{% endif %}>
 			<a href="{{ item.url }}">
-				<div class="icon">{% include document-icon.html icon=item.type %}</div>
+				<div class="icon">{% if include.custom_icon and item.icon %}{% include featured-icon.html icon=item.icon %}{% else %}{% include document-icon.html icon=item.type %}{% endif %}</div>
 				<article>
 					<div>
 						<h3>{% if include.numbered %}{{ forloop.index }}. {% endif %}{{ item.title }}</h3>
@@ -18,4 +18,5 @@
 			</a>
 		</li>
 	{% endfor %}
+	<li></li><li></li>
 </ul>

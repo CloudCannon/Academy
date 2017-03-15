@@ -10,8 +10,9 @@ resources:
   - name: Source code
     link: https://github.com/CloudCannon/bakery-store/tree/navigation
 type: Video
-set: intermediate
-set_order: 1
+set: basics
+set_order: 19
+icon: navigation
 ---
 ## Introduction
 

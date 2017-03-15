@@ -12,7 +12,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/liquid-control-flow
 type: Video
 set: basics
-set_order: 7
+set_order: 11
+icon: control
 ---
 ## Introduction
 In this example we have a list of cupcakes on our bakery store and we're going to Liquid to only show a subset of these cupcakes. The cupcakes are a collection, here's one of the cupcakes to show you the structure.

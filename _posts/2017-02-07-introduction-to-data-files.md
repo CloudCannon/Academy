@@ -1,6 +1,6 @@
 ---
 date: 2017-02-07
-title: Introduction to Data files
+title: Introduction to data files
 video_id: 1ckg2ttXX0s
 description: Read data from CSV, JSON or YAML files into your liquid templates
 tags:
@@ -12,7 +12,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/data-files
 type: Video
 set: basics
-set_order: 12
+set_order: 16
+icon: data
 ---
 ## Introduction
 

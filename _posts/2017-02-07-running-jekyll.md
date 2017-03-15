@@ -10,7 +10,8 @@ resources:
     link: https://jekyllrb.com/docs/configuration/
 type: Video
 set: basics
-set_order: 2
+set_order: 6
+icon: run
 ---
 ## Introduction
 

@@ -10,7 +10,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/structure
 type: Video
 set: basics
-set_order: 1
+set_order: 5
+icon: library
 ---
 ## Introduction
 

@@ -12,7 +12,8 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/includes
 type: Video
 set: basics
-set_order: 5
+set_order: 9
+icon: include
 ---
 ## Introduction
 

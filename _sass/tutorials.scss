@@ -1,3 +1,7 @@
+.featured-series {
+	margin: 0 0 40px 0;
+}
+
 .count {
 	color: $light-grey;
 	font-size: .7em;
@@ -137,7 +141,7 @@
 	display: flex;
 
 	h1 {
-		margin: 0;
+		margin: 0 0 10px 0;
 	}
 
 	h2 {
@@ -148,17 +152,15 @@
 .listing {
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 -10px;
 	display: flex;
 	flex-flow: wrap;
+	justify-content: space-between;
 
 	li {
-		margin: 10px 0;
+		margin: 10px;
 		padding: 0;
-		width: 100%;
-		@media #{$mid-point} {
-			flex: 0 0 50%;
-		}
+		flex: 1 1 500px;
 	}
 
 	h3 {
@@ -169,9 +171,11 @@
 	a {
 		display: flex;
 		text-decoration: none;
-		padding: 5px;
-		border-radius: 5px;
+		padding: 14px 10px;
+		border-radius: 2px;
+		border: 1px solid #f6f6f6;
 		height: 100%;
+		box-sizing: border-box;
 
 		article {
 			display: flex;
@@ -195,6 +199,7 @@
 		}
 
 		&:hover {
+			background: #f6f6f6;
 			svg {
 				fill: $link-hover-color;
 				transform: translateX(4px);

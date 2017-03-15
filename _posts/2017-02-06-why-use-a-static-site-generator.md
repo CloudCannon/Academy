@@ -6,8 +6,9 @@ description: Introduction to the world of static site generators
 tags:
   - jekyll-set-up
 type: Video
-set: introduction
+set: basics
 set_order: 1
+icon: bulb
 ---
 ## Introduction
 

@@ -1,7 +1,5 @@
 - name: Tutorials
   link: /
-- name: Casts
-  link: /jekyll-casts/
 - name: Templates
   link: /jekyll-templates/
 - name: Cheat Sheet
