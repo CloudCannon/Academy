@@ -2,12 +2,15 @@
 layout: default
 ---
 {% assign posts = page.posts | sort: "title" %}
+{% assign category = page.title | replace: "jekyll-", "" %}
+
 <h2 style="text-transform:capitalize;">{{ page.title | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }} <span class="count">({{ posts | size }})</span></h2>
+<p>{{ site.data.categories[category].description }}</p>
 
 {% assign featured_posts = "" | split: "" %}
 
-{% assign category = page.title | replace: "jekyll-", "" %}
-{% assign category-tutorials = site.data.categories[category] %}
+
+{% assign category-tutorials = site.data.categories[category].featured %}
 {% assign category-tutorials-size = category-tutorials | size %}
 
 {% for tutorial in category-tutorials %}

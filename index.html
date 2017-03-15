@@ -33,7 +33,7 @@ sets:
 				</h3>
 
 			<ul>
-				{% assign category-tutorials = site.data.categories[cat-name] %}
+				{% assign category-tutorials = site.data.categories[cat-name].featured %}
 				{% assign category-tutorials-size = category-tutorials | size %}
 				{% for tutorial in category-tutorials %}
 					{% assign permalink = "/jekyll/" | append: tutorial | append: "/" %}

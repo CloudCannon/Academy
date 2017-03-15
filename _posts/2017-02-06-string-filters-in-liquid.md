@@ -1,8 +1,8 @@
 ---
 date: 2017-02-06
-title: String filters in liquid
+title: String filters in Liquid
 video_id: 9co6Qp3ZoWo
-description: Modify string variables in liquid
+description: Modify string variables in Liquid
 tags:
   - jekyll-liquid
 resources:
@@ -44,7 +44,7 @@ Let's say we're outputting `heading` string in multiple places across this page 
 
 ## Replace
 
-In this first instance, instead of saying "baked goods" we want it to say "baked bread". This is an excellent use case for liquid filters.
+In this first instance, instead of saying "baked goods" we want it to say "baked bread". This is an excellent use case for Liquid filters.
 
 To use a filter we'll add a "\|" after the variable then pass it a filter, `replace` in this case.
 
@@ -72,7 +72,7 @@ We can also chain filters together, so let's make the heading uppercase as well.
 
 ![Upcase](/images/tutorials/string-filters/upcase.png){: .screenshot}
 
-Below is a list of all the liquid string filters available. Head over to the [Jekyll Cheat Sheet](http://cheat.jekyll.tips) to see all filters you can use.
+Below is a list of all the Liquid string filters available. Head over to the [Jekyll Cheat Sheet](http://cheat.jekyll.tips) to see all filters you can use.
 
 <table class="filter-table">
 	<tr>

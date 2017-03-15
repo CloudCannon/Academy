@@ -1,6 +1,6 @@
 ---
 date: 2017-02-06
-title: Introduction to liquid
+title: Introduction to Liquid
 video_id: 6pCdOh_I4EM
 description: Introduction to using Liquid in Jekyll static site generator
 tags:
@@ -17,7 +17,7 @@ icon: liquid
 ---
 ## Introduction
 
-Liquid is a simple templating language Jekyll uses to process pages on your site. With liquid you can output an modify variables, have logic statements inside your pages and loop over content. There's two types of tags in Liquid:
+Liquid is a simple templating language Jekyll uses to process pages on your site. With Liquid you can output an modify variables, have logic statements inside your pages and loop over content. There's two types of tags in Liquid:
 
 * You can output variables by surrounding them in two curly braces e.g. {% raw %}`{{ variable }}`{% endraw %}
 * You can perform logic statements by surrounding them in a curly brace, percentage sign e.g. {% raw %}`{% if statement %}`{% endraw %}
@@ -75,7 +75,7 @@ We can run this content through multiple filters. Here we'll run in through a tr
 
 ## Logic statements
 
-Next let's get into some liquid logic statements to control whether the `h1` is output on the page. We'll add a new variable to the front matter called `show_heading` and initalize it to true. Then we'll surround the `h1` in an if statement to check if `show_heading` is true.
+Next let's get into some Liquid logic statements to control whether the `h1` is output on the page. We'll add a new variable to the front matter called `show_heading` and initalize it to true. Then we'll surround the `h1` in an if statement to check if `show_heading` is true.
 
 {% raw %}
 ~~~html
@@ -119,7 +119,7 @@ show_heading: false
 
 ## Loops
 
-In this last example we'll go over looping in liquid. We'll create a cupcakes array in front matter then loop over it in liquid and output it in an unordered list. The syntax for a for loop in liquid is `for variable in array`, variable can named whatever you'd like and holds the item in the current iteration of the loop.
+In this last example we'll go over looping in Liquid. We'll create a cupcakes array in front matter then loop over it in Liquid and output it in an unordered list. The syntax for a for loop in Liquid is `for variable in array`, variable can named whatever you'd like and holds the item in the current iteration of the loop.
 
 {% raw %}
 ~~~html

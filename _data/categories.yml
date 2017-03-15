@@ -1,58 +1,82 @@
 blogging:
-  - introduction-to-blogging
-  - using-diqus-for-comments
-  - list-posts
-  - advanced-blogging
+  description: Learn how to get the most out of your Jekyll blog.
+  featured:
+    - introduction-to-blogging
+    - using-diqus-for-comments
+    - list-posts
+    - advanced-blogging
 cloudcannon:
-  - client-editable-jekyll-sites
-  - front-matter-best-practices-in-cloudcannon
-  - visual-editor-best-practices
+  description: Tips and tricks to improve using CloudCannon on your Jekyll site.
+  featured:
+    - client-editable-jekyll-sites
+    - front-matter-best-practices-in-cloudcannon
+    - visual-editor-best-practices
 collections:
-  - introduction-to-jekyll-collections
-  - photo-gallery
-  - converting-a-static-site-to-jekyll
-  - seo-in-jekyll
+  description: Different ways to use the powerful Jekyll collections feature.
+  featured:
+    - introduction-to-jekyll-collections
+    - photo-gallery
+    - converting-a-static-site-to-jekyll
+    - seo-in-jekyll
 data-files:
-  - introduction-to-data-files
-  - list-data-file
-  - output-json
-  - advanced-navigation
+  description: Use data from JSON, YML or CSV files in Jekyll.
+  featured:
+    - introduction-to-data-files
+    - list-data-file
+    - output-json
+    - advanced-navigation
 front-matter:
-  - introduction-to-jekyll-front-matter
-  - permalinks
-  - simple-navigation
-  - front-matter-best-practices-in-cloudcannon
+  description: Everything you need to know about Jekyll front matter.
+  featured:
+    - introduction-to-jekyll-front-matter
+    - permalinks
+    - simple-navigation
+    - front-matter-best-practices-in-cloudcannon
 includes:
-  - introduction-to-jekyll-includes
-  - youtube-video
-  - svg-icons
-  - google-maps
+  description: Reduce repetition on your Jekyll site using includes.
+  featured:
+    - introduction-to-jekyll-includes
+    - youtube-video
+    - svg-icons
+    - google-maps
 layouts:
-  - introduction-to-jekyll-layouts
-  - converting-a-static-site-to-jekyll
-  - link-to-related-posts
-  - link-to-next-and-previous-post
+  description: Make your Jekyll site more maintainable with layouts.
+  featured:
+    - introduction-to-jekyll-layouts
+    - converting-a-static-site-to-jekyll
+    - link-to-related-posts
+    - link-to-next-and-previous-post
 liquid:
-  - introduction-to-liquid
-  - string-filters-in-liquid
-  - control-flow-statements-in-liquid
-  - date-formatting
+  description: The ins and outs of using Liquid in Jekyll.
+  featured:
+    - introduction-to-liquid
+    - string-filters-in-liquid
+    - control-flow-statements-in-liquid
+    - date-formatting
 plugins:
-  - using-jekyll-plugins
-  - gemfiles-and-the-bundler
-  - rss-feed
-  - seo-in-jekyll
+  description: Add extra functionality to your site using Jekyll plugins.
+  featured:
+    - using-jekyll-plugins
+    - gemfiles-and-the-bundler
+    - rss-feed
+    - seo-in-jekyll
 search:
-  - algolia
-  - google-custom-search-engine
-  - jekyll-search-using-lunr-js
+  description: Different ways to search content on your Jekyll site.
+  featured:
+    - algolia
+    - google-custom-search-engine
+    - jekyll-search-using-lunr-js
 set-up:
-  - why-use-a-static-site-generator
-  - running-jekyll
-  - jekyll-file-structure
-  - install-jekyll-on-os-x
+  description: Getting your environment set up for Jekyll.
+  featured:
+    - why-use-a-static-site-generator
+    - running-jekyll
+    - jekyll-file-structure
+    - install-jekyll-on-os-x
 third-parties:
-  - google-analytics
-  - google-maps
-  - algolia
-  - using-diqus-for-comments
+  description: Make your Jekyll site even more powerful with third-party integrations.
+  featured:
+    - google-analytics
+    - google-maps
+    - algolia
+    - using-diqus-for-comments
