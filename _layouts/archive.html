@@ -4,4 +4,29 @@ layout: default
 {% assign posts = page.posts | sort: "title" %}
 <h2 style="text-transform:capitalize;">{{ page.title | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }} <span class="count">({{ posts | size }})</span></h2>
 
-{% include listings.html listings=posts %}
+{% assign featured_posts = "" | split: "" %}
+
+{% assign category = page.title | replace: "jekyll-", "" %}
+{% assign category-tutorials = site.data.categories[category] %}
+{% assign category-tutorials-size = category-tutorials | size %}
+
+{% for tutorial in category-tutorials %}
+	{% assign permalink = "/jekyll/" | append: tutorial | append: "/" %}
+	{% assign post = site.posts | where: "url", permalink | first %}
+	{% assign featured_posts = featured_posts | push: post %}
+{% endfor %}
+
+
+{% assign other_posts = "" | split: "" %}
+
+{% for p in posts %}
+	{% unless featured_posts contains p %}
+		{% assign other_posts = other_posts | push: p %}
+	{% endunless %}
+{% endfor %}
+
+{% include listings.html listings=featured_posts %}
+
+<br>
+
+{% include listings.html listings=other_posts %}
