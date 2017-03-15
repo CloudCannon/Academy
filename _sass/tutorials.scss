@@ -50,6 +50,10 @@
 
 	@media #{$mid-point} {
 		padding-left: 300px;
+
+		&.no-sidebar {
+			padding-left: 0;
+		}
 	}
 }
 

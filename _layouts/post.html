@@ -3,15 +3,20 @@ layout: default
 ---
 
 <section class="tutorial">
-	<section class="sidebar sticky">
-		<ul>
-			{% assign sub_navigation = content | extract_element: 'h2' %}
-			{% for item in sub_navigation %}
-				<li><a href="#{{ item.id }}">{{ item.text }}</a></li>
-			{% endfor %}
-		</ul>
-	</section>
-	<section class="main-content">
+	{% assign sub_navigation = content | extract_element: 'h2' %}
+	{% assign sub_navigation_size = sub_navigation | size %}
+
+	{% if sub_navigation_size > 1 %}
+		<section class="sidebar sticky">
+			<ul>
+				{% for item in sub_navigation %}
+					<li><a href="#{{ item.id }}">{{ item.text }}</a></li>
+				{% endfor %}
+			</ul>
+		</section>
+	{% endif %}
+
+	<section class="main-content {% if sub_navigation_size < 2 %}no-sidebar{% endif %}">
 		<h1>{{ page.title }}</h1>
 		{% include share-section.html %}
 		<div class="category-buttons">
