@@ -1,0 +1,58 @@
+blogging:
+  - introduction-to-blogging
+  - using-diqus-for-comments
+  - list-posts
+  - advanced-blogging
+cloudcannon:
+  - client-editable-jekyll-sites
+  - front-matter-best-practices-in-cloudcannon
+  - visual-editor-best-practices
+collections:
+  - introduction-to-jekyll-collections
+  - photo-gallery
+  - converting-a-static-site-to-jekyll
+  - seo-in-jekyll
+data-files:
+  - introduction-to-data-files
+  - list-data-file
+  - output-json
+  - advanced-navigation
+front-matter:
+  - introduction-to-jekyll-front-matter
+  - permalinks
+  - simple-navigation
+  - front-matter-best-practices-in-cloudcannon
+includes:
+  - introduction-to-jekyll-includes
+  - youtube-video
+  - svg-icons
+  - google-maps
+layouts:
+  - introduction-to-jekyll-layouts
+  - converting-a-static-site-to-jekyll
+  - link-to-related-posts
+  - link-to-next-and-previous-post
+liquid:
+  - introduction-to-liquid
+  - string-filters-in-liquid
+  - control-flow-statements-in-liquid
+  - date-formatting
+plugins:
+  - using-jekyll-plugins
+  - gemfiles-and-the-bundler
+  - rss-feed
+  - seo-in-jekyll
+search:
+  - algolia
+  - google-custom-search-engine
+  - jekyll-search-using-lunr-js
+set-up:
+  - why-use-a-static-site-generator
+  - running-jekyll
+  - jekyll-file-structure
+  - install-jekyll-on-os-x
+third-parties:
+  - google-analytics
+  - google-maps
+  - algolia
+  - using-diqus-for-comments

@@ -5,6 +5,7 @@ video_id: l-Uu5Hi2as4
 description: How to add Jekyll plugins to your site
 tags:
   - jekyll-set-up
+  - jekyll-plugins
 resources:
   - name: Source code
     link: https://github.com/CloudCannon/bakery-store/tree/plugins

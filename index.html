@@ -8,18 +8,24 @@
 		{% assign posts = tag[1] %}
 		{% assign size = posts | size %}
 		<section class="category">
+			{% assign cat-name = name | replace: "jekyll-", " "  | strip %}
 				<h3>
-					<a href="{{ site.baseurl }}/{{ name | slugify }}/">{{ name | replace: "jekyll-", " " | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
+					<a href="{{ site.baseurl }}/{{ name | slugify }}/">{{ cat-name | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
 				</h3>
 
 			<ul>
-				{% assign tutorials = posts | sort: "title" %}
-				{% for tutorial in tutorials limit: 4 %}
-					<li><a href="{{ site.baseurl }}{{ tutorial.url }}">{% include document-icon.html icon=tutorial.type %}{{ tutorial.title }}</a></li>
+				{% assign category-tutorials = site.data.categories[cat-name] %}
+				{% assign category-tutorials-size = category-tutorials | size %}
+				{% for tutorial in category-tutorials %}
+					{% assign permalink = "/jekyll/" | append: tutorial | append: "/" %}
+					{% assign post = site.posts | where: "url", permalink | first %}
+					<li><a href="{{ site.baseurl }}{{ post.url }}">{% include document-icon.html icon=post.type %}{{ post.title }}</a></li>
 				{% endfor %}
-				{% if size > 4 %}
-					<li><a href="{{ site.baseurl }}/{{ name | slugify }}/">{{ size | minus: 4 }} more...</a></li>
+
+				{% if size > category-tutorials-size %}
+					<li><a href="{{ site.baseurl }}/{{ name | slugify }}/">{{ size | minus: category-tutorials-size }} more...</a></li>
 				{% endif %}
+
 			</ul>
 		</section>
 	{% endfor %}
