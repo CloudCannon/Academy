@@ -48,6 +48,7 @@ h1 span {
 		padding: 20px;
 		flex-direction: column;
 		display: flex;
+		transition: background .2s ease;
 
 		&:hover {
 			background: #f6f6f6;
