@@ -13,6 +13,9 @@ body {
 	color: $dark-grey;
 	-webkit-font-smoothing: antialiased;
 }
+h1 {
+	font-weight: bold;
+}
 
 h2, h2 a {
 	color: $dark-grey;
@@ -25,21 +28,6 @@ h2, h2 a {
 h4 {
 	margin: 0 0 20px 0;
 }
-
-// a {
-// 	color: $link-color;
-// 	text-decoration: none;
-//
-// 	&:hover {
-// 		text-decoration: underline;
-// 		color: $link-color;
-// 	}
-// }
-
-// p, pre, dd {
-// 	font-size: 1.1em;
-// 	line-height: 1.6em;
-// }
 
 img {
 	max-width: 100%;

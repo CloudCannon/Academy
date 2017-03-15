@@ -1,4 +1,4 @@
-@media #{$mid-point} {
+@media #{$nav-snap} {
 	.show_hero_search header nav form {
 		display: none;
 	}
@@ -25,7 +25,7 @@ header {
 	}
 
 	.top-bar {
-		@media #{$mid-point} {
+		@media #{$nav-snap} {
 			display: flex;
 		}
 
@@ -37,6 +37,7 @@ header {
 				color: #fff;
 
 				span {
+					display: none;
 					position: relative;
 					top: -4px;
 					right: -3px;
@@ -51,28 +52,25 @@ header {
 				top: 5px;
 			}
 		}
-
-		form svg {
-			fill: #eee;
-		}
 	}
 
 	nav {
-		@media #{$mid-point} {
+		@media #{$nav-snap} {
 			flex: 1;
 			margin: 0 0 0 10px;
 			display: block;
-			text-align: right;
+
+			&.right-nav {
+				text-align: right;
+
+				svg {
+					width: 15px;
+					position: relative;
+					top: 6px;
+				}
+			}
 		}
 		display: none;
-
-		svg {
-			position: absolute;
-			top: 6px;
-			right: 7px;
-			width: 25px;
-			cursor: pointer;
-		}
 
 		a {
 			color: #fff;
@@ -80,7 +78,7 @@ header {
 			display: block;
 			padding: 20px 0;
 
-			@media #{$mid-point} {
+			@media #{$nav-snap} {
 				display: inline-block;
 				padding: 7px 0;
 				margin: 0 15px;
@@ -94,7 +92,7 @@ header {
 			&:hover {
 				text-decoration: none;
 				color: #fff;
-				@media #{$mid-point} {
+				@media #{$nav-snap} {
 					border-bottom-color: rgba(255, 255, 255, .1);
 				}
 			}
@@ -115,7 +113,7 @@ header {
 	color: #fff;
 	top: 4px;
 
-	@media #{$mid-point} {
+	@media #{$nav-snap} {
 		display: none;
 	}
 }
@@ -127,7 +125,7 @@ header {
 	padding: 60px 0 30px 0;
 
 	h1 {
-		margin: 0;
+		margin: 0 0 14px 0;
 	}
 
 	form {
@@ -137,7 +135,6 @@ header {
 		padding: 20px 0;
 
 		svg {
-			fill: #eee;
 			position: absolute;
 			top: 31px;
 			right: 12px;
@@ -145,6 +142,10 @@ header {
 			width: 36px;
 			height: 40px;
 			cursor: pointer;
+			fill: $link-color;
+			&:hover {
+				fill: $link-hover-color;
+			}
 		}
 	}
 

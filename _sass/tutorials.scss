@@ -90,7 +90,8 @@
 }
 
 .category {
-	flex: 1 0 350px;
+	flex: 0 1 350px;
+	margin: 0 auto 30px auto;
 
 	h3 {
 		text-transform:capitalize;

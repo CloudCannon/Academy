@@ -32,7 +32,7 @@ h1 span {
 }
 .templates {
 	padding: 0;
-	margin: 0;
+	margin: 0 -12px;
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
@@ -42,14 +42,15 @@ h1 span {
 		text-decoration: none;
 		display:block;
 		transition: all 0.2s ease;
-		border: 1px solid rgba(0,0,0,0);
+		border: 1px solid #f6f6f6;
 		border-radius: 2px;
 		padding: 20px;
 		flex-direction: column;
 		display: flex;
+		border-color: #f6f6f6;
 
 		&:hover {
-			border-color: #f6f6f6;
+			background: #f6f6f6;
 		}
 	}
 
@@ -61,7 +62,7 @@ h1 span {
 			flex: 1 0 500px;
 			display: flex;
 		}
-		margin: 0;
+		margin: 0 12px 20px 12px;
 		box-sizing: border-box;
 
 		img {
