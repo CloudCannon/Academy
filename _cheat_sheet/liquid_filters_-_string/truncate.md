@@ -7,6 +7,7 @@ sub_category: String
 {% raw %}
 ~~~liquid
 {{ "I love Jekyll" | truncate: 12 }}
+{{ "I love Jekyll" | truncate: 12, " etc." }}
 ~~~
 {% endraw %}
 
@@ -14,4 +15,5 @@ sub_category: String
 
 ~~~html
 I love Je...
+I love etc.
 ~~~

@@ -13,37 +13,19 @@ permalink: /jekyll-cheat-sheet/
 			{% assign split_path_size = split_path | size %}
 			{% assign category = split_path[1] %}
 
-			{% if previous_category != category  %}
+			{% if previous_category != category %}
 				{% if previous_category %}
 						</ul>
 					</section>
 				{% endif %}
 				{% assign previous_category = category %}
-				{% assign previous_sub_category = null %}
-					<section>
-						<h2 id="{{ category | slugify }}">{{ category | replace: "_", " " | capitalize }} <a target="_blank" href="{{ site.data.cheat-sheet-links[category] }}">Docs</a></h2>
+				<section>
+					<h2 id="{{ category | slugify }}">{{ category | replace: "_", " " | capitalize }} <a target="_blank" href="{{ site.data.cheat-sheet-links[category] }}">Docs</a></h2>
+					<ul class="list-items">
 			{% endif %}
-
-			{% if split_path_size == 4 %}
-				{% assign sub_category = split_path[2] %}
-			{% else %}
-				{% assign sub_category = "N/A" %}
-			{% endif %}
-
-			{% if previous_sub_category != sub_category %}
-				{% if previous_sub_category %}
-					</ul>
-				{% endif %}
-				{% if sub_category != "N/A" %}
-					<h3>{{ sub_category }}</h3>
-				{% endif %}
-				<ul class="list-items">
-			{% endif %}
-
-			{% assign previous_sub_category = sub_category %}
 
 			<li>{% include render_cheat.html cheat=cheat %}</li>
-			{% endif %}
+		{% endif %}
 	{% endfor %}
 		</ul>
 	</section>

@@ -1,6 +1,6 @@
 ---
 title: "post_url"
-description: "Generate the correct permalink URL."
+description: "Generate the correct permalink URL for a post."
 sub_category: Other
 ---
 ##### Input

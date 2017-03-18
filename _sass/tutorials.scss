@@ -30,16 +30,14 @@
 		font-size: .7em;
 		text-decoration: none;
 		text-transform: capitalize;
-		border: 1px solid #e8e8e8;
+		border: 1px solid #999;
 		padding: 6px 8px;
 		line-height: 1em;
 		border-radius: 3px;
-		color: #c7c7c7;
 		margin: 0 5px 0 0;
 
 		&:hover {
-			border-color: #bbb;
-			color: #999;
+			background: #f6f6f6;
 		}
 	}
 }
@@ -165,6 +163,7 @@
 		margin: 10px;
 		padding: 0;
 		flex: 1 1 500px;
+		position: relative
 	}
 
 	h3 {
@@ -211,6 +210,14 @@
 			}
 		}
 
+		.featured {
+			position: absolute;
+			top: -1px;
+			right: 10px;
+			color: #aaa;
+			font-size: .8em;
+		}
+
 		p {
 			margin: 5px 0 0 0;
 			color: #888;
@@ -226,12 +233,11 @@ h1 + .tutorial-share {
 }
 
 .tutorial-share {
-	text-align: right;
 
 	a {
 		color: $medium-grey;
 		text-decoration: none;
-		margin-left: 10px;
+		transition: fill .2s ease;
 
 		&:hover {
 			color: $dark-grey;
@@ -395,14 +401,15 @@ h1 + .tutorial-share {
 	border: 1px solid #eee;
 	border-top: 0;
 	margin: 0 0 30px 0;
-	h3 {
-		margin-top: 0;
-	}
 
 	ul {
 		padding: 0;
 		margin: 0 0 3px 0;
 		list-style: none;
+
+		li {
+			margin: 0;
+		}
 
 		svg {
 			position: relative;
@@ -417,7 +424,7 @@ h1 + .tutorial-share {
 	position: relative;
 	left: 50%;
 	right: 50%;
-	margin: 50px -50vw 0 -50vw;
+	margin: 50px -50vw 50px -50vw;
 	background: #26abe2;
 	padding: 55px 0;
 	text-align: center;
@@ -432,6 +439,7 @@ h1 + .tutorial-share {
 
 	h3 {
 		margin-top: 0;
+		font-weight: bold;
 	}
 }
 

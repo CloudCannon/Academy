@@ -18,7 +18,6 @@ layout: default
 
 	<section class="main-content {% if sub_navigation_size < 2 %}no-sidebar{% endif %}">
 		<h1>{{ page.title }}</h1>
-		{% include share-section.html %}
 		<div class="category-buttons">
 			{% for tag in page.tags %}
 				<a href="{{ site.baseurl }}/{{ tag | slugify }}/">{{ tag | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
@@ -30,7 +29,6 @@ layout: default
 
 			{% if page.resources %}
 				<div class="resources">
-					<h3>Resources</h3>
 					<ul>
 						{% for resource in page.resources %}
 							{% assign icon = "Link" %}

@@ -28,8 +28,6 @@ layout: default
 	{% endunless %}
 {% endfor %}
 
-{% include listings.html listings=featured_posts %}
-
-<br>
+{% include listings.html listings=featured_posts featured=true %}
 
 {% include listings.html listings=other_posts %}

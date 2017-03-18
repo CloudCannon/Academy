@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>{{ page.name }} <span><a class="btn" target="_blank" href="{{ page.demo_url }}">Demo {% include document-icon.html icon="External Link" %}</a></h1>
+<h1>{{ page.name }}</h1>
 
 {{ content }}
 
@@ -17,16 +17,17 @@ layout: default
 	</div>
 
 	<div class="split">
-		<h2>Usage</h2>
-
-		You can start using {{ page.name }} in a number of ways:
-
+		<h2>Using {{ page.name }}</h2>
 		<ul>
 			<li>Select {{ page.name }} as a template in <a href="https://cloudcannon.com">CloudCannon</a></li>
-			<li><a href="{{ page.repository }}">Fork {{ page.name }}</a> on GitHub</li>
-			<li><a href="{{ page.repository }}/archive/master.zip">Download {{ page.name }}</a></li>
+			<li>or <a href="{{ page.repository }}">Fork {{ page.name }}</a> on GitHub</li>
+			<li>or <a href="{{ page.repository }}/archive/master.zip">Download {{ page.name }}</a></li>
 		</ul>
 	</div>
+</div>
+
+<div class="template-button">
+	<a class="btn" target="_blank" href="{{ page.demo_url }}">View Live Demo {% include document-icon.html icon="External Link" %}</a>
 </div>
 
 <ul class="photo-gallery">

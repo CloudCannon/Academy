@@ -13,6 +13,7 @@
 					<div>
 						<h3>{% if include.numbered %}{{ forloop.index }}. {% endif %}{{ item.title }}</h3>
 						<p class="description">{{ item.description }}</p>
+						{% if include.featured %}<div class="featured">Featured</div>{% endif %}
 					</div>
 				</article>
 			</a>

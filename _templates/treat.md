@@ -14,6 +14,7 @@ features:
   - Share your best recipes with the world.
   - Beautifully structured recipe and ingredient lists.
   - Build a community through a mailing list.
+order: 7
 ---
 
 Treat is a food/baking Jekyll template. If you're interested in sharing recipes on the internet this is a great way to get started.

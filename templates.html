@@ -6,7 +6,8 @@ permalink: /jekyll-templates/
 <p>Sometimes it's hard to know where to start on your next project. That's why we've created {{ site.templates | size }} free Jekyll templates to help get you on your way. All the templates use Jekyll best practices and are MIT licensed so feel free to modify and use them however you'd like.</p>
 
 <ul class="templates">
-	{% for template in site.templates %}
+	{% assign templates = site.templates | sort: 'order' %}
+	{% for template in templates %}
 		<li>
 			<a href="{{ template.url }}">
 				{% assign first_image = template.images | first %}

@@ -13,6 +13,7 @@ features:
   - Add your team and write your company story.
   - Write about your latest release and findings in the blog.
   - Attract customers to your app.
+order: 4
 ---
 
 Market your product or service with the Frisco Jekyll template. Frisco is a clean layout which features large hero images on each page.
