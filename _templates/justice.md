@@ -2,7 +2,7 @@
 name: Justice
 repository: https://github.com/CloudCannon/justice-jekyll-template
 demo_url: https://grey-grouse.cloudvent.net/
-description: A law firm themed template which can be modified to fit any local business.
+description: A law firm themed Jekyll template.
 images:
   - image: /images/templates/justice/1.jpeg
   - image: /images/templates/justice/2.jpeg
