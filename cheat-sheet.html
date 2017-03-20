@@ -5,7 +5,7 @@ permalink: /jekyll-cheat-sheet/
 <p>There's so many Jekyll variables and filters to remember it can be tricky to keep it all in your head. This cheat sheet serves as a quick reference of everything Jekyll can do.</p>
 
 {% assign cheats = site.cheat_sheet | sort: "path" %}
-<div class="cheats" id="grid" data-columns>
+<div class="cheats">
 	{% assign previous_category = null %}
 	{% for cheat in cheats %}
 		{% if cheat.title %}
@@ -20,19 +20,20 @@ permalink: /jekyll-cheat-sheet/
 				{% endif %}
 				{% assign previous_category = category %}
 				<section>
-					<h2 id="{{ category | slugify }}">{{ category | replace: "_", " " | capitalize }} <a target="_blank" href="{{ site.data.cheat-sheet-links[category] }}">Docs</a></h2>
-					<ul class="list-items">
-			{% endif %}
+					<div class="wrap">
+						<h2 id="{{ category | slugify }}">{{ category | replace: "_", " " | capitalize }} <a target="_blank" href="{{ site.data.cheat-sheet-links[category] }}">Docs</a></h2>
+						<ul class="list-items">
+				{% endif %}
 
-			<li>{% include render_cheat.html cheat=cheat %}</li>
-		{% endif %}
-	{% endfor %}
-		</ul>
+				<li>{% include render_cheat.html cheat=cheat %}</li>
+			{% endif %}
+		{% endfor %}
+			</ul>
+		</div>
 	</section>
 </div>
 <script src="/js/main.js"></script>
 
-<script src="/js/salvattore.js"></script>
 <script>
 	$(document).ready(function () {
 		$('.list-items h4').click(function () {
