@@ -238,6 +238,7 @@ h1 + .tutorial-share {
 		color: $medium-grey;
 		text-decoration: none;
 		transition: fill .2s ease;
+		margin-right: 10px;
 
 		&:hover {
 			color: $dark-grey;
