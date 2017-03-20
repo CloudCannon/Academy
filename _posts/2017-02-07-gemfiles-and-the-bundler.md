@@ -4,7 +4,7 @@ title: Gems, Gemfiles and the Bundler
 video_id: zdJln6RBg8A
 description: Overview of the Ruby ecosystem
 tags:
-  - jekyll-set-up
+  - jekyll-setup
   - jekyll-plugins
 resources:
   - name: Source code

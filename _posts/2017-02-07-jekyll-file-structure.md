@@ -4,7 +4,7 @@ title: File structure
 video_id: iF6emJkKTHk
 description: Overview of Jekyll's file structure
 tags:
-  - jekyll-set-up
+  - jekyll-setup
 resources:
   - name: Source code
     link: https://github.com/CloudCannon/bakery-store/tree/structure

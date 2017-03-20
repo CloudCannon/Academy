@@ -4,7 +4,7 @@ title: Introduction to plugins
 video_id: l-Uu5Hi2as4
 description: How to add Jekyll plugins to your site
 tags:
-  - jekyll-set-up
+  - jekyll-setup
   - jekyll-plugins
 resources:
   - name: Source code

@@ -4,7 +4,7 @@ title: Why use a static site generator?
 video_id: t3yEhIAOeg8
 description: Introduction to the world of static site generators
 tags:
-  - jekyll-set-up
+  - jekyll-setup
 type: Video
 set: basics
 set_order: 1

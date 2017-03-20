@@ -4,7 +4,7 @@ title: Install Jekyll on Mac OS X
 video_id: buZ-v5Qt19w
 description: Set up Jekyll on a OS X environment
 tags:
-  - jekyll-set-up
+  - jekyll-setup
 resources:
   - name: Homebrew
     link: http://brew.sh/

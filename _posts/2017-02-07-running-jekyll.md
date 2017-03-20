@@ -4,7 +4,7 @@ title: Running Jekyll
 video_id: NJU1wluNrBw
 description: How to have Jekyll build your site
 tags:
-  - jekyll-set-up
+  - jekyll-setup
 resources:
   - name: Configuration documentation
     link: https://jekyllrb.com/docs/configuration/
