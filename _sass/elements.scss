@@ -53,3 +53,16 @@ code, pre, tt {
 	border-radius: 2px;
 	padding: 2px 5px;
 }
+
+tbody tr:nth-child(odd) {
+	background-color: #efefef;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td, th {
+	text-align: left;
+	padding: 5px;
+}

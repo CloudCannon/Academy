@@ -14,9 +14,11 @@ set_order: 4
 ---
 ## Introduction
 
-In this tutorial we're going to output a date on a Jekyll site in different formats. We'll create a new page, `/date-formatting.html` on our Bakery Store site to try out the different options.
+Formatting dates can be tricky if you need a specific format. In this tutorial we'll show you how to build a date in almost any format.
 
-To start with we'll add some basic Front Matter to `/date-formatting.html` including a date in [ISO 8601 format](http://www.iso.org/iso/home/standards/iso8601.htm).
+## Setup
+
+We'll start by setting a date in front matter in [ISO 8601 format](http://www.iso.org/iso/home/standards/iso8601.htm).
 
 {% raw %}
 ~~~liquid
@@ -32,48 +34,56 @@ Now we can run the date through a filter to get the desired format.
 
 ## date_to_long_string
 
+Input:
 {% raw %}
 ~~~liquid
 {{ page.date | date_to_long_string }}
 ~~~
 {% endraw %}
 
+Output:
 ~~~html
 23 March 2016
 ~~~
 
 ## date_to_rfc822
 
+Input:
 {% raw %}
 ~~~liquid
 {{ page.date | date_to_rfc822 }}
 ~~~
 {% endraw %}
 
+Output:
 ~~~html
 Wed, 23 Mar 2016 23:20:00 +1300
 ~~~
 
 ## date_to_string
 
+Input:
 {% raw %}
 ~~~liquid
 {{ page.date | date_to_string }}
 ~~~
 {% endraw %}
 
+Output:
 ~~~html
 23 Mar 2016
 ~~~
 
 ## date_to_xmlschema
 
+Input:
 {% raw %}
 ~~~liquid
 {{ page.date | date_to_xmlschema }}
 ~~~
 {% endraw %}
 
+Output:
 ~~~html
 2016-03-23T23:20:00+13:00
 ~~~
@@ -83,24 +93,28 @@ Wed, 23 Mar 2016 23:20:00 +1300
 
 `date` gives us complete control of the format. We can specify a template of the format we want. For example.
 
+Input:
 {% raw %}
 ~~~liquid
 {{ page.date | date: "%m/%d/%Y" }}
 ~~~
 {% endraw %}
 
+Output:
 ~~~html
 03/23/2016
 ~~~
 
 or
 
+Input:
 {% raw %}
 ~~~liquid
 {{ page.date | date: "%-d %B %Y"}}
 ~~~
 {% endraw %}
 
+Output:
 ~~~html
 23 March 2016
 ~~~

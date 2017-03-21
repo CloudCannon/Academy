@@ -16,19 +16,11 @@ set_order: 1
 ---
 ## Introduction
 
-[Previously](/blogging/introduction-to-blogging/) we built a simple blog for our Bakery Store.
-
-![Blog list](/images/tutorials/advanced-blogging/blog-list.png){: .screenshot}
-
-Clicking on a post takes us to a nicely formatted post.
-
-![Post](/images/tutorials/advanced-blogging/date.png){: .screenshot}
-
-In this tutorial we'll go over some more advanced features in Jekyll blogging and other tips and tricks.
+In a [previous](/jekyll/introduction-to-blogging/) tutorial we built a simple blog for our Bakery Store. In this tutorial we'll add advanced blogging features and go over some other tricks.
 
 ## Setting a title
 
-On `_posts/2016-04-03-chocolate-chip-cookies.md` let's say we don't want to use the title from the file name which is chocolate chip cookies. We can specify a title in front matter to override it.
+The post `_posts/2016-04-03-chocolate-chip-cookies.md` has a default `title` of "chocolate chip cookies" which comes directly from the filename. If we want to keep the filename the same but set our own title we can use front matter.
 
 {% raw %}
 ~~~html
@@ -40,7 +32,11 @@ title: How are chocolate cookies made?
 ~~~
 {% endraw %}
 
-We can do the same thing with the date, so let's publish this post on new year's day.
+Now `post.title` is "How are chocolate cookies made?".
+
+
+## Setting a date
+We can do the same thing with the date. Let's publish this post on new year's day.
 
 {% raw %}
 ~~~html
@@ -57,8 +53,7 @@ date: 2016-01-01
 
 ## Published
 
-In front matter we can also control whether a blog post is published. If we set `published` to false in the front matter, it's going to remove this post from the blog listing on my site. This is an easy way to temporarily remove a post.
-
+In front matter we can control whether a blog post is published. If we set `published` to false in the front matter, it will remove the post from the blog listing on the site. This is an easy way to temporarily remove a post from the blog listing, just note you can still access the post by going directly to its URL.
 
 {% raw %}
 ~~~html
@@ -72,13 +67,9 @@ published: false
 ~~~
 {% endraw %}
 
-![unpublished](/images/tutorials/advanced-blogging/unpublished.png){: .screenshot}
-
-So now my blog list page only has one item. Let's remove published so the post appears again.
-
 ## Excerpt
 
-Now let's look at `blog.html` which is the page that lists all the blog posts. We want to add a small snippet of text from the post content to give someone a glimpse of what's inside. Jekyll makes the first paragraph in a blog post available to us using `excerpt`.
+`blog.html` lists all the blog posts on the site. Let's show visitors a snippet of text from the post content to give them a glimpse of what's inside. Jekyll makes the first paragraph in a blog post available to us using `excerpt`.
 
 {% raw %}
 ~~~html
@@ -98,7 +89,7 @@ title: Blog Page
 
 ![Excerpt](/images/tutorials/advanced-blogging/excerpt.png){: .screenshot}
 
-What if we want more content in the excerpt?, We can control exactly what is in this excerpt using an excerpt separator. In the post's front matter we can specify an `excerpt_separator` which is a sequence of characters which indicates the end of the excerpt. Let's add a few paragraphs of text here and then add a excerpt separator.
+If we wanted to more control over the content in the snippet we can use a excerpt separator. In the post's front matter we can specify `excerpt_separator` which is a sequence of characters to indicate the end of the excerpt. Let's add a few paragraphs of text and add a excerpt separator.
 
 {% raw %}
 ~~~html
@@ -122,11 +113,7 @@ Source / Read more [Wikipedia](https://en.wikipedia.org/wiki/Chocolate_chip_cook
 
 ![Excerpt Seperator](/images/tutorials/advanced-blogging/excerpt-seperator.png){: .screenshot}
 
-If we didn't want the excerpt to be part of the post content we could add it to a front matter variable.
-
-## Categories
-
-Next we'll look at categories which are a way of organizing blog posts into groups. We can specify the categories in the post's the front matter. Let's put `_posts/2016-04-03-chocolate-chip-cookies.md` in the cookies and the baking categories.
+If we don't want the excerpt to be part of the post content we can use a regular front matter variable.
 
 {% raw %}
 ~~~html
@@ -134,7 +121,42 @@ Next we'll look at categories which are a way of organizing blog posts into grou
 layout: posts
 title: How are chocolate cookies made?
 date: 2016-01-01
-excerpt_separator: <!-- excerpt -->
+description: Welcome to the exciting world of chocolate chip cookies
+---
+...
+~~~
+{% endraw %}
+
+Then we output `description` instead on `excerpt` in `blog.html`.
+
+{% raw %}
+~~~html
+---
+layout: page
+title: Blog Page
+---
+<ul>
+  {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.description }}
+    </li>
+  {% endfor %}
+</ul>
+~~~
+{% endraw %}
+
+
+
+## Categories
+
+Categories are set in the post's front matter. Let's put `_posts/2016-04-03-chocolate-chip-cookies.md` in the `cookies` and `baking` categories.
+
+{% raw %}
+~~~html
+---
+layout: posts
+title: How are chocolate cookies made?
+date: 2016-01-01
 categories:
   - cookies
   - baking
@@ -143,7 +165,7 @@ categories:
 ~~~
 {% endraw %}
 
-We'll put `_posts/2016-04-04-sourdough-bread.md` in the baking category.
+We'll put `_posts/2016-04-04-sourdough-bread.md` in the `baking` category.
 
 {% raw %}
 ~~~html
@@ -156,10 +178,9 @@ categories:
 ~~~
 {% endraw %}
 
+Adding a category to a post changes the default URL. So the URL for `_posts/2016-04-04-sourdough-bread.md` was `/2016/04/04/sourdough-bread.html` and now it's `/baking/2016/04/04/sourdough-bread.html`.
 
-One thing to note is by adding a category it actually changes the default URL for the post. So the URL for `_posts/2016-04-04-sourdough-bread.md` was `/2016/04/04/sourdough-bread.html` and now it's `/baking/2016/04/04/sourdough-bread.html`.
-
-Let's add a list the categories and posts inside those categories to `blog.html`. Jekyll makes the categories available to us at `site.categories`. Iterating over `site.categories` actually gives as another array with two items, the first item is the name of the category and the second item is a list of blog posts in that category.
+Let's add a list of the categories and posts inside those categories to `blog.html`. Jekyll makes the categories available to us at `site.categories`. Iterating over `site.categories` gives as another array with two items, the first item is the name of the category and the second item is an array of blog posts in that category.
 
 {% raw %}
 ~~~html
@@ -190,7 +211,7 @@ title: Blog Page
 
 ## Tags
 
-Jekyll also has the concept of tags which behave in a similar way to categories. We could add a tag of bread to `_posts/2016-04-04-sourdough-bread.md`.
+Jekyll also has the concept of tags which behave in a similar way to categories. Let's add a tag of bread to `_posts/2016-04-04-sourdough-bread.md`.
 
 {% raw %}
 ~~~html
@@ -205,43 +226,28 @@ tags:
 ~~~
 {% endraw %}
 
-Then we can access all the tags on our site at `site.tags` and iterate over them just like we did for the categories. The main difference between categories and tags is:
+We can access the tags on our site at `site.tags`. The main difference between categories and tags is:
 
  * By default categories will add the category to the URL whereas tags will not and two.
- * When we get into doing permalinks which are a way of customising the url, we can use categories in the URL however we can't use tags.
+ * We can customise the URL for posts to include the category using permalinks. We can't with tags.
 
 ## Post URL
 
-We'll move on the final topic of this tutorial which is `post_url`. Let's say we have hardcoded a link to a particular blog post like this.
+The problem with hardcoding a link to a post is if we change the URL of the post in the future, the link will break. With `post_url` the link will automatically update i[ we change the URL.
+
+Instead of linking directly to a post:
 
 {% raw %}
 ~~~html
 ...
 <p>
-  <a href="/bread/2016-04-04-sourdough-bread.html">Sourdough Bread</a>
+  <a href="/bread/2016-04-04-sourdough-bread.html">Sourdouh Bread</a>
 </p>
 ...
 ~~~
 {% endraw %}
 
-
-If we add another category to `_posts/2016-04-04-sourdough-bread.md` it will change the URL for the post and the above link will no longer work.
-
-{% raw %}
-~~~html
----
-layout: posts
-categories:
-  - baking
-  - sour
-tags:
-  - bread
----
-...
-~~~
-{% endraw %}
-
-Instead of hard coding the link we can use `post_url` instead which will update the link if the permalink changes.
+We call `post_url` and pass it the date and title of the post:
 
 {% raw %}
 ~~~html
@@ -252,3 +258,11 @@ Instead of hard coding the link we can use `post_url` instead which will update 
 ...
 ~~~
 {% endraw %}
+
+## Summary
+
+Now you've got a solid foundation in Jekyll blogging it might be worth taking a look at some related topics:
+
+* Learn about customising your post URL with [permalinks](/jekyll/permalinks/).
+* Create [archive pages](/jekyll/jekyll-archives/) to organise posts by date, category or tag.
+* Build [search](/jekyll/jekyll-search-using-lunr-js/) for your posts using lunr.js.

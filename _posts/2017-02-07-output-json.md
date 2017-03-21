@@ -19,12 +19,12 @@ set_order: 2
 ---
 ## Introduction
 
-Sometimes it's useful to output front matter or Collection data as JSON so we can reference it in Javascript.
+Jekyll can act purely as a content manager and hand off the displaying and interaction of content to JavaScript. This is useful if you have a site or component that needs user interaction with JavaScript but you also want an easy way to manage the content in a markdown or data file. The easiest way to get JavaScrip to understand your content is using [JSON](https://www.copterlabs.com/json-what-it-is-how-it-works-how-to-use-it/).
 
 
 ## Jsonify
 
-If the data is an array or hash you can use the `jsonify` filter.
+If the data is an array or hash you can use the `jsonify` filter to convert it to JSON.
 
 {% raw %}
 ~~~liquid
@@ -88,7 +88,7 @@ This gives us complete control over the JSON and allows us to run variables thro
 ~~~
 {% endraw %}
 
-## Real example
+## Use case
 
 Katy DeCorah shows us a real application of this technique in her [JekyllConf](http://jekyllconf.com) 2016 talk, [Unconventional Use Cases For Jekyll](https://www.youtube.com/watch?v=s84wFRD8vfE).
 
@@ -123,4 +123,8 @@ It's all controlled by a Jekyll data file which is output to JSON.
 ~~~
 {% endraw %}
 
+This is a great demonstration of separating content from logic. The YAML file only contains the speaker information which makes it easy to add, remove or edit speakers. The JavaScript is simpler as it won't be polluted with speaker content.
+
 The code for the site is available [here](https://github.com/katydecorah/unconventional/).
+
+

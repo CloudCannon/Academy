@@ -16,7 +16,7 @@ set_order: 4
 ---
 ## Introduction
 
-[Medium](https://medium.com) has a great feature on their blogging platform which shows an estimated reading time of a post.
+[Medium](https://medium.com) has a nice little feature that shows an estimated reading time on posts. 
 
 ![Medium Michael Rose](/images/tutorials/reading-time/medium.jpg){: .screenshot}
 
