@@ -15,7 +15,7 @@ icon: library
 ---
 ## Introduction
 
-A basic Jekyll site has a file structure something like this:
+A basic Jekyll site has a file structure similar to this:
 
 ![Jekyll File Structure](/images/tutorials/file-structure/overview.png)
 
@@ -25,9 +25,9 @@ In this tutorial we'll take a high-level look at what these directories mean. Do
 
 Holds the configuration for your Jekyll site. This is commonly used to:
 
-* Set variables which are used over our site
-* Configure Collections or defaults
-* Specify runtime variables we want to run every time.  
+* Set global variables on the site
+* Configure collections or defaults
+* Specify runtime variables we want to run every time  
 
 ## _drafts
 
@@ -35,11 +35,11 @@ All our unpublished blog posts. This allows us to work on blog posts without pub
 
 ## _includes
 
-Code snippets which can be included throughout our site. Includes are often used for page sections which are duplicated across the site like a newsletter subscribe form.
+Page snippets which can be included throughout our site. Includes are often used for page sections which are duplicated across the site like a newsletter subscribe form.
 
 ## _layouts
 
-Templates which wrap around our content. All the repeating code on our site like the header, footer and navigation are typically in a layout.
+Templates which wrap around content. All the repeating HTML on our site like the header, footer and navigation typically live in a layout.
 
 ## _posts
 

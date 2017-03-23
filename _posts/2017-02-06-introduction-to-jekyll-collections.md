@@ -24,7 +24,7 @@ Jekyll collections are a powerful way to organize content on your site.
 
 ## When should you use collections?
 
-Ben Balter has a great overview on his blog called [Explain Like I'm Five - Jekyll Collections](http://ben.balter.com/2015/02/20/jekyll-collections/). In the post Ben includes the following diagram of when you should use a post, page or collection in Jekyll.
+Ben Balter has a great overview on his blog called [Explain Like I'm Five - Jekyll Collections](http://ben.balter.com/2015/02/20/jekyll-collections/). In the post, Ben includes the following diagram of when you should use a post, page or collection in Jekyll.
 
 {% raw %}
 ~~~text
@@ -50,7 +50,7 @@ Ben Balter has a great overview on his blog called [Explain Like I'm Five - Jeky
 
 ## Data structure
 
-In this tutorial we're looking at a page on our Bakery Store site which lists all the cookies we have.
+In this tutorial we're looking at a page on the [demo Bakery Store site](https://github.com/CloudCannon/bakery-store/tree/collections) which lists all the cookies we have.
 
 ![Cookies page](/images/tutorials/intro-to-collections/cookies-page.png){: .screenshot}
 
@@ -73,11 +73,11 @@ Each cookie has an image, heading and content.
 ~~~
 {% endraw %}
 
-If we wanted to add another cookie we would copy and paste an existing cookies and update the content. The problem with doing this is if we wanted to update the structure of the cookies page, for example adding a rating to each cookie, we would have to copy and paste code and it's highly likely we would make a mistake. Collections eliminate this repetition and make the page much easier to maintain.
+If we wanted to add another cookie, we would copy and paste an existing cookies and update the content. The problem with doing this is once there's multiple cookies there updating structure becomes tricky. For example if we wanted to add a rating we'd add HTML to each cookie and it's likely we'd make a mistake. Collections eliminate this repetition and make the content easier to maintain.
 
 ## Basic implementation
 
-Defining collections happens in `_config.yml`. First we add a collections object, then under collections we define the different collections we want on this site. In this case we're going to have one collections called cookies.
+Defining collections happens in `_config.yml`. First we add a collections object, then under collections we define the collections we want on the site. In this case we're going to have one collections called cookies:
 
 {% raw %}
 ~~~yaml
@@ -86,9 +86,9 @@ collections:
 ~~~
 {% endraw %}
 
-Documents (the items in a collection) live in a folder in the root of your site named _*collection_name*, in this case it's `_cookies`. Documents can either be Markdown or HTML. Markdown is more common as it's easier to work with unless you're doing something complicated.
+Documents (the items in a collection) live in a folder in the root of the site named `_*collection_name*`, in this case it's `_cookies`. Documents can either be Markdown or HTML. Markdown is more common as it's easier to work with.
 
-Now we'll create a document for each cookie. The image and title will be specified in front matter and the description in the content. For the Afghan cookie we'll create `_cookies/afghan.md` and copy the content across so it'll look like this:
+Now we'll create a document for each cookie. The image and title are specified in front matter and the description in the content. For the Afghan cookie we'll create `_cookies/afghan.md` and copy the content across:
 
 {% raw %}
 ~~~markdown
@@ -104,7 +104,7 @@ Source [Wikipedia](https://en.wikipedia.org/wiki/Afghan_biscuit)
 
 Repeat this for the other cookies.
 
-Next we need to print we'll replace the hardcoded cookie data `cookies.html` with data from our cookie collection. Jekyll makes collection documents available to us at site.*collection_name*, in this case it's `site.cookies`. So let's iterate over our documents and output the data.
+Next we'll replace the hardcoded cookie data in `cookies.html` with data from our cookie collection. Jekyll makes collection documents available to us at `site.*collection_name*`, in this case it's `site.cookies`. Let's iterate over our documents and output the data:
 
 {% raw %}
 ~~~html
@@ -139,7 +139,7 @@ collections:
 ~~~
 {% endraw %}
 
-In `cookies.html` we'll remove the content and image. We'll also add an a tag to link to the generated document page. The url is available to us at *document*.url.
+In `cookies.html` we'll remove the content and image. We'll link the `<h2>` to the generated document page. The url is available to us at *document*.url:
 
 {% raw %}
 ~~~html
@@ -155,9 +155,7 @@ title: Cookies
 ~~~
 {% endraw %}
 
-So how do we specify the look of the generated document pages? Well we can use a layout for that.
-
-We'll create `_layouts/cookie.html` with a basic layout:
+Now we need to create a layout for the documents. We'll create `_layouts/cookie.html` with a basic layout:
 
 {% raw %}
 ~~~html
@@ -174,7 +172,7 @@ layout: page
 ~~~
 {% endraw %}
 
-Then in each document we can specify that layout.
+Then each document we can set the cookie layout:
 
 {% raw %}
 ~~~Markdown
@@ -189,7 +187,7 @@ Source [Wikipedia](https://en.wikipedia.org/wiki/Afghan_biscuit)
 ~~~
 {% endraw %}
 
-The cookies page now has a list of links to cookies:
+The cookies page has a list of links to cookies:
 
 ![Cookies page Links](/images/tutorials/intro-to-collections/cookies-page-links.png){: .screenshot}
 

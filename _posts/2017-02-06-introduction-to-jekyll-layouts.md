@@ -12,12 +12,12 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/layouts
 type: Video
 set: basics
-set_order: 8
+set_order: 9
 icon: layout
 ---
 ## Introduction
 
-Most websites typically have a header and footer which remain similar across all the pages. If you compare this `index.html` file:
+Most websites typically have a header and footer which remains similar across all pages. If you compare this `index.html` file:
 
 {% raw %}
 ~~~html
@@ -147,11 +147,11 @@ You can see the content outside of the content div is almost exactly the same as
 
 ## Reduce repetition
 
-In Jekyll we can use layouts to eliminate this repetition and make the site much easier to maintain.
+In Jekyll we can use layouts to eliminate this repetition and make the site easier to maintain.
 
-To start with we'll create a new directory called `_layouts`. Inside this we'll create a new file called `default.html`. This file will contain the content which repeats across multiple pages.
+To start, we'll create a new directory called `_layouts`. Inside this we'll create a new file called `default.html`.
 
-Now we'll cut all the HTML except the content div's children from `index.html` and paste it into `_layouts/default.html`. We need a placeholder for where the content of the page is going to go. Jekyll makes this available to us using a content variable which we can output using Liquid.
+Now we'll cut all the HTML from `index.html` which repeats across multiple pages and paste it into `_layouts/default.html`. We also need a placeholder for where the content of the page is going to go. Jekyll makes this available to us using a `{% raw %}{{ content }}{% endraw %}` variable:
 
 {% raw %}
 ~~~html
@@ -188,7 +188,7 @@ Now we'll cut all the HTML except the content div's children from `index.html` a
 ~~~
 {% endraw %}
 
-Let's use this layout on `index.html`. Jekyll front matter has a special variable called `layout` where we can specify a layout for this page. In this case we want `index.html` to use the default layout.
+Let's use this layout on `index.html`. Jekyll front matter has a special variable called `layout` which is used to specify a layout for this page. In this case we want `index.html` to use the default layout:
 
 {% raw %}
 ~~~html
@@ -236,7 +236,7 @@ layout: default
 ~~~
 {% endraw %}
 
-Now when we load `index.html` it looks exactly as it did before, however now it's powered by a layout. Let's change `blog.html` to use the layout as well.
+When we look at `index.html` in a browser it looks exactly as it did before, however now it's using a layout. Let's change `blog.html` to use the layout as well.
 
 {% raw %}
 ~~~html
@@ -266,7 +266,7 @@ layout: default
 
 ## Layout inheritance
 
-In the next example let's say we're building multiple landing pages and they're all going to have this hero section.
+In the next example we're building multiple landing pages and they're all going to have a hero section:
 
 {% raw %}
 ~~~html
@@ -279,7 +279,7 @@ In the next example let's say we're building multiple landing pages and they're 
 ~~~
 {% endraw %}
 
-If we put this hero section in `_layouts/default.html` it's going to output it on every page which we don't want. We can use layout inheritance to get around this problem. We'll start by creating a new layout, `_layouts/page.html`. In Jekyll, we can set a layout within a layout, so in the page layout we'll have the hero section then it will call the default layout which has rest of the page structure.
+If we put this hero section in `_layouts/default.html` it's going to output it on every page including `blog.html` which we don't want. Instead, we can use layout inheritance to get around this problem. We'll start by creating a new layout, `_layouts/page.html`. In Jekyll, we can set a layout within a layout, so in the page layout we'll add the hero section then it will call the default layout which has rest of the page structure:
 
 {% raw %}
 ~~~html
@@ -296,9 +296,11 @@ layout: default
 ~~~
 {% endraw %}
 
-Now we can use this layout on our landing pages and the hero section won't be there on pages using the default layout.
+We can use this layout on our landing pages and keep the rest of the pages using the default layout.
 
-In the last example we'll use front matter to set the heading in the hero section so it can change on each page. In `_layouts/page.html` instead of `<h2>Fresh, homemade baked goods</h2>`, we'll make it a variable:
+## Conditions
+
+Let's use front matter to set the heading in the hero section so it can change on each page. In `_layouts/page.html` instead of `<h2>Fresh, homemade baked goods</h2>`, we'll make it a variable:
 
 {% raw %}
 ~~~html
@@ -315,7 +317,7 @@ layout: default
 ~~~
 {% endraw %}
 
-On our landing pages we can set `hero_text` in the front matter which will change the heading.
+On our landing pages we can set `hero_text` in the front matter which changes the heading:
 {% raw %}
 ~~~html
 ---
@@ -330,7 +332,7 @@ hero_text: Home Page!
 
 ## Page titles
 
-Another place this is useful is for setting page titles. We don't want the title for each page to be "Home Page" so let's change it to a variable in `_layouts/default.html`.
+We don't want the title for each page to be "Home Page" so let's change it to a variable in `_layouts/default.html`:
 
 {% raw %}
 ~~~html
@@ -346,7 +348,7 @@ Another place this is useful is for setting page titles. We don't want the title
 ~~~
 {% endraw %}
 
-Then in on a page we can set a title in front matter:
+On a page we can set a title in front matter:
 
 {% raw %}
 ~~~html
@@ -358,9 +360,13 @@ title: Blog
 ~~~
 {% endraw %}
 
+Which will insert that page's title into `<title>`.
+
 ## Jekyll 3 vs Jekyll 2
 
-There's a one minor difference between Jekyll 2 and 3 in regards to layouts. If we set front matter inside a layout, for example in `_layouts/page.html` let's say we have this:
+There's a one minor difference between Jekyll 2 and 3 in regards to variables in layouts.
+
+If we set a front matter variables inside a layout:
 
 {% raw %}
 ~~~html
@@ -368,17 +374,11 @@ There's a one minor difference between Jekyll 2 and 3 in regards to layouts. If 
 layout: default
 city: San Francisco
 ---
-<section class="hero">
-  <div class="small-container">
-    <h2>{{ page.hero_text }}</h2>
-    <p class="sub-text">Bakery<strong>Store</strong> serves the freshest baked goods in San Francisco.</p>
-  </div>
-</section>
-{{ content }}
+...
 ~~~
 {% endraw %}
 
-In Jekyll 2 we could output `city` using the `page` variable like this:
+In Jekyll 2 we could output `city` using the `page` variable:
 
 {% raw %}
 ~~~html
@@ -387,7 +387,7 @@ In Jekyll 2 we could output `city` using the `page` variable like this:
 {% endraw %}
 
 
-In Jekyll 3 we would output `city` using the `layout` variable like this:
+In Jekyll 3 we would output `city` using the `layout` variable:
 
 {% raw %}
 ~~~html

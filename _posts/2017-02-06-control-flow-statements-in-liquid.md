@@ -16,7 +16,9 @@ set_order: 11
 icon: control
 ---
 ## Introduction
-In this example we have a list of cupcakes on our bakery store and we're going to Liquid to only show a subset of these cupcakes. The cupcakes are a collection, here's one of the cupcakes to show you the structure.
+We have a list of cupcakes on our [Bakery Store examples site](https://github.com/CloudCannon/bakery-store/tree/liquid-control-flow) and we're using Liquid to only show a subset of these cupcakes.
+
+The cupcakes are a collection, here's one of the cupcakes to show you the structure:
 
 {% raw %}
 ~~~html
@@ -30,7 +32,7 @@ description: Our delicious chocolate and banana cupcake.
 {% endraw %}
 
 
-In `cupcakes.html`, we iterate over the collection and output each cupcake's image, type and description.
+In `cupcakes.html`, we iterate over the collection and output each cupcake's image, type and description:
 
 {% raw %}
 ~~~html
@@ -56,7 +58,7 @@ title: Muffins
 
 ## The if statement
 
-Now we'll add an if statement inside the for loop which surrounds the output of a cupcake and try out different ways of filtering the cupcakes. First let's only show the lemon cupcake.
+We'll add an if statement inside the for loop to surround the output of a cupcake and try out different ways of filtering the cupcakes. First let's only show the lemon cupcake:
 
 {% raw %}
 ~~~html
@@ -84,7 +86,7 @@ title: Muffins
 
 ## Not equal to
 
-How about everything *except* the Lemon cupcake.
+How about everything *except* the Lemon cupcake:
 
 {% raw %}
 ~~~html
@@ -98,7 +100,7 @@ How about everything *except* the Lemon cupcake.
 
 ## Contains
 
-What if we want to show all the chocolate cupcakes? There's multiple chocolate cupcakes so we can use contains to check if the word "chocolate" exists in the string.
+What if we want to show all the chocolate cupcakes? There's multiple chocolate cupcakes so we can use contains to check if the word "chocolate" exists in the string:
 
 {% raw %}
 ~~~html
@@ -112,7 +114,7 @@ What if we want to show all the chocolate cupcakes? There's multiple chocolate c
 
 ## Less than and greater than
 
-Let's get the lowest rated cupcakes, we'll check if the rating is less than three.
+Let's get the lowest rated cupcakes, we'll check if the rating is less than three:
 
 {% raw %}
 ~~~html
@@ -124,7 +126,7 @@ Let's get the lowest rated cupcakes, we'll check if the rating is less than thre
 
 ![Lemon Cupcake](/images/tutorials/control-flow-statements/less-than.png)
 
-What about the highest rated? Let's check if the rating is greater or equal to three.
+What about the highest rated? Let's check if the rating is greater or equal to three:
 
 {% raw %}
 ~~~html
@@ -138,7 +140,7 @@ What about the highest rated? Let's check if the rating is greater or equal to t
 
 ## Unless
 
-We can also use an `unless` which is the exact opposite of an if statement. If we change the previous if statement to an `unless` we'll be back to getting the lowest rated cupcakes.
+We can also use an `unless` which is the exact opposite of an if statement. If we change the previous if statement to `unless` we'll be back to getting the lowest rated cupcakes:
 
 {% raw %}
 ~~~html
@@ -152,9 +154,9 @@ We can also use an `unless` which is the exact opposite of an if statement. If w
 
 ## Case statement
 
-In this final example, we'll output an icon indicating the cupcake's rating. The icons we have are named `sick.png`, `unhappy.png`, `ok.png`, `happy.png` and `super_happy.png`.
+Let's output an icon indicating the cupcake's rating. The icons we have are named `sick.png`, `unhappy.png`, `ok.png`, `happy.png` and `super_happy.png`.
 
-One way to do this would be with if statements which would look something like this.
+One way to do this would be with if statements which would look something like this:
 
 {% raw %}
 ~~~html
@@ -175,7 +177,7 @@ One way to do this would be with if statements which would look something like t
 {% endraw %}
 
 
-This is ok but we can do even better with a case statement. With a case statement we set the variable we're looking at, then we have different cases depending on the value of that variable.
+This is ok but we can do even better with a case statement. With a case statement we set the variable we're looking at, then we have different cases depending on the value of that variable:
 
 {% raw %}
 ~~~html

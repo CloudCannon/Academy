@@ -24,20 +24,20 @@ We're converting a free HTML 5 template into a Jekyll site to make it easier to 
 
 The theme we're using is called Creative, you can download a copy [here](https://github.com/CloudCannon/creative-jekyll-theme/archive/static-site.zip).
 
-First let's unzip the theme, then navigate to the directory in the terminal and run `jekyll serve`:
+First let's unzip the theme, navigate to the directory in the terminal and run `jekyll serve`:
 
 ~~~bash
 $ cd ~/Downloads/creative # or wherever you've unzipped the template
 $ jekyll serve
 ~~~
 
-If we open our browser and navigate to [http://localhost:4000](http://localhost:4000), we can see the site.
+If we open our browser and navigate to [http://localhost:4000](http://localhost:4000), we can see the site:
 
 ![Creative Template](/images/tutorials/convert-static-site/creative.png){: .screenshot}
 
 ## Layouts
 
-At this stage it's a four page static site, now it's time to add some Jekyll magic. Each page has the same header, navigation and footer. Let's reduce this repetition by using a [layout](/jekyll-casts/layouts/).
+At this stage it's a four page static site, now it's time to add Jekyll functionality. Each page has the same header, navigation and footer. Let's reduce this repetition by using a [layout](/jekyll/introduction-to-jekyll-layouts/).
 
 Create `/_layouts/default.html` and copy the contents of `index.html` into it. Now we'll delete the content in our layout which changes between pages and replace it with a placeholder variable. We'll also replace the contents of `<title>` with {% raw %}`{{ page.title }}`{% endraw %} so we can change it on each page.
 
@@ -237,7 +237,7 @@ If we look at a portfolio items in `portfolio.html`, each item has an image, cat
 ~~~
 {% endraw %}
 
-Let's use a [collection](/jekyll-casts/introduction-to-collections/) to remove this repetition. Create `_config.yml` and set up a collection for services:
+Let's use a [collection](/jekyll/introduction-to-jekyll-collections/) to remove this repetition. Create `_config.yml` and set up a collection for services:
 
 {% raw %}
 ~~~yaml
@@ -248,7 +248,7 @@ collections:
 
 Remember when we update `_config.yml` we need to restart Jekyll for the changes to take effect.
 
-Now we can create a `_portfolio` directory and add six portfolio items with `image_path`, `category`, `link` and `project_name` set in the front matter. For example, here's a portfolio item for work we did for Google - `_portfolio/google.md`:
+Now we can create a `_portfolio` directory and add six portfolio items with `image_path`, `category`, `link` and `project_name` in the front matter. For example, here's a portfolio item for work we did for Google - `_portfolio/google.md`:
 
 {% raw %}
 ~~~yaml
@@ -299,7 +299,7 @@ title: Portfolio
 
 ## Blogging
 
-In this final section we'll add a [blog](/jekyll-casts/blogging/) to our site. First we need a layout for the posts, create `/_layouts/post.html` and add some basic HTML to format the content:
+In this final section we'll add a [blog](/jekyll/introduction-to-blogging/) to our site. First we need a layout for the posts, create `/_layouts/post.html` and add some basic HTML to format the content:
 
 {% raw %}
 ~~~html
@@ -374,7 +374,7 @@ And finally add link to `/blog.html` in the navigation on `/_layouts/default.htm
 ~~~
 {% endraw %}
 
-On the live site we have our blog page with a list of our posts (there's only one at the moment).
+On the live site we have our blog page with a list of our posts. There's only one at the moment.
 
 ![Blog page](/images/tutorials/convert-static-site/blog.png){: .screenshot}
 
@@ -384,4 +384,4 @@ Clicking on a link takes us to the entire post.
 
 ## Summary
 
-In a short amount of time we've made this site significantly more maintainable with Jekyll. We can make this site even better by [improving the navigation](/liquid/front-matter/simple-navigation/), [adding an RSS feed](/liquid/plugins/rss-feed/), [adding search](/jekyll-casts/jekyll-search-using-lunr-js/) or [adding an estimated read time to posts](/liquid/reading-time/).
+In a short amount of time we've made this site significantly more maintainable with Jekyll. We can make this site even better by [improving the navigation](/jekyll/simple-navigation/), [adding an RSS feed](/jekyll/rss-feed/), [adding search](/jekyll/jekyll-search-using-lunr-js/) or [adding an estimated read time to posts](/jekyll/reading-time/).

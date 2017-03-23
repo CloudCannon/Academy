@@ -12,19 +12,21 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/intro-to-liquid
 type: Video
 set: basics
-set_order: 10
+set_order: 7
 icon: liquid
 ---
 ## Introduction
 
-Liquid is a simple templating language Jekyll uses to process pages on your site. With Liquid you can output an modify variables, have logic statements inside your pages and loop over content. There's two types of tags in Liquid:
+Liquid is a templating language Jekyll uses to process pages on your site. With Liquid you can output and modify variables, have logic statements inside your pages and loop over content.
+
+There's two tags in Liquid:
 
 * You can output variables by surrounding them in two curly braces e.g. {% raw %}`{{ variable }}`{% endraw %}
 * You can perform logic statements by surrounding them in a curly brace, percentage sign e.g. {% raw %}`{% if statement %}`{% endraw %}
 
 ## Output
 
-Let's start with a basic example. We'll add some content in front matter, then output it using front matter. Variables set in front matter are available to us at `page.variable_name`.
+Let's start with a basic example. We'll add some content in front matter, then output it using front matter. Variables set in front matter are available to us at `page.variable_name`:
 
 {% raw %}
 ~~~html
@@ -49,7 +51,7 @@ heading: I like cupcakes
 
 ## Filters
 
-Now let's say we want the heading to be uppercase. We can run a variable through a filter to modify the output. To use a filter we'll add a "\|" after the variable then pass it a filter, `upcase` in this case.
+Now we want the heading to be uppercase. We can run a variable through a filter to modify the output. To use a filter we'll add a "\|" after the variable then pass it a filter, `upcase` in this case:
 
 {% raw %}
 ~~~html
@@ -61,7 +63,7 @@ Now let's say we want the heading to be uppercase. We can run a variable through
 
 ![Liquid output](/images/tutorials/intro-to-liquid/liquid-upcase.png){: .screenshot}
 
-We can run this content through multiple filters. Here we'll run in through a truncate to only output a maximum of 8 characters. So now that main heading is truncated to 8 characters.
+We can run this content through multiple filters. Here we'll run in through a truncate to only output a maximum of eight characters:
 
 {% raw %}
 ~~~html
@@ -75,7 +77,7 @@ We can run this content through multiple filters. Here we'll run in through a tr
 
 ## Logic statements
 
-Next let's get into some Liquid logic statements to control whether the `h1` is output on the page. We'll add a new variable to the front matter called `show_heading` and initalize it to true. Then we'll surround the `h1` in an if statement to check if `show_heading` is true.
+Let's control whether the `h1` is output on the page. We'll add a new variable to the front matter called `show_heading` and initalize it to true. Then we'll surround the `h1` in an if statement to check if `show_heading` is true:
 
 {% raw %}
 ~~~html
@@ -93,9 +95,9 @@ show_heading: true
 
 ![Liquid output](/images/tutorials/intro-to-liquid/liquid-truncate.png){: .screenshot}
 
-This displays the heading on the page and if we change show_heading to false it shows nothing.
+This displays the heading on the page. If we change `show_heading` to false it shows nothing.
 
-We can also add an `elsif` to the if statement to check other conditions. So if `page.show_heading` is false we'll check if `page.heading` contains the word "cupcake", if it does then we'll output "I want cupcakes", if it doesn't we'll have output I don't want cupcakes.
+We can add an `elsif` to the if statement to check other conditions. So if `page.show_heading` is false we'll check if `page.heading` contains the word "cupcake", if it does then we'll output "I want cupcakes", if it doesn't we'll have output I don't want cupcakes:
 
 {% raw %}
 ~~~html
@@ -119,7 +121,7 @@ show_heading: false
 
 ## Loops
 
-In this last example we'll go over looping in Liquid. We'll create a cupcakes array in front matter then loop over it in Liquid and output it in an unordered list. The syntax for a for loop in Liquid is `for variable in array`, variable can named whatever you'd like and holds the item in the current iteration of the loop.
+Let's create a cupcakes array in front matter then loop over it in Liquid and output it in an unordered list. The syntax to loop in Liquid is `for variable in array`, variable can named whatever you'd like and holds the item in the current iteration of the loop:
 
 {% raw %}
 ~~~html

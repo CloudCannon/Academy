@@ -12,20 +12,20 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/includes
 type: Video
 set: basics
-set_order: 9
+set_order: 10
 icon: include
 ---
 ## Introduction
 
-On this `index.html` page you can see there's a subscribe to our newsletter section.
+On this example `index.html` there's a subscribe to our newsletter section.
 
 ![Newsletter section](/images/tutorials/includes/newsletter-section.png){: .screenshot}
 
-And let's say now, we also way this newsletter section on `blog.html`. One way of doing this would be to copy the newsletter section HTML and paste it into `blog.html`. This works however now we've duplicated source code on the website. If we ever wanted to change content inside the newsletter section, then we'd have to make the change in multiple places. A better solution is to use Jekyll includes.
+We also want this newsletter section on `blog.html`. One way of doing this would be to copy the newsletter section HTML and paste it into `blog.html`. This works but we've duplicated source code on the website. If we ever wanted to change content inside the newsletter section, then we'd have to make the change in multiple places. A better solution is to use Jekyll includes.
 
 ## Implementation
 
-To use includes we'll create a new folder called `_includes`. Inside this we'll create a new file called `newsletter.html`. Now we'll copy the source code for the newsletter section across to `newsletter.html`.
+To use an include we'll create a new folder called `_includes`. Inside this we'll create a new file called `newsletter.html`. Now we'll copy the source code for the newsletter section across to `newsletter.html`:
 
 {% raw %}
 ~~~html
@@ -51,11 +51,11 @@ In `index.html` we can replace the newsletter section with the include:
 ~~~
 {% endraw %}
 
-We can also use this newsletter include on `blog.html`. Now if we change `newsletter.html` it's reflected on both pages.
+We can also use this newsletter include on `blog.html`. If we change `newsletter.html` it's reflected on both pages.
 
 ## Passing parameters to an include
 
-In more complicated situations you can also pass parameters to an include. In this example we're going to add YouTube videos to the site which we always want presented in a consistent way. We need them to be centered and a particular size.
+In more complicated situations you can pass parameters to an include. In this example we're going to add YouTube videos to the site which we always want presented in a consistent way. We need them to be centered and a particular size.
 
 Let's create a new include, `_includes/youtube.html`. In this file we'll create the structure for displaying a YouTube video and have a placeholder for the YouTube video id. We can access parameters passed to an include using `include.variable_name`.
 
@@ -67,7 +67,7 @@ Let's create a new include, `_includes/youtube.html`. In this file we'll create 
 ~~~
 {% endraw %}
 
-Now we can use this include throughout our site and pass in the video id we want to display:
+We can use this include throughout our site and pass in the video id we want to display:
 
 {% raw %}
 ~~~html

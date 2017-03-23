@@ -16,11 +16,11 @@ set_order: 3
 ---
 ## Introduction
 
-We need a photo gallery on our Bakery Store site to show off all the amazing cakes they offer. We'll cover two ways of implementing a photo gallery on a Jekyll site: using front matter and using Collections.
+We're looking at two ways of implementing a photo gallery in Jekyll: using front matter and collections.
 
 ## Front matter
 
-We'll start with front matter, this is a good way to add a photo gallery if it's only going to be on one page. First we'll create `photo-gallery.html` and add the default layout and an array with all the image data to the front matter.
+If the photo gallery is only going to be used on one page then front matter is a nice choice. First we'll create `photo-gallery.html` and add an array with image data to the front matter.
 
 {% raw %}
 ~~~yaml
@@ -49,9 +49,7 @@ images:
 ~~~
 {% endraw %}
 
-## Liquid
-
-We can loop over this array to output the images in a grid. There's already CSS styles to format it nicely.
+Now we've got our data in front matter we can loop over the array to output the images in a grid.
 
 {% raw %}
 ~~~html
@@ -64,9 +62,11 @@ We can loop over this array to output the images in a grid. There's already CSS 
 ~~~
 {% endraw %}
 
+And finally we would just need to add some CSS to make it display nicely. I'm not going to cover that in this tutorial as it really depends on your requirements and site.
+
 ![Cakes](/images/tutorials/photo-gallery/cakes.jpg){: .screenshot}
 
-Having the photo gallery in this format gives us flexibility. If we want to reorder the items we can just reorder the array in front matter. If we wanted to make the images link somewhere we'd just add the location to the front matter.
+Using front matter for the photo gallery gives us a lot of flexibility. We can easily reorder items and extend the structure to adjust the functionality. For example, to have each item link somewhere we can add a link field to the array:
 
 {% raw %}
 ~~~yaml
@@ -78,7 +78,7 @@ Having the photo gallery in this format gives us flexibility. If we want to reor
 ~~~
 {% endraw %}
 
-Then output the link in an `a` when we output the images.
+Then output the link in an `a` when we output the images:
 
 {% raw %}
 ~~~html
@@ -97,9 +97,11 @@ Then output the link in an `a` when we output the images.
 
 ## Collection
 
-Now let's change this to use a Collection for the data instead of front matter on the page. If we were displaying the photo gallery on multiple pages or had a lot of metadata for each image using a Collection would be a good choice.
+Using a collection for a photo gallery is good choice if we are displaying the photo gallery on multiple pages or had a lot of metadata for each image.
 
-We'll create a `photo_gallery` collection, if you're not sure how to do this check out our [Introduction to Collections tutorial](/jekyll-casts/introduction-to-collections/). Each document in the collection will have the metadata for a single image. For example `_photo_gallery/lemon-cake.md` will look like this.
+First we'll create a `photo_gallery` collection, if you're not sure how to do this check out our [Introduction to Collections tutorial](/jekyll/introduction-to-jekyll-collections/).
+
+Each document in the collection will have metadata for a single image. For example, `_photo_gallery/lemon-cake.md`:
 
 {% raw %}
 ~~~yaml
@@ -110,7 +112,7 @@ title: Lemon Cake
 ~~~
 {% endraw %}
 
-We can tweak our loop from before to output from the `photo_gallery` collection.
+Using liquid we can iterate over the `photo_gallery` collection:
 
 {% raw %}
 ~~~html
@@ -123,7 +125,7 @@ We can tweak our loop from before to output from the `photo_gallery` collection.
 ~~~
 {% endraw %}
 
-If we wanted to control the order of photos we could add a `weight` variable to the front matter of the documents in `photo_gallery`. `weight` is a number which indicates the photo's position.
+If we need to control the order of photos we could add a `weight` variable to the front matter of the documents in `photo_gallery`. `weight` is a number which indicates the photo's position.
 
 {% raw %}
 ~~~yaml
@@ -135,7 +137,7 @@ weight: 1
 ~~~
 {% endraw %}
 
-Then we would order it by the weight before they're output.
+Then we order the collection documents by the weight before they're output:
 
 {% raw %}
 ~~~html
@@ -148,3 +150,7 @@ Then we would order it by the weight before they're output.
 </ul>
 ~~~
 {% endraw %}
+
+## JavaScript
+
+These techniques will work exactly the same when using a JavaScript photo gallery. For example the [template pages](/templates/hydra/) on this site use a library called [lightSlider](http://sachinchoolur.github.io/lightslider/) to display screenshots. Lightslider expects the elements in a simple `<ul>` structure in the HTML and it handles the rest of logic to slide between the photos.

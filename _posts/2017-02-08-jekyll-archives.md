@@ -15,7 +15,7 @@ The [jekyll-archives](https://github.com/jekyll/jekyll-archives) plugin let's yo
 ## Installation
 
 1.  [Create a Gemfile](/jekyll-setup/gemfiles-and-the-bundler/) if you don't already have one.
-2.  Add jekyll-archives to the jekyll_plugins group in your Gemfile:
+2.  Add jekyll-archives to the `jekyll_plugins` group in your Gemfile:
     ~~~ruby
     source 'https://rubygems.org'
 

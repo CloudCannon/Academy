@@ -20,7 +20,7 @@ set_order: 3
 ---
 ## Introduction
 
-We're adding search to our demo Bakery Store site so users can easily find relevant content. This is a small site so we can perform the search on the client side. If there were hundreds of blog posts performing the search in the backend would make more sense.
+We're adding search to the [demo Bakery Store site](https://github.com/CloudCannon/bakery-store/tree/lunrjs) so users can easily find relevant content. It's a relatively small site so we can perform the search entirely client side. If there were hundreds of blog posts, performing the search client side may get slow and a backend search may be a better option.
 
 ## Lunr.js
 
@@ -34,7 +34,7 @@ First we'll create `/js/search.js` to hold our search JavaScript and download [l
 
 ## search.html
 
-Now we need to create `/search.html` which has a search box, a placeholder for displaying results, a JSON output of all the content we want to search on and includes our JavaScript libraries.
+Now we need to create `/search.html`. This file has a search box, a placeholder for displaying results, a JSON output of all the content we want to search on and includes our JavaScript libraries:
 
 {% raw %}
 ~~~html
@@ -80,7 +80,9 @@ We'll go over the sections of code then at the end, we'll see the whole file.
 
 ### Get the search term
 
-JavaScript doesn't have an easy way to read GET parameters so we'll add a `getParameterByName` function to do this. Don't worry if you don't understand how it works. Now we can use `getParameterByName` to get our search term.
+JavaScript doesn't have an easy way to read GET parameters so we'll add a `getParameterByName` function to do this. Don't worry if you don't understand how it works, it's basically manipulating the query string to split it into variables.
+
+Now we can use `getParameterByName` to get our search term:
 
 {% raw %}
 ~~~javascript
@@ -105,7 +107,7 @@ var searchTerm = getQueryVariable('query');
 
 ### Perform the search
 
-If there's a search term we need to set up and configure lunr.js. This involves telling lunr about the fields we're interested and adding the search data from the JSON. Once this is set up we can perform the search.
+If there's a search term we need to set up and configure lunr.js. This involves telling lunr about the fields we're interested and adding the search data from the JSON. Once this is set up we can perform the search:
 
 {% raw %}
 ~~~javascript
@@ -142,7 +144,7 @@ if (searchTerm) {
 
 ### Display the results
 
-Now we have the results we can display them in our list.
+Now we have the results we can display them in our list:
 
 {% raw %}
 ~~~javascript
@@ -168,7 +170,7 @@ function displaySearchResults(results, store) {
 ~~~
 {% endraw %}
 
-When we put it all together we have working search.
+When we put it all together we have working search:
 
 {% raw %}
 ~~~javascript
@@ -240,8 +242,7 @@ When we put it all together we have working search.
 
 ## Search field
 
-Now we can add a search box anywhere on our site by adding a form which submits to `/search.html`.
-
+Now we can add a search box anywhere on our site by adding a form which submits to `/search.html`. You'll need to prefix the action with `{% raw %}{{ site.baseurl }}{% endraw %}` if you're on GitHub Pages or using a baseurl.
 {% raw %}
 ~~~html
 ...

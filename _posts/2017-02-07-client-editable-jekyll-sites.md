@@ -17,15 +17,15 @@ icon: client
 ---
 ## Introduction
 
-Many people don’t use Jekyll for client projects as non-developers would traditionally have to learn HTML, Markdown and Liquid to update content. In this tutorial, we give non-developers an easy way to update Jekyll sites with [CloudCannon](https://cloudcannon.com).
+Many developers don’t use Jekyll for client projects as non-developers would traditionally have to learn HTML, Markdown and Liquid to update content. In this tutorial, we give non-developers an easy way to update Jekyll sites with [CloudCannon](https://cloudcannon.com).
 
 ## What is CloudCannon?
 
-CloudCannon is cloud content management system and hosting provider for Jekyll websites. A developer uploads a Jekyll site in the browser or by syncing with GitHub, Bitbucket or Dropbox. CloudCannon then builds the site, hosts it and provides an interface for non-technical users to update content.
+CloudCannon is cloud content management system and hosting provider for Jekyll websites. A developer uploads a Jekyll site in the browser or syncs with GitHub, Bitbucket or Dropbox. CloudCannon builds the site, hosts it and provides an interface for non-technical people to update content.
 
 ## Setup
 
-To begin, we need to create a CloudCannon account and create our first site. Head over to [CloudCannon](https://cloudcannon.com) and click the *Get Started Free* button:
+To begin, we need to create a CloudCannon account and set up our first site. Head over to [CloudCannon](https://cloudcannon.com) and click the *Get Started Free* button:
 
 ![CloudCannon homepage](/images/tutorials/client-editing/cloudcannon-homepage.png){: .screenshot}
 

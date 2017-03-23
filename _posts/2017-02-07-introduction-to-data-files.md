@@ -17,13 +17,13 @@ icon: data
 ---
 ## Introduction
 
-Data files allow you to access information from CSV, JSON or YAML files on your Jekyll website. You can almost treat these files like a database.
+Data files give you access information from CSV, JSON or YAML files on your Jekyll site. You can almost treat these files like a database.
 
-In this example, we have a `contact.html` page which has a map with all the outlets of our Bakery Store. At the moment we have one outlet in Wellington but there's other outlets so we need to add more markers.
+In this example, we have a `contact.html` page which has a map with all the outlets of fiction Bakery Stores. At the moment there's one outlet in Wellington but there's other outlets so we need to add more markers.
 
 ![Map one](/images/tutorials/data-files/map-one.png){: .screenshot}
 
-The source code for the page is available [in the repository](https://github.com/CloudCannon/bakery-store/tree/data-files). The part we're  interested in is where the markers are added to a JavaScript array.
+The source code for the page is available [in the repository](https://github.com/CloudCannon/bakery-store/tree/data-files). The part we're  interested in is where the markers are added to a JavaScript array:
 
 {% raw %}
 ~~~javascript
@@ -35,7 +35,7 @@ var markers = [{
 ~~~
 {% endraw %}
 
-So how would we add another marker? Well we could copy this and change the latitude, longitude and title.
+So how do we add another marker? We could copy this and change the latitude, longitude and title:
 
 {% raw %}
 ~~~javascript
@@ -51,7 +51,7 @@ var markers = [{
 ~~~
 {% endraw %}
 
-This works but it's hard to manage as the markers array is in the middle of other JavaScript. We can do better with Jekyll data files.
+This works but it's hard to manage as the markers array is amongst other JavaScript. We can do better with Jekyll data files.
 
 ## Creating a data file
 
@@ -81,7 +81,7 @@ In the next example we'll let's have a look an image of the post author and a li
 
 ![No author](/images/tutorials/data-files/no-author.png){: .screenshot}
 
-We can use data files to store this author metadata. We'll create `authors.json` which has a JSON object where the keys are the author's short name and values are the author's full name, image path and twitter handle.
+We can use data files to store this author metadata. We'll create `authors.json` which has a JSON object where the keys are the author's short name and values are the author's full name, image path and twitter handle:
 
 {% raw %}
 ~~~javascript
@@ -101,7 +101,7 @@ We can use data files to store this author metadata. We'll create `authors.json`
 {% endraw %}
 
 
-Now we'll add the author's short name to the front matter in our posts. So the author of `_posts/2016-01-01-what-is-sour-dough.md` is george.
+Now we'll add the author's short name to the front matter in our posts. So the author of `_posts/2016-01-01-what-is-sour-dough.md` is george:
 
 {% raw %}
 ~~~text
@@ -115,7 +115,7 @@ author: george
 {% endraw %}
 
 
-And the author of `_posts/2016-01-02-where-did-the-cookie-come-from.md` is mike.
+And the author of `_posts/2016-01-02-where-did-the-cookie-come-from.md` is mike:
 
 {% raw %}
 ~~~text
@@ -128,7 +128,7 @@ author: mike
 ~~~
 {% endraw %}
 
-Let's add the author data to our list of posts on `blog.html`. We have a for loop which gives us a reference to each post {% raw %}`{% for post in site.posts %}` {% endraw %}, from  `post` we can now get the author's short name from the front matter using `post.author`. We can access the authors data file at `site.data.authors` and combining all of this we can get the current author's metadata using `site.data.authors[post.author]`.
+Let's add the author data to our list of posts on `blog.html`. We have a for loop which gives us a reference to each post {% raw %}`{% for post in site.posts %}` {% endraw %}, from  `post` we can now get the author's short name from the front matter using `post.author`. We can access the authors data file at `site.data.authors` and combining all of this we can get the current author's metadata using `site.data.authors[post.author]`:
 
 {% raw %}
 ~~~html

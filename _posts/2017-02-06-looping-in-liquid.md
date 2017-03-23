@@ -17,9 +17,9 @@ icon: loop
 ---
 ## Introduction
 
-In Liquid you often need to loop over arrays. In this tutorial taking an in-depth look at all the options available to us when we're looping.
+In this tutorial taking an in-depth look at all the options available to us when we loop over arrays.
 
-On our Bakery Store site we have `cupcake.html` which lists all the cupcakes available.
+On our [demo Bakery Store site](https://github.com/CloudCannon/bakery-store/tree/liquid-loops) we have `cupcake.html` which lists all the cupcakes available:
 
 {% raw %}
 ~~~html
@@ -47,7 +47,7 @@ title: Muffins
 
 ## Cycle
 
-First we'll add an image filter in CSS to make all the images black and white.
+First we'll add an image filter in CSS to make all the images black and white:
 
 {% raw %}
 ~~~html
@@ -59,7 +59,7 @@ First we'll add an image filter in CSS to make all the images black and white.
 
 ![Black and white cupcakes](/images/tutorials/looping-in-liquid/black-and-white.png)
 
-Let's change the image filter for each image. We'll make the first image black and white, the second sepia, the third inverted and then cycle through those options for the rest of the images. To do this we'll use a `cycle` which has multiple values it iterates over each time it's called.
+Let's change the image filter for each image. We'll make the first image black and white, the second sepia, the third inverted and then cycle through those options for the rest of the images. To do this we'll use a `cycle`. A `cycle` has values it iterates over each time it's called:
 
 {% raw %}
 ~~~html
@@ -73,11 +73,9 @@ Let's change the image filter for each image. We'll make the first image black a
 
 ## Index
 
-Next we'll number the cupcakes. We can access the current iteration of the loop using `forloop.index`.
-
+Next we'll number the cupcakes. We can access the current iteration of the loop using `forloop.index`:
 {% raw %}
 ~~~html
-
 ...
 <h2>{{ forloop.index }}. {{ cupcake.type }}</h2>
 ...
@@ -86,7 +84,7 @@ Next we'll number the cupcakes. We can access the current iteration of the loop 
 
 ![Cupcakes Index](/images/tutorials/looping-in-liquid/index.png){: .screenshot}
 
-We can make the 0 indexed if we use `forloop.index0`.
+We can make the 0 indexed if we use `forloop.index0`:
 
 {% raw %}
 ~~~html
@@ -100,7 +98,7 @@ We can make the 0 indexed if we use `forloop.index0`.
 
 ## First and last
 
-The next thing we'll do is change the first and last cupcakes so the title is white text on a black background. We can check it's the first or last item in the loop using `forloop.first` and `forloop.last`.
+Let's change the first and last cupcakes so the title is white text on a black background. We can check it's the first or last item in the loop using `forloop.first` and `forloop.last`:
 
 {% raw %}
 ~~~html
@@ -118,7 +116,7 @@ The next thing we'll do is change the first and last cupcakes so the title is wh
 
 ## Rindex
 
-If we wanted to change this to the last three items instead of the first and the last we could use `forloop.rindex`. rindex gives us how many iterations are left in the loop. So on the first iteration the `forloop.rindex` will be six, on the second it would be five and on the last it would be one. We can also use `forloop.rindex0` to have a zero indexed number.
+If we want to change the highlighting to the last three items instead of the first and the last we could use `forloop.rindex`. `rindex` gives us how many iterations are left in the loop. So on the first iteration the `forloop.rindex` will be six, on the second it would be five and on the last it would be one. We can also use `forloop.rindex0` to have a zero indexed number:
 
 {% raw %}
 ~~~html
@@ -136,7 +134,7 @@ If we wanted to change this to the last three items instead of the first and the
 
 ## Length
 
-When you hover of a heading on the cupcakes page, let's make it popup with the total number of cupcakes available. I could get the size from the collection like this `site.cupcakes.size` or we could get it from the forloop like this `forloop.length`.
+When you hover over a heading on the cupcakes page, let's make it popup with the total number of cupcakes available. I could get the size from the collection using `site.cupcakes.size` or we could get it from the forloop using `forloop.length`:
 
 {% raw %}
 ~~~html
@@ -156,7 +154,7 @@ title="{{ forloop.length }} cupcakes"
 
 ## Continue
 
-We can use a `continue` to skip straight to the next item in the loop. So in this example we've skipped over the Lemon cupcake.
+We can use a `continue` to skip straight to the next item in the loop. In this example we've skipped over the Lemon cupcake:
 
 {% raw %}
 ~~~html
@@ -189,7 +187,7 @@ We can use a `continue` to skip straight to the next item in the loop. So in thi
 
 ## Break
 
-We can use a `break` to exit the loop. So in this example we're dropping out of the loop when it gets to the Lemon cupcake.
+We can use `break` to exit the loop. In this example we're dropping out of the loop when it gets to the Lemon cupcake:
 
 {% raw %}
 ~~~html
@@ -222,7 +220,7 @@ We can use a `break` to exit the loop. So in this example we're dropping out of 
 
 ## Reversed
 
-Let's get rid of the break statement and try reversing the order of the loop. We can do this by passing reversed to the for loop.
+Let's get rid of the break statement and try reversing the order of the loop. We can do this by passing reversed to the for loop:
 
 {% raw %}
 ~~~html
@@ -236,7 +234,7 @@ Let's get rid of the break statement and try reversing the order of the loop. We
 
 ## Limit and offset
 
-We can add a `limit` to a show maximum of three cupcakes and an `offset` which skips over the first x number of cupcakes.
+We can add a `limit` to a show maximum of three cupcakes and an `offset` which skips over the first x number of cupcakes:
 
 {% raw %}
 ~~~html
@@ -250,7 +248,7 @@ We can add a `limit` to a show maximum of three cupcakes and an `offset` which s
 
 ## Else
 
-You might need to handle the case where your array is empty. In this example we'll create an empty flavours array, then we'll loop over that array and specify an else which is the case where the array is empty.
+You might need to handle the case where your array is empty. In this example we'll create an empty flavours array, then we'll loop over that array and specify an else which is the case where the array is empty:
 
 {% raw %}
 ~~~html

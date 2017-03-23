@@ -12,13 +12,13 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/frontmatter
 type: Video
 set: basics
-set_order: 7
+set_order: 8
 icon: book
 ---
 
 ## Introduction
 
-Front matter is used to set variables and metadata on pages in your Jekyll site. Let's get straight into an example to demonstrate why this is useful.
+Front matter is used to set variables and metadata on pages in your Jekyll site.
 
 ## Basics
 
@@ -121,9 +121,13 @@ show_footer: true
 
 ![Footer about page](/images/tutorials/front-matter/footer-about.png){: .screenshot}
 
-Changing `show_footer` to false will remove the footer.
+Changing `show_footer` to false removes the footer.
 
-Arrays are also possible in front matter. We'll create a new array called fruit, each item is indented with two spaces then starts with a hyphen. Then we'll iterate over the items on our page and output them as an unordered list.
+## Arrays
+
+Let's output a list of fruit on the page. First we'll create a new array called fruit, each item is indented with two spaces then starts with a hyphen.
+
+In the body of the page we'll iterate over the items and output them as an unordered list.
 
 {% raw %}
 ~~~html
@@ -163,7 +167,9 @@ fruit:
 
 ## Objects
 
-In this last example we'll use objects in front matter. Objects allow for more complex data structures, we're going to use it in our fruits array so we're not only setting the name of the fruit, but also the cost and color. Instead of array items being strings we want them to be keys and values. When we're outputting the fruit, item is now an entire object so we need to reference the keys inside the object.
+Objects allow for complex data structures. We're using it in our fruits array so can set the cost and color of a fruit in addition to its name. Instead of having strings as the array items, we want them to be keys and values.
+
+When we're output the fruit, item is now an entire object so we need to reference the keys inside the object:
 
 {% raw %}
 ~~~html

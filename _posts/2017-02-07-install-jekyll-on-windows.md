@@ -17,13 +17,13 @@ icon: windows
 
 In this installation guide we'll be using Windows 10. These instructions should work for older versions of Windows but they have not but tested.
 
-Open Command Prompt which can be found in `All Apps -> Windows System -> Command Prompt`. Right click on the icon, select "More" then "Run as administrator"
+Open the Command Prompt which can be found in `All Apps -> Windows System -> Command Prompt`. Right click on the icon, select "More" then "Run as administrator"
 
 ![Command Prompt](/images/tutorials/windows-install/command-prompt.png)
 
 ## Commands
 
-Next we'll install [Chocolatey](https://chocolatey.org/) which is a package manager for Windows.
+Next we'll install [Chocolatey](https://chocolatey.org/) which is a package manager for Windows:
 
 {% raw %}
 ~~~bash
@@ -33,7 +33,7 @@ Next we'll install [Chocolatey](https://chocolatey.org/) which is a package mana
 
 Close Command Prompt and open it again to make Chocolatey available, remember to run it as administrator.
 
-First we'll install ruby.
+First we'll install Ruby:
 
 {% raw %}
 ~~~bash
@@ -41,9 +41,9 @@ choco install ruby -y
 ~~~
 {% endraw %}
 
-Close Command Prompt and open it once again to make Ruby available, remember to run it as administrator.
+Close Command Prompt and open it once again to make Ruby available, remember to run it as administrator:
 
-And now we can install Jekyll.
+And now we can install Jekyll:
 
 {% raw %}
 ~~~bash
@@ -53,7 +53,7 @@ gem install jekyll
 
 ## Final check
 
-We can test Jekyll is working by checking the version installed.
+We can test Jekyll is working by checking the version installed:
 {% raw %}
 ~~~bash
 jekyll -v

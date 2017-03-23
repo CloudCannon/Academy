@@ -17,12 +17,12 @@ icon: link
 ---
 ## Introduction
 
-Permalinks are a flexible way to build your site urls. We might want to have a particular file structure for managing our Jekyll site and then completely change the file structure for the live site. Permalinks allow us to do this.
+Permalinks are a flexible way to build site urls. We might want to have a particular file structure for build the site then change it for the live site. Permalinks allow us to do this.
 
 
 ## Front matter permalink
 
-We have a `/blog.html` page and let's say we want the URL for this on the live site to be `/blog/`. One way we could do this is create a new folder called blog, move `blog.html` in that folder and then rename it to `index.html`. The problem with this is we're creating folders just to have the URLs we want. Let's move `/blog/index.html` back to `/blog.html` and solve this with permalinks. We can add a permalink in front matter, then we just need to specify the URL we want.
+We have a `/blog.html` page and want the URL on the live site to be `/blog/`. One way we could do this is create a new folder called `blog`, move `blog.html` in that folder and then rename it to `index.html`. The problem with this is we're creating folders just to have the URLs we want. Let's move `/blog/index.html` back to `/blog.html` and solve this with permalinks. We can add a permalink in front matter, then we just need to specify the URL we want:
 
 {% raw %}
 ~~~html
@@ -35,12 +35,12 @@ permalink: /blog/
 ~~~
 {% endraw %}
 
-Going to `blog.html` in the browser 404s and going to `/blog/` outputs the blog page.
+Going to `blog.html` in the browser 404s whereas `/blog/` now outputs the blog page.
 
 
 ## Blog post permalinks
 
-So that's an example of setting the permalink on individual pages but what if we wanted to set a permalink for all our blog posts. We could add this permalink to every blog post or a better way is to set it once for all blog posts in  `_config.yml`. The variables available to us when setting permalinks for posts are as follows.
+What if we wanted to set a permalink for all our blog posts? We could add a permalink to every blog post but that could take forever. A better way is to set it once for all blog posts in  `_config.yml`. The variables available to us when setting permalinks for posts are as follows:
 
 <table>
   <thead>
@@ -55,7 +55,7 @@ So that's an example of setting the permalink on individual pages but what if we
         <p><code>year</code></p>
       </td>
       <td>
-        <p>Year from the Post’s filename</p>
+        <p>Year from the Post’s filename.</p>
       </td>
     </tr>
     <tr>
@@ -63,7 +63,7 @@ So that's an example of setting the permalink on individual pages but what if we
         <p><code>month</code></p>
       </td>
       <td>
-        <p>Month from the Post’s filename</p>
+        <p>Month from the Post’s filename.</p>
       </td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ So that's an example of setting the permalink on individual pages but what if we
         <p><code>day</code></p>
       </td>
       <td>
-        <p>Day from the Post’s filename</p>
+        <p>Day from the Post’s filename.</p>
       </td>
     </tr>
     <tr>
@@ -146,8 +146,8 @@ So that's an example of setting the permalink on individual pages but what if we
       </td>
       <td>
         <p>
-            Slugified title from the document’s filename ( any character
-            except numbers and letters is replaced as hyphen ). May be
+            Slugified title from the document’s filename (any character
+            except numbers and letters is replaced as hyphen). May be
             overridden via the document’s <code>slug</code> YAML front matter.
         </p>
       </td>
@@ -180,7 +180,7 @@ permalink: /:day/:month/:year/:title/
 
 ## Collection permalinks
 
-In this final example we'll do the same thing for our cookies collection. The permalink variables available to collections are as follows.
+The permalink variables available to collections are as follows:
 
 <table>
   <thead>
@@ -234,7 +234,7 @@ In this final example we'll do the same thing for our cookies collection. The pe
   </tbody>
 </table>
 
-We can add a permalink to metadata of the collection in `_config.yml`.
+We can add a permalink to metadata of the collection in `_config.yml`:
 
 {% raw %}
 ~~~yaml
@@ -246,4 +246,4 @@ collections:
 ~~~
 {% endraw %}
 
-Instead of linking to `/cookies/afghan/` we're linking to `/baked-goods/afghan/`
+Instead of linking to `/cookies/afghan/` we would now link to `/baked-goods/afghan/`.

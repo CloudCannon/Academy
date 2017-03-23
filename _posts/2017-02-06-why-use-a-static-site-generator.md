@@ -20,7 +20,7 @@ A static site generator takes source files and generates an entirely static webs
 
 ![Static Overview](/images/tutorials/what-is-a-static-site-generator/static-overview.png)
 
-There are many static site generators available built for all sorts of purposes. [Some](https://github.com/Jack000/Expose) are for creating photo gallery websites from a bunch of photos, [others](https://www.gitbook.com/) help you create documentation websites. The majority help you manage a typical website with a blog.  
+There are many static site generators available used for all sorts of purposes. [Some](https://github.com/Jack000/Expose) are for creating photo gallery websites from a folder of photos, [others](https://www.gitbook.com/) help you create documentation websites. The majority help you manage a typical website with a blog.  
 
 ![static site generator Options](/images/tutorials/what-is-a-static-site-generator/options.png)
 
@@ -45,11 +45,11 @@ When we're setting up our server, we take the static site created by static site
 
 ## Why use a static site generator?
 
-Now that we understand the fundamental differences between static site generators and dynamic CMSs, let's have a look at why we'd actually use one.
+Now we understand the fundamental differences between static site generators and dynamic CMSs, let's have a look at why we'd actually use one.
 
 ### Less Complexity
 
-Jekyll sites are basically static sites with an extra templating language called [Liquid](https://shopify.github.io/liquid/) so it's a small step to learn if you already know HTML, CSS and JavaScript. We can actually just start with a static site and then introduce Jekyll functionality as it's needed.
+Jekyll sites are basically static sites with an extra templating language called [Liquid](https://shopify.github.io/liquid/) so it's a small step to learn if you already know HTML, CSS and JavaScript. We can actually start with a static site and then introduce Jekyll functionality as it's needed.
 
 ![Building Jekyll](/images/tutorials/what-is-a-static-site-generator/building-jekyll.png)
 
@@ -81,7 +81,7 @@ This is made worse if we're using WordPress plugins. Each plugin will most likel
 
 A lot of this processing can be eliminated by using a cache which means when a page is processed, it will save a copy for future requests. However this adds extra complexity and another point of failure.
 
-We can also perform some optimizations like minification to speed up the site but these are usually done on-the-fly.
+We can perform some optimizations like minification to speed up the site but these are usually done on-the-fly.
 
 ### Security
 

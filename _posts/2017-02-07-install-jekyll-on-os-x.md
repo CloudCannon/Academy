@@ -19,7 +19,7 @@ In this installation guide we'll be using Mac OS X 10.11 El Capitan. These instr
 
 ## Commands
 
-Install Xcode from the AppStore, this around a 4GB download.
+Install Xcode from the AppStore. The download is around 4GB.
 
 ![Xcode](/images/tutorials/mac-install/xcode.png)
 
@@ -27,7 +27,7 @@ We'll open up the Terminal which can be found at `Applications/Utilities/Termina
 
 ![Terminal](/images/tutorials/mac-install/terminal.png)
 
-We need to install "Command Line Tools" which gives us access to commonly used tools, utilities, and compilers such as make and GCC.
+We need to install "Command Line Tools" which gives us access to commonly used tools, utilities, and compilers such as make and GCC:
 
 {% raw %}
 ~~~bash
@@ -37,7 +37,7 @@ xcode-select --install
 
 ![Command Line Tools](/images/tutorials/mac-install/xcode-select.png)
 
-After that we need to agree to Xcode's license. Either run the command below or open up Xcode which will prompt you to agree to the license.
+After that we need to agree to Xcode's license. Either run the command below or open up Xcode which will prompt you to agree to the license:
 
 {% raw %}
 ~~~bash
@@ -45,9 +45,9 @@ sudo xcodebuild -license
 ~~~
 {% endraw %}
 
-OS X already has Ruby already installed but it has some quirks that makes installing Jekyll tricky. Instead of using this version, we'll install our own version of Ruby.
+OS X already has Ruby already installed but it has some quirks that makes installing Jekyll tricky. Instead of using this version, we'll install our own version of Ruby:
 
-First we'll install [Homebrew](http://brew.sh/). Homebrew helps you install packages and is a must-have for anyone programming on OS X.
+First we'll install [Homebrew](http://brew.sh/). Homebrew helps you install packages and is a must-have for anyone programming on OS X:
 
 {% raw %}
 ~~~bash
@@ -55,7 +55,7 @@ First we'll install [Homebrew](http://brew.sh/). Homebrew helps you install pack
 ~~~
 {% endraw %}
 
-Now we can install Ruby.
+Now we can install Ruby:
 
 {% raw %}
 ~~~bash
@@ -63,7 +63,7 @@ brew install ruby
 ~~~
 {% endraw %}
 
-And now we can install Jekyll.
+And install Jekyll:
 
 {% raw %}
 ~~~bash
@@ -73,7 +73,7 @@ sudo gem install jekyll
 
 ## Final check
 
-We can test Jekyll is working by checking the version installed.
+We can test Jekyll is working by checking the version installed:
 {% raw %}
 ~~~bash
 jekyll -v

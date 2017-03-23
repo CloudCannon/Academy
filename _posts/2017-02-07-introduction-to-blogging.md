@@ -18,13 +18,13 @@ icon: blog
 ---
 ## Introduction
 
-Blogging is one of Jekyll's main use cases. In this tutorial we'll create a few blog posts and list them on our site.
+In this tutorial we'll create a few blog posts and list them on our [demo Bakery Store site](https://github.com/CloudCannon/bakery-store/tree/posts).
 
 ## Creating a post
 
-Blog posts live in a `_posts` directory and each post is stored in its own file. The file name of a post is important, the beginning has the date when the post was or will be published, then there's the title and finally, the extension. By default, the blog posts are written in one of two languages, Markdown or HTML. We'll create a new file for our first post: `_posts/2016-04-03-chocolate-chip-cookies.md`.
+Blog posts live in the `_posts` directory. Each post is stored in its own file. The file name of a post is important, the beginning has the date when the post was or will be published, then there's a title and finally an extension. By default, blog posts are commonly written in Markdown but can also be written in HTML. We'll create a new file for our first post: `_posts/2016-04-03-chocolate-chip-cookies.md`.
 
-In our post we'll start with empty front matter. We need this empty front matter to tell Jekyll that this isn't just a static file and it needs some processing. Then we'll add our Markdown content.
+In our post we'll start with empty front matter. We need this empty front matter to tell Jekyll that this isn't a static file. Then we'll add our Markdown content:
 
 {% raw %}
 ~~~html
@@ -36,7 +36,7 @@ Source / Read more [Wikipedia](https://en.wikipedia.org/wiki/Chocolate_chip_cook
 ~~~
 {% endraw %}
 
-We'll repeat this for another post, `_posts/2016-04-04-sourdough-bread.md`.
+We'll repeat this for another post, `_posts/2016-04-04-sourdough-bread.md`:
 
 {% raw %}
 ~~~html
@@ -50,7 +50,7 @@ Source / Read more [Wikipedia](https://en.wikipedia.org/wiki/Sourdough)
 
 ## List all posts
 
-Now we have two blog posts on our site, let's have a page which lists all the posts. We'll create `blog.html` in the root of the site and add some basic front matter for the layout and title.
+We have two blog posts on our site, let's have a page which lists all the posts. We'll create `blog.html` in the root of the site and add front matter to set the layout and title:
 
 {% raw %}
 ~~~html
@@ -61,7 +61,7 @@ title: Blog Page
 ~~~
 {% endraw %}
 
-Next we'll output the blog posts in an unordered list, each post will have a link and title. Jekyll gives us access to an array of all the posts at `site.posts`. A post object has special properties. `url` is the URL for the generated post page, `date` is (by default) the date specified in the file name and `title` is (by default) the title specified in the file name.
+Next we'll output the blog posts in an unordered list, each post will have a link and title. Jekyll gives us access to an array of all the posts at `site.posts`. A post object has special properties. `url` is the URL for the generated post page, `date` is (by default) the date specified in the file name and `title` is (by default) the title specified in the file name:
 
 {% raw %}
 ~~~html
@@ -76,13 +76,13 @@ Next we'll output the blog posts in an unordered list, each post will have a lin
 
 ![Blog posts](/images/tutorials/blogging/blog-list.png){: .screenshot}
 
-When we click on a post it takes us to the generated page.
+When we click on a post it takes us to the generated page:
 
 ![Blog post](/images/tutorials/blogging/post.png){: .screenshot}
 
 ## Post layout
 
-The generated page currently has no styling so let's fix that with a layout. We'll create `_layouts/posts.html`, inherit the page layout then output the title, date and content. Jekyll automatically converts the markdown content into HTML.
+The generated page currently has no styling because there's no layout. Let's create a layout at `_layouts/posts.html`, inherit the page layout then output the title, date and content. Jekyll automatically converts the markdown content into HTML:
 
 {% raw %}
 ~~~html
@@ -112,7 +112,7 @@ layout: posts
 
 ## Date filter
 
-That's almost there except the date format doesn't look right. We can run it through a date filter (which we'll cover in another tutorial) to fix the formatting.
+That's almost there except the date is too long. We can run it through a [date filter](/jekyll/date-formatting/) to fix the formatting:
 
 {% raw %}
 ~~~javascript

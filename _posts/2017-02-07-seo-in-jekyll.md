@@ -22,7 +22,7 @@ set_order: 8
 ---
 ## Introduction
 
-In this tutorial we'll go over techniques to improve the SEO on our demo Bakery Store site.
+In this tutorial we'll go over techniques to improve the search engine optimization of our [demo Bakery Store site](https://github.com/CloudCannon/bakery-store/tree/seo).
 
 ## Jekyll SEO Tag Plugin
 
@@ -36,7 +36,7 @@ Here's more information on creating SEO friendly [title tags](https://moz.com/le
 
 ## Structured URLs
 
-With permalinks, we can control how Jekyll builds site URLs. Head over to our [permalink tutorial](/front-matter/permalinks/) to review how they work. Google recommends using descriptive keywords in the URL.
+With permalinks, we can control how Jekyll builds site URLs. Head over to our [permalink tutorial](/jekyll/permalinks/) to review how they work. Google recommends using descriptive keywords in the URL.
 
 Moz has a great [URL guide](https://moz.com/learn/seo/url) to help you create SEO friendly URLs.
 

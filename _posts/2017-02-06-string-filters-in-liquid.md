@@ -19,7 +19,7 @@ icon: string
 ---
 ## Introduction
 
-Liquid string filters allow us to modify string variables. In this example we having a `heading` variable in front matter we're outputting as an `h2`.
+Liquid string filters allow us to modify string variables. In this example we have a `heading` variable in front matter we're outputting as an `h2`:
 
 {% raw %}
 ~~~html
@@ -46,7 +46,7 @@ Let's say we're outputting `heading` string in multiple places across this page 
 
 In this first instance, instead of saying "baked goods" we want it to say "baked bread". This is an excellent use case for Liquid filters.
 
-To use a filter we'll add a "\|" after the variable then pass it a filter, `replace` in this case.
+To use a filter we'll add a "\|" after the variable then pass it a filter, `replace` in this case:
 
 {% raw %}
 ~~~html
@@ -60,7 +60,7 @@ To use a filter we'll add a "\|" after the variable then pass it a filter, `repl
 
 ## Upcase
 
-We can also chain filters together, so let's make the heading uppercase as well.
+We can also chain filters together, so let's make the heading uppercase as well:
 
 {% raw %}
 ~~~html
@@ -72,7 +72,7 @@ We can also chain filters together, so let's make the heading uppercase as well.
 
 ![Upcase](/images/tutorials/string-filters/upcase.png){: .screenshot}
 
-Below is a list of all the Liquid string filters available. Head over to the [Jekyll Cheat Sheet](http://cheat.jekyll.tips) to see all filters you can use.
+Below is some examples of different string filters. Head over to the [Cheat Sheet](/jekyll-cheat-sheet/) to see all filters you can use.
 
 <table class="filter-table">
 	<tr>

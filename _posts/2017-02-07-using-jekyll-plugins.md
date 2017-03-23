@@ -94,7 +94,7 @@ Liquid::Template.register_filter(ReadingTimeFilter)
 ~~~
 {% endraw %}
 
-Now we can use this filter using {% raw %}`{{ page.content | reading_time }}`{% endraw %}. On our Bakery Store site I've added the filter to `_layouts/post.html`:
+Now we can use this filter using {% raw %}`{{ page.content | reading_time }}`{% endraw %}. On our [Bakery Store site](https://github.com/CloudCannon/bakery-store/tree/plugins) I've added the filter to `_layouts/post.html`:
 
 {% raw %}
 ~~~html
@@ -116,11 +116,11 @@ layout: default
 
 ### Gemfile
 
-This is more complicated but much better option as it allows you to easily upgrade a plugin in the future. These instructions assume you know what a Gem, Gemfile and the bundler are. If you new to these topics or need a brush up, checkout our [Gemfile and the bundler tutorial](/jekyll-casts/gemfiles-and-the-bundler/).
+This is more complicated but much better option as it allows you to easily upgrade a plugin in the future. These instructions assume you know what a Gem, Gemfile and the bundler are. If you new to these topics or need a brush up, checkout our [Gemfile and the bundler tutorial](/jekyll/gemfiles-and-the-bundler/).
 
 In this example we'll add the [jekyll-feed](https://github.com/jekyll/jekyll-feed) plugin to our site.
 
-First we'll create `Gemfile` with jekyll and jekyll-feed gems:
+First we'll create `Gemfile` with jekyll and jekyll-feed Gems:
 
 {% raw %}
 ~~~ruby
@@ -134,7 +134,7 @@ end
 ~~~
 {% endraw %}
 
-Next let's install the gems using the bundler:
+Next let's install the Gems using the bundler:
 
 {% raw %}
 ~~~bash

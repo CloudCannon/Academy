@@ -16,7 +16,7 @@ icon: navigation
 ---
 ## Introduction
 
-Basic navigation is easy in Jekyll as we can hardcode links like we do on the Bakery Store navigation in `_layouts/default.html`.
+Basic navigation is easy in Jekyll as we can hardcode links like we do on the Bakery Store navigation in `_layouts/default.html`:
 
 {% raw %}
 ~~~html
@@ -33,7 +33,7 @@ Basic navigation is easy in Jekyll as we can hardcode links like we do on the Ba
 
 ## Highlighting links
 
-It gets trickier if we want to highlight the current page. One way to do this is add an `active` class if the current page's url matches the link.
+It gets trickier if we want to highlight the current page. One way to do this is add an `active` class if the current page's url matches the link:
 
 {% raw %}
 ~~~html
@@ -48,7 +48,7 @@ It gets trickier if we want to highlight the current page. One way to do this is
 ~~~
 {% endraw %}
 
-Then we can add CSS to `style.css` to make the active link yellow.
+Then we can add CSS to `style.css` to make the active link yellow:
 
 {% raw %}
 ~~~css
@@ -67,7 +67,7 @@ This works but there's a lot of repetition.
 
 ## Using front matter
 
-A better way is to highlight the navigation using front matter. For the pages we want in the navigation, we'll add a `navigation_weight` to the front matter. The value of `navigation_weight` is a number which dictates the position it's shown. For `index.html` we'll add a `navigation_weight` of 1.
+A better way is to highlight the navigation using front matter. For the pages we want in the navigation, we'll add a `navigation_weight` to the front matter. The value of `navigation_weight` is a number which dictates the position it's shown. For `index.html` we'll add a `navigation_weight` of 1:
 
 {% raw %}
 ~~~html
@@ -80,7 +80,7 @@ navigation_weight: 1
 ~~~
 {% endraw %}
 
-And for blog.html we'll add a `navigation_weight` of 2.
+And for blog.html we'll add a `navigation_weight` of 2:
 
 {% raw %}
 ~~~html
@@ -93,7 +93,7 @@ navigation_weight: 2
 ~~~
 {% endraw %}
 
-Then instead of having static links in `_layouts/default.html`, we can sort our html pages by their navigation_weight, loop over the pages that have a `navigation_weight` and output the `url`, `title` and an `active` class if it's the current page.
+Then instead of having static links in `_layouts/default.html`, we can sort our html pages by their navigation_weight, loop over the pages that have a `navigation_weight` and output the `url`, `title` and an `active` class if it's the current page:
 
 {% raw %}
 ~~~html
@@ -117,3 +117,7 @@ Then instead of having static links in `_layouts/default.html`, we can sort our 
 {% endraw %}
 
 Now when we add a new page, we can add it to the navigation by setting `navigation_weight` in front matter.
+
+## Summary
+
+This technique works great for smaller sites but will start to slow down the build time on larger sites. For large sites have a look at [advanced navigation](/jekyll/advanced-navigation/).

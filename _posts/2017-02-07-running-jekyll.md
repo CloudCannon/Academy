@@ -15,7 +15,7 @@ icon: run
 ---
 ## Introduction
 
-To run jekyll on a site, we'll navigate to the site's directory in the command line, then run one of these commands.
+To run Jekyll on a site, we'll navigate to the site's directory in the command line, then run one of these commands.
 
 ## Serve
 
@@ -25,7 +25,7 @@ jekyll serve
 ~~~
 {% endraw %}
 
-This builds the site to `_site` and runs a local development server at [http://localhost:4000](http://localhost:4000) by default. Any changes we make to a site (except edits to `_config.yml`) trigger the site to rebuild and the development server to refresh. This command is typically used while you're developing a site as it automatically builds and serves your site locally after a change.
+Does a build of the site to `_site` and runs a local development server at [http://localhost:4000](http://localhost:4000) by default. Any changes we make to a site (except edits to `_config.yml`) trigger the site to rebuild and the development server to refresh. This command is typically used while you're developing a site as it automatically builds and serves your site locally after a change.
 
 ## Build
 
@@ -39,7 +39,7 @@ This builds the site to `_site`. From here we would typically copy the contents 
 
 ## Runtime flags
 
-There's also a number of runtime flags we can run with these commands to adjust how the site is built. For example if we wanted the build to include all of our draft blog posts we could run jekyll like this.
+There's a number of runtime flags we can pass these commands to adjust how the site is built. For example if we wanted the build to include all of our draft blog posts we could run jekyll like this:
 
 {% raw %}
 ~~~html
@@ -62,7 +62,7 @@ Below is a full list of the run time parameters available. Many of these can be 
 		<tr class="setting">
 			<td>
 				<p class="name"><strong>Site Source</strong></p>
-				<p class="description">Change the directory where Jekyll will read files</p>
+				<p class="description">Change the directory where Jekyll reads files.</p>
 			</td>
 			<td class="align-center">
 				<p><code class="flag">-s, --source DIR</code></p>
@@ -71,7 +71,7 @@ Below is a full list of the run time parameters available. Many of these can be 
 		<tr class="setting">
 			<td>
 				<p class="name"><strong>Site Destination</strong></p>
-				<p class="description">Change the directory where Jekyll will write files</p>
+				<p class="description">Change the directory where Jekyll writes files.</p>
 			</td>
 			<td class="align-center">
 				<p><code class="flag">-d, --destination DIR</code></p>
@@ -89,7 +89,7 @@ Below is a full list of the run time parameters available. Many of these can be 
 		<tr class="setting">
 			<td>
 				<p class="name"><strong>Regeneration</strong></p>
-				<p class="description">Enable auto-regeneration of the site when files are modified.</p>
+				<p class="description">Automatically regenerate the site when files are modified.</p>
 			</td>
 			<td class="align-center">
 				<p><code class="flag">-w, --[no-]watch</code></p>
@@ -170,8 +170,7 @@ Below is a full list of the run time parameters available. Many of these can be 
 		<tr class="setting">
 			<td>
 				<p class="name"><strong>Silence Output</strong></p>
-				<p class="description">Silence the normal output from Jekyll
-				during a build</p>
+				<p class="description">Silence the normal output from Jekyll during a build.</p>
 			</td>
 			<td class="align-center">
 				<p><code class="flag">-q, --quiet</code></p>
