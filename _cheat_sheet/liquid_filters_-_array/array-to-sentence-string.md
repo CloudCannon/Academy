@@ -8,6 +8,7 @@ sub_category: Array
 ~~~liquid
 <!-- page.my_array is ['a', 'b', 'c'] -->
 {{ page.my_array | array_to_sentence_string }}
+{{ page.my_array | array_to_sentence_string: 'or' }}
 ~~~
 {% endraw %}
 
@@ -15,4 +16,5 @@ sub_category: Array
 
 ~~~html
 a, b, and c
+a, b, or c
 ~~~

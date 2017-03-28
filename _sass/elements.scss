@@ -54,6 +54,10 @@ code, pre, tt {
 	padding: 2px 5px;
 }
 
+pre code {
+	padding: 0;
+}
+
 tbody tr:nth-child(odd) {
 	background-color: #efefef;
 }
