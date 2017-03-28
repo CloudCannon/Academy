@@ -14,7 +14,7 @@ features:
   - Accept donation using <a href="https://donorbox.org">DonorBox</a>.
   - Build a community through a mailing list.
   - Post your latest milestones.
-order: 8
+order: 9
 ---
 
 Cause is a one page template built for non-profit or donation pages. It's the perfect way to tell people about your cause and accept donations.

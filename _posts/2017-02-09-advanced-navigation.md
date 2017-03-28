@@ -10,7 +10,7 @@ type: Document
 ---
 ## Introduction
 
-My favourite way to handle navigation in Jekyll is using a data file. It allows you to control the navigation items in a central file and separate them for the navigation logic. It also has much better performance on larger sites than our [simple navigation](/jekyll-liquid/jekyll-front-matter/simple-navigation/) tutorial.
+My favourite way to handle navigation in Jekyll is using a data file. It allows you to control the navigation items in a central file and separate them for the navigation logic. It also has much better performance on larger sites than our [simple navigation](/jekyll/simple-navigation/) tutorial.
 
 ## Instructions
 

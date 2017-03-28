@@ -13,7 +13,7 @@ resources:
   - name: lunr.js
     link: http://lunrjs.com/
   - name: Outputting JSON in Jekyll
-    link: /jekyll-casts/output-json/
+    link: /jekyll/output-json/
 type: Video
 set: intermediate
 set_order: 3

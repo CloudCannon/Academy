@@ -37,7 +37,7 @@ Once we've signed up we're taken to our dashboard. Click *Create Site*:
 
 ![CloudCannon dashboard](/images/tutorials/client-editing/dashboard.png){: .screenshot}
 
-Enter a name for the site. I'm going to use the site from the [Converting a static site to Jekyll](/jekyll-casts/converting-a-static-site-to-jekyll/) cast so I'll call it *Creative*:
+Enter a name for the site. I'm going to use the site from the [Converting a static site to Jekyll](/jekyll/converting-a-static-site-to-jekyll/) cast so I'll call it *Creative*:
 
 ![CloudCannon enter site name](/images/tutorials/client-editing/enter-site-name.png){: .screenshot}
 
