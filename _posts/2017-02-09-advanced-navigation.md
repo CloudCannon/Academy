@@ -33,7 +33,7 @@ My favourite way to handle navigation in Jekyll is using a data file. It allows 
     ~~~html
     <nav>
       {% for item in site.data.navigation %}
-        <a href="{{ item.link %}" {% if item.link == page.url %}class="active"{% endif %}>
+        <a href="{{ item.link }}" {% if item.link == page.url %}class="active"{% endif %}>
           {{ item.name }}
         </a>
       {% endfor %}
@@ -76,7 +76,7 @@ And then use it in the include:
 ~~~html
 <nav>
   {% for item in site.data.navigation %}
-    <a href="{{ item.link %}" {% if item.highlight %}style="border: 1px solid red;"{% endif %} {% if item.link == page.url %}class="active"{% endif %}>
+    <a href="{{ item.link }}" {% if item.highlight %}style="border: 1px solid red;"{% endif %} {% if item.link == page.url %}class="active"{% endif %}>
       {{ item.name }}
     </a>
   {% endfor %}
