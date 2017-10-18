@@ -10,7 +10,7 @@
 
 header {
 	padding: 16px 0 10px 0;
-	background: $header-color;
+	background: $header-color linear-gradient(45deg, rgba(0, 0, 0, 0), $secondary-header-color);
 	color: #fff;
 	min-height: 47px;
 
