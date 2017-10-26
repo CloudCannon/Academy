@@ -426,7 +426,7 @@ h1 + .tutorial-share {
 	left: 50%;
 	right: 50%;
 	margin: 50px -50vw 50px -50vw;
-	background: #26abe2;
+	background: $header-color linear-gradient(45deg, rgba(0, 0, 0, 0), $secondary-header-color);
 	padding: 55px 0;
 	text-align: center;
 

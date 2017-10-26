@@ -19,12 +19,11 @@ Google Analytics is a visitor analytics platform you can drop into your Jekyll s
 1.  Create a new Analytics account if you don't already have one - [Google Analytics](https://analytics.google.com).
 2.  Set up a property for your site.
 3.  In your Property Settings copy the `Tracking Id` and set it as a `google_analytics_key` variable in your `_config.yml`:
-    {% raw %}
     ~~~yaml
     ...
     google_analytics_key: UA-16478174-16
     ...
-    ~~~
+    ~~~    
 4.  In your main layout (usually `_layouts/default.html`) paste this code somewhere in your `<head>`:
 
     ~~~liquid

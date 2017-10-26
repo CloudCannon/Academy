@@ -8,7 +8,11 @@ html {
 body {
 	height: 100%;
 	max-height: 100%;
-	font-family: "Merriweather", serif;
+	font-family: "Muli", sans-serif;
+	-webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+	-moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+	-o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+	text-rendering: geometricPrecision;
 	letter-spacing: 0.01rem;
 	font-size: 1.8em;
 	line-height: 1.75em;
@@ -17,15 +21,6 @@ body {
 	-moz-font-feature-settings: 'kern' 1;
 	-o-font-feature-settings: 'kern' 1;
 	text-rendering: geometricPrecision
-}
-
-h1, h2, h3, h4, h5, h6,
-input, label, select, textarea, table, header, footer, .categories, .listing, .sidebar, .tutorial-share, .modalDialog, .faq ul, .tutorial-series ul, .cheats, .templates, .category-buttons, .post-cta p, .btn {
-	-webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-	-moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-	-o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-	font-family: "Open Sans", sans-serif;
-	text-rendering: geometricPrecision;
 }
 
 .categories a {

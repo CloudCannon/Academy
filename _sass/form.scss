@@ -55,24 +55,127 @@ input::-webkit-input-placeholder {
 	color: #ccc;
 }
 
-.btn, input[type=submit] {
+// .btn, input[type=submit] {
+// 	display: inline-block;
+// 	border-radius: 2px;
+// 	-webkit-appearance: none;
+// 	padding: 15px 80px;
+// 	margin-bottom: 0;
+// 	line-height: 20px;
+// 	text-align: center;
+// 	vertical-align: middle;
+// 	cursor: pointer;
+// 	background-color: #006dcc;
+// 	border: 1px solid #0065bd;
+// 	border-bottom: 2px solid #003f75;
+// 	color: #fff;
+// 	text-decoration: none;
+//
+// 	&:hover {
+// 		background-color: #005fb3;
+// 		color: #fff;
+// 	}
+// }
+
+a.button, input[type="submit"] {
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	padding: 1em 55px;
 	display: inline-block;
 	border-radius: 2px;
-	-webkit-appearance: none;
-	padding: 15px 80px;
-	margin-bottom: 0;
-	line-height: 20px;
-	text-align: center;
-	vertical-align: middle;
-	cursor: pointer;
-	background-color: #006dcc;
-	border: 1px solid #0065bd;
-	border-bottom: 2px solid #003f75;
+	background: $header-color;
 	color: #fff;
-	text-decoration: none;
+	border: 0;
+	transition: .2 background ease;
+	letter-spacing: 1px;
+	font-size: .9rem;
+	cursor: pointer;
 
-	&:hover {
-		background-color: #005fb3;
-		color: #fff;
+	svg {
+		height: 1em;
+		position: relative;
+		top: 2px;
+		width: 1em;
+	}
+
+	&:hover, &.light.dark-hover:hover {
+		background: #364261;
+	}
+
+	&.keep-text-size {
+		font-size: 1.3rem;
+	}
+
+	&.smaller-text {
+		font-size: .8rem;
+	}
+
+	&.no-side-padding {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&.no-padding {
+		padding: 0;
+	}
+
+	&.no-hover {
+		&, &.light, &.dark {
+			&:hover {
+				background: none;
+			}
+		}
+
+		&.light:hover {
+			color: $header-color;
+		}
+	}
+
+	&.no-border {
+		&, &.light, &.light:hover {
+			border-color: rgba(0,0,0,0);
+		}
+	}
+
+	&.dark {
+		background: none;
+		border: 1px solid #fff;
+
+		&.brand {
+			background: $header-color;
+		}
+
+		&:hover {
+			background: #fff;
+			color: $header-color;
+		}
+
+		&.no-border {
+			border: 0;
+		}
+	}
+
+	&.dark-blue {
+		background: #364261;
+
+		&:hover {
+			background: $header-color;
+		}
+	}
+
+	&.light {
+		background: #fff;
+		color: $header-color;
+		border: 1px solid $header-color;
+		&.shadow {
+			box-shadow: 0 12px 34px 5px rgba(0,0,0,0.15);
+		}
+
+		&:hover {
+			color: #fff;
+			background: $header-color;
+		}
 	}
 }
