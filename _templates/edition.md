@@ -4,11 +4,11 @@ repository: https://github.com/CloudCannon/edition-jekyll-template
 demo_url: https://long-pig.cloudvent.net/
 description: Write documentation for your product.
 images:
-  - image: /images/templates/edition/1.jpeg
-  - image: /images/templates/edition/2.jpeg
-  - image: /images/templates/edition/3.jpeg
-  - image: /images/templates/edition/4.jpeg
-  - image: /images/templates/edition/5.jpeg
+  - image: /images/templates/edition/1.jpg
+  - image: /images/templates/edition/2.jpg
+  - image: /images/templates/edition/3.jpg
+  - image: /images/templates/edition/4.jpg
+  - image: /images/templates/edition/5.jpg
 features:
   - Clearly document how you use your product.
   - Fully integrated search allows your customers to find the content they're looking for.

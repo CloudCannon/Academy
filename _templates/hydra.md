@@ -4,11 +4,11 @@ repository: https://github.com/CloudCannon/hydra-jekyll-template
 demo_url: https://proud-alligator.cloudvent.net/
 description: Market your product or SaaS business.
 images:
-  - image: /images/templates/hydra/1.jpeg
-  - image: /images/templates/hydra/2.jpeg
-  - image: /images/templates/hydra/3.jpeg
-  - image: /images/templates/hydra/4.jpeg
-  - image: /images/templates/hydra/5.jpeg
+  - image: /images/templates/hydra/1.jpg
+  - image: /images/templates/hydra/2.jpg
+  - image: /images/templates/hydra/3.jpg
+  - image: /images/templates/hydra/4.jpg
+  - image: /images/templates/hydra/5.jpg
 features:
   - Show your pricing in an easy-to-read table.
   - Write about your industry in the blog.
