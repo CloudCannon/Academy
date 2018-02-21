@@ -17,4 +17,4 @@ features:
 order: 10
 ---
 
-Author let's you write ebooks using the power of Jekyll.
+Author let's you write eBooks using the power of Jekyll.
