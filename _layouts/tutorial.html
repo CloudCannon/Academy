@@ -1,0 +1,29 @@
+---
+layout: post
+---
+
+<div class="category-buttons">
+	{% for tag in page.tags %}
+		<a href="{{ site.baseurl }}/{{ tag | slugify }}/">{{ tag | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
+	{% endfor %}
+</div>
+
+{% if page.type == "Video" %}
+	{% include youtube.html video_id=page.video_id %}
+
+	{% if page.resources %}
+		<div class="resources">
+			<ul>
+				{% for resource in page.resources %}
+					{% assign icon = "Link" %}
+					{% if resource.name == "Source code" %}
+						{% assign icon = "Source" %}
+					{% endif %}
+					<li>{% include document-icon.html icon=icon %}<a href="{{ resource.link }}">{{ resource.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	{% endif %}
+{% endif %}
+
+{{ content }}

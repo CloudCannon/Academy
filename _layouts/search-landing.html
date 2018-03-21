@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<header class="landing">
+	{% include navigation/top.html %}
+
+	<section class="hero">
+		<div class="wrapper">
+			<h1>CloudCannon Academy</h1>
+			<p class="sub-text">{{ site.posts | size }} tutorials to help you with Jekyll and CloudCannon</p>
+		</div>
+	</section>
+</header>
+
+{% include search.html %}
+
+<section>
+	<div class="wrapper wrapper-large">
+		{{ content }}
+	</div>
+</section>
+
+{% include components/cta/main.html text="Join thousands of developers building sites on CloudCannon today" button="Get started free" %}

@@ -9,14 +9,14 @@
 		font-size: 1em;
 
 		a {
-			color: $medium-grey;
+			color: $grey-text;
 			text-decoration: none;
 			display: block;
 			border-bottom: 1px solid #eee;
 			padding: 5px 0;
 
 			&:hover {
-				color: $dark-grey;
+				color: #222;
 			}
 		}
 	}

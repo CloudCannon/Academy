@@ -19,7 +19,7 @@ h1 span {
 	}
 }
 
-@media #{$mid-point} {
+@media (min-width: $desktop-min) {
 	.template-content {
 		display: flex;
 
@@ -73,7 +73,7 @@ h1 span {
 		position: relative;
 		line-height: 0;
 		padding: 0;
-		@media #{$desktop} {
+		@media (min-width: $desktop-min) {
 			flex: 1 0 500px;
 			display: flex;
 		}

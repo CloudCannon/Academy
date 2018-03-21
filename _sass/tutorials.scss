@@ -3,7 +3,7 @@
 }
 
 .count {
-	color: $light-grey;
+	color: $grey-text;
 	font-size: .7em;
 	position: relative;
 	top: -2px;
@@ -20,6 +20,10 @@
 	h3 {
 		font-size: 2.75rem;
 		margin-bottom: 20px;
+	}
+
+	a {
+		text-decoration: none;
 	}
 }
 
@@ -46,7 +50,7 @@
 	width: 100%;
 	box-sizing: border-box;
 
-	@media #{$mid-point} {
+	@media (min-width: $desktop-min) {
 		padding-left: 300px;
 
 		&.no-sidebar {
@@ -63,7 +67,7 @@
 	width: 260px;
 	text-align: right;
 
-	@media #{$mid-point} {
+	@media (min-width: $desktop-min) {
 		display: block;
 	}
 
@@ -82,14 +86,14 @@
 	}
 
 	a {
-		color: $medium-grey;
+		color: $grey-text;
 		text-decoration: none;
 		display: block;
 		-webkit-transition: transform .2s;
 		line-height: 1.3em;
 
 		&.active {
-			color: $link-color;
+			color: $brand-color;
 			transform: translateX(-10px);
 		}
 	}
@@ -191,21 +195,21 @@
 			svg {
 				width: 35px;
 				height: 35px;
-				fill: $link-color;
+				fill: $brand-color;
 				-webkit-transition: all .2s ease;
 				margin: 0 auto;
 			}
 		}
 
 		.length {
-			color: $light-grey;
+			color: $grey-text;
 			font-size: .8em;
 		}
 
 		&:hover {
 			background: #f6f6f6;
 			svg {
-				fill: $link-hover-color;
+				fill: darken($brand_color, 10%);
 				transform: translateX(4px);
 			}
 		}
@@ -235,22 +239,22 @@ h1 + .tutorial-share {
 .tutorial-share {
 
 	a {
-		color: $medium-grey;
+		color: $grey-text;
 		text-decoration: none;
 		transition: fill .2s ease;
 		margin-right: 10px;
 
 		&:hover {
-			color: $dark-grey;
+			color: #222;
 
 			svg {
-				fill: $dark-grey;
+				fill: #222;
 			}
 		}
 	}
 
 	svg {
-		fill: $medium-grey;
+		fill: $grey-text;
 		position: relative;
 		top: 5px;
 		width: 20px;
@@ -387,7 +391,7 @@ h1 + .tutorial-share {
 		}
 
 		&.active a:before {
-			color: $medium-grey;
+			color: $grey-text;
 		}
 	}
 
@@ -417,30 +421,6 @@ h1 + .tutorial-share {
 			top: 5px;
 			width: 20px;
 		}
-	}
-}
-
-.post-cta {
-	width: 100vw;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin: 50px -50vw 50px -50vw;
-	background: $header-color linear-gradient(45deg, rgba(0, 0, 0, 0), $secondary-header-color);
-	padding: 55px 0;
-	text-align: center;
-
-	h3, p {
-		color: #fff;
-	}
-
-	p {
-		margin-bottom: 20px;
-	}
-
-	h3 {
-		margin-top: 0;
-		font-weight: bold;
 	}
 }
 

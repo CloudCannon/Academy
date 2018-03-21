@@ -1,18 +1,16 @@
 ---
 ---
-@import "variables";
-@import "typography";
-@import "cheats";
-@import "elements";
-@import "tutorials";
-@import "header";
-@import "layout";
+
+@import "screen";
 @import "search";
-@import "dark-theme";
-@import "footer";
+@import "cheats";
+@import "tutorials";
 @import "faq";
 @import "modal";
-@import "form";
 @import "templates";
+@import "video";
 @import "light-slider";
-@import "cloudcannon";
+
+.post .wrapper {
+	max-width: 800px;
+}
