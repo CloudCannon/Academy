@@ -1,0 +1,23 @@
+{
+  "name": "academy",
+  "version": "1.0.0",
+  "description": "CloudCannon learning materials",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudCannon/Academy.git"
+  },
+  "author": "CloudCannon Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CloudCannon/Academy/issues"
+  },
+  "homepage": "https://learn.cloudcannon.com",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "cloudcannon-suite": "git+ssh://git@github.com/CloudCannon/cloudcannon-suite.git"
+  }
+}

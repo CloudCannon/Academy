@@ -3,15 +3,13 @@
 
 title: CloudCannon Academy
 url: "https://learn.cloudcannon.com"
-baseurl:
 google_analytics_key: "UA-37472773-17"
 disqus_shortname: "learn-cloudcannon-com"
 newsletter_action: "//cloudcannon.us12.list-manage.com/subscribe/post?u=c2598ec08fca5843b980a7d3f&amp;id=16297bb754"
 theme: jekyll-theme-cloudcannon
-baseurl:
 
 active_sibling: Guides
-main_url:
+main_url: https://cloudcannon.com
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
