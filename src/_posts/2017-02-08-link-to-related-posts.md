@@ -2,6 +2,7 @@
 date: 2017-02-08
 title: Link to related posts
 description: How to link to the related posts on a blog
+category: Blogging
 tags:
   - jekyll-blogging
   - jekyll-liquid

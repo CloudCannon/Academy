@@ -1,0 +1,42 @@
+.series-progress {
+	height: 10px;
+	display: flex;
+	border-bottom: 1px solid #e7e7e7;
+
+	.series-progress-bar {
+		flex: 1;
+		background: #eee;
+		border-left: 1px solid #fff;
+
+		&:first-child {
+			border: 0;
+		}
+	}
+
+	.series-progress-complete {
+		background: $success-color;
+	}
+
+	.series-progress-current {
+		flex: 2;
+		background: $warning-color;
+	}
+}
+
+.series-items {
+	border-bottom: 1px solid #e7e7e7;
+	background: #fafafa;
+
+	.wrapper {
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+
+	.featured-series {
+		margin-bottom: 0;
+	}
+
+	&.series-items-hidden {
+		display: none;
+	}
+}

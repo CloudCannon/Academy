@@ -2,6 +2,7 @@
 date: 2017-02-08
 title: Archives
 description: Archive posts by date, tags and categories.
+category: Blogging
 tags:
   - jekyll-plugins
   - jekyll-blogging

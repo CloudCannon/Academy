@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: directory
 ---
+
 {% assign posts = page.posts | sort: "title" %}
 {% assign category = page.title | replace: "jekyll-", "" %}
-
 <h2 style="text-transform:capitalize;">{{ page.title | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }} <span class="count">({{ posts | size }})</span></h2>
 <p>{{ site.data.categories[category].description }}</p>
 

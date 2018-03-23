@@ -2,6 +2,7 @@
 date: 2017-02-09
 title: Front matter editor best practices
 description: Tips to get the most out of front matter editor in CloudCannon
+category: Front Matter
 tags:
   - jekyll-cloudcannon
   - jekyll-front-matter

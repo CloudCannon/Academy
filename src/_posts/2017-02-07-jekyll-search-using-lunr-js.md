@@ -3,6 +3,7 @@ date: 2017-02-07
 title: Jekyll search using lunr.js
 video_id: J0KmJpbEU-U
 description: Add search to your Jekyll site using lunr.js
+category: General
 tags:
   - jekyll-liquid
   - jekyll-blogging

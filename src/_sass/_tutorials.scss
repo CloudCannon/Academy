@@ -1,3 +1,5 @@
+$listings-transition-duration: 200ms;
+
 .featured-series {
 	margin: 0 0 40px 0;
 }
@@ -89,7 +91,7 @@
 		color: $grey-text;
 		text-decoration: none;
 		display: block;
-		-webkit-transition: transform .2s;
+		-webkit-transition: transform $listings-transition-duration;
 		line-height: 1.3em;
 
 		&.active {
@@ -104,7 +106,12 @@
 	margin: 0 auto 30px auto;
 
 	h3 {
-		text-transform:capitalize;
+		text-transform: capitalize;
+		font-size: 1.5rem;
+
+		a {
+			color: inherit;
+		}
 	}
 
 	margin: 0 0 30px 0;
@@ -128,7 +135,7 @@
 			svg {
 				margin: 0 5px 0 0;
 				fill: #4A4A4A;
-				-webkit-transition: all .2s ease;
+				-webkit-transition: all $listings-transition-duration ease;
 			}
 
 			&:hover {
@@ -167,7 +174,38 @@
 		margin: 10px;
 		padding: 0;
 		flex: 1 1 500px;
-		position: relative
+		position: relative;
+
+		&.filler-listing {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		&.active {
+			pointer-events: none;
+
+			a {
+				background: #eee;
+				border-color: #ddd;
+
+				svg {
+					fill: #888;
+				}
+			}
+		}
+	}
+
+
+	.listings-choose-one & {
+		li {
+			flex: 1 1 350px;
+		}
+
+		a {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
 	}
 
 	h3 {
@@ -183,7 +221,9 @@
 		border: 1px solid #eeeeee;
 		height: 100%;
 		box-sizing: border-box;
-		transition: background .2s ease;
+		transition: background 200ms ease;
+		background: #fff;
+		color: inherit;
 
 		article {
 			display: flex;
@@ -196,7 +236,7 @@
 				width: 35px;
 				height: 35px;
 				fill: $brand-color;
-				-webkit-transition: all .2s ease;
+				-webkit-transition: fill $listings-transition-duration ease;
 				margin: 0 auto;
 			}
 		}
@@ -208,9 +248,9 @@
 
 		&:hover {
 			background: #f6f6f6;
+			border-color: #ddd;
 			svg {
 				fill: darken($brand_color, 10%);
-				transform: translateX(4px);
 			}
 		}
 
@@ -241,7 +281,7 @@ h1 + .tutorial-share {
 	a {
 		color: $grey-text;
 		text-decoration: none;
-		transition: fill .2s ease;
+		transition: fill $listings-transition-duration ease;
 		margin-right: 10px;
 
 		&:hover {
@@ -422,32 +462,4 @@ h1 + .tutorial-share {
 			width: 20px;
 		}
 	}
-}
-
-.has-screenshot {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
-	border-radius: 2px;
-	margin-left: auto;
-	margin-right: auto;
-	background: #DDD url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2212%22%20viewBox%3D%220%200%2044%2012%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3C%2Fsvg%3E') 4px 4px no-repeat;
-	padding: 20px 0 62.5% 0;
-	position: relative;
-
-	img {
-		position: absolute;
-		top: 20px;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		border-radius: 0 0 2px 2px;
-	}
-}
-
-.screenshot {
-	@extend .has-screenshot;
-	margin: 0 auto;
-	padding: 20px 0 0 0;
 }

@@ -63,6 +63,7 @@ h1 span {
 		flex-direction: column;
 		display: flex;
 		transition: background .2s ease;
+		color: inherit;
 
 		&:hover {
 			background: #f6f6f6;

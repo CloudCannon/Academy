@@ -3,6 +3,7 @@ date: 2017-02-07
 title: Output JSON
 video_id: lmoq_Kd1pXs
 description: Turn Jekyll Data into JSON
+category: General
 tags:
   - jekyll-liquid
   - jekyll-front-matter

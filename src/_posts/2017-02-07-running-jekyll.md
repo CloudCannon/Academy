@@ -3,6 +3,7 @@ date: 2017-02-07
 title: Running Jekyll
 video_id: NJU1wluNrBw
 description: How to have Jekyll build your site
+category: Setup
 tags:
   - jekyll-setup
 resources:
@@ -10,7 +11,7 @@ resources:
     link: https://jekyllrb.com/docs/configuration/
 type: Video
 set: basics
-set_order: 6
+set_order: 1
 icon: run
 ---
 ## Introduction

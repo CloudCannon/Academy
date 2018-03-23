@@ -1,29 +1,144 @@
 ---
-layout: post
+layout: page
+icons: true
 ---
 
-<div class="category-buttons">
-	{% for tag in page.tags %}
-		<a href="{{ site.baseurl }}/{{ tag | slugify }}/">{{ tag | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
+{% if page.set %}
+	{% assign set_file_name = "_sets/" | append: page.set | append: ".md" %}
+	{% assign set = site.sets | where: "path", set_file_name | first %}
+
+	{% assign series_posts = site.posts | where: "set", page.set | sort: "set_order" %}
+	{% assign series_posts_size = series_posts | size %}
+
+	{% for posts in series_posts %}
+		{% if posts.url == page.url %}
+			{% assign current_index = forloop.index0 %}
+			{% assign prev_index = current_index | minus: 1 %}
+			{% assign next_index = current_index | plus: 1 %}
+			{% break %}
+		{% endif %}
 	{% endfor %}
-</div>
 
-{% if page.type == "Video" %}
-	{% include youtube.html video_id=page.video_id %}
-
-	{% if page.resources %}
-		<div class="resources">
-			<ul>
-				{% for resource in page.resources %}
-					{% assign icon = "Link" %}
-					{% if resource.name == "Source code" %}
-						{% assign icon = "Source" %}
-					{% endif %}
-					<li>{% include document-icon.html icon=icon %}<a href="{{ resource.link }}">{{ resource.name }}</a></li>
-				{% endfor %}
-			</ul>
+	{% if set.type == "series" and series_posts_size > 1 %}
+		<div class="series-progress">
+			{% assign class_name = "series-progress-complete" %}
+			{% for posts in series_posts %}
+				{% if posts.url == page.url %}
+					<div class="series-progress-bar series-progress-current"></div>
+					{% assign class_name = "series-progress-incomplete" %}
+				{% else %}
+					<div class="series-progress-bar {{ class_name }}"></div>
+				{% endif %}
+			{% endfor %}
 		</div>
 	{% endif %}
+
+	<div class="series-items {% if set.type != "choose-one" %}series-items-hidden{% endif %}">
+		<div class="wrapper wrapper-large">
+			<div class="featured-series listings-{{ set.type }}">
+				{% if set.type == "choose-one" %}
+					{% include listings.html listings=series_posts custom_icon=true %}
+				{% else %}
+					{% include listings.html listings=series_posts custom_icon=true numbered=true %}
+					{% assign header_prefix = next_index | append: ". " %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
 {% endif %}
 
-{{ content }}
+<div class="post dark-content">
+	<div class="wrapper">
+		<h1>{{ header_prefix }}{{ page.title }}</h1>
+		<p class="subtitle">{{ page.description }}</p>
+
+		<div class="post-content">
+			<div class="category-buttons">
+				{% for tag in page.tags %}
+					<a href="{{ site.baseurl }}/{{ tag | slugify }}/">{{ tag | replace: "jekyll-", "" | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
+				{% endfor %}
+			</div>
+
+			{% if page.type == "Video" %}
+				{% include youtube.html video_id=page.video_id %}
+
+				{% if page.resources %}
+					<div class="resources">
+						<ul>
+							{% for resource in page.resources %}
+								{% assign icon = "Link" %}
+								{% if resource.name == "Source code" %}
+									{% assign icon = "Source" %}
+								{% endif %}
+								<li>{% include document-icon.html icon=icon %}<a href="{{ resource.link }}">{{ resource.name }}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endif %}
+			{% endif %}
+
+			{{ content }}
+
+
+			{% include components/blog/sharing-bar.html url=page.url title=page.title %}
+		</div>
+	</div>
+</div>
+
+
+{% if set %}
+	<div class="wrapper">
+		<h2>What's next?</h2>
+		<div class="follow-up-options">
+			{% if set.type != "choose-one" and next_index < series_posts_size %}
+				<div class="next-option">
+					<h3>Continue Learning</h3>
+					{% assign item = series_posts[next_index] %}
+					{% include follow-up/article.html item=item %}
+				</div>
+			{% elsif set.next_set %}
+				<div class="next-option">
+					{% assign next_set_file_name = "_sets/" | append: set.next_set | append: ".md" %}
+					{% assign next_set = site.sets | where: "path", next_set_file_name | first %}
+					{% assign next_series_posts = site.posts | where: "set", set.next_set | sort: "set_order" %}
+
+					<h3>{{ next_set.title }}</h3>
+					{% if next_set.type == "choose-one" %}
+						{% include listings.html listings=next_series_posts custom_icon=true %}
+					{% else %}
+						{% include listings.html listings=next_series_posts custom_icon=true limit=1 %}
+					{% endif %}
+				</div>
+			{% else %}
+				{% assign display_cta = true %}
+			{% endif %}
+
+			{% if set.type != "choose-one" and prev_index >= 0 %}
+				<div class="previous-option">
+					<h3>Go Back</h3>
+					{% assign item = series_posts[prev_index] %}
+					{% include follow-up/article.html item=item %}
+				</div>
+			{% endif %}
+
+			<div class="discuss-option">
+				<h3>Discuss this article</h3>
+				<p><a href="#comments">Scroll Down</a> and add a comment</p>
+			</div>
+		</div>
+	</div>
+{% else %}
+	{% assign display_cta = true %}
+{% endif %}
+
+{% if display_cta %}
+	{% include components/cta/main.html text="Need more? Checkout the directory for all of our tutorials" url="/tutorials/" button="Explore more" %}
+{% endif %}
+
+{% unless page.hide_disqus %}
+<div class="dark-content" id="comments">
+	<div class="wrapper">
+		{% include disqus.html %}
+	</div>
+</div>
+{% endunless %}

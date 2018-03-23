@@ -3,6 +3,7 @@ date: 2017-02-07
 title: Simple navigation
 video_id: gtILjIPk4Ug
 description: An easy way to manage navigation menus in Jekyll
+category: General
 tags:
   - jekyll-liquid
   - jekyll-front-matter

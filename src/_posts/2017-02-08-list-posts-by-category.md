@@ -2,6 +2,7 @@
 date: 2017-02-08
 title: List posts by category
 description: List all the posts on your site and group them by their category
+category: Blogging
 tags:
   - jekyll-blogging
   - jekyll-liquid

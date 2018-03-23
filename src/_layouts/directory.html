@@ -1,0 +1,40 @@
+---
+layout: search
+icons: true
+---
+
+<div class="dark-content docs-container">
+	<div class="wrapper wrapper-large">
+		<nav class="docs-nav" id="list">
+			<ul>
+				{% assign tags = site.tags | sort %}
+				{% for tag in tags %}
+					{% assign current = false %}
+					{% for post in tag[1] %}
+						{% if post.url == page.url %}
+							{% assign current = true %}
+							{% break %}
+						{% endif %}
+					{% endfor %}
+
+					{% assign name = tag[0] %}
+					{% assign url = name | slugify | append: "/" | prepend: "/" %}
+					{% assign posts = tag[1] %}
+					{% assign size = posts | size %}
+					{% assign cat-name = name | replace: "jekyll-", " "  | strip %}
+					<li class="nav-item top-level {% if current %}current{% endif %}">
+						{% assign cat-name = name | replace: "jekyll-", " "  | strip %}
+						<a style="text-transform:capitalize;" href="{{ url }}#list">{{ cat-name | replace: "-", " " | replace: "cloudcannon", "CloudCannon" }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+
+		<section class="docs-main">
+			<article class="content">
+				{{ content }}
+			</article>
+		</section>
+	</div>
+</div>
+

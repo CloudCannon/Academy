@@ -3,6 +3,7 @@ date: 2017-02-07
 title: Reading time
 video_id: hOvVjZh9-rs
 description: A simple way to calculate the read time of a post
+category: General
 tags:
   - jekyll-liquid
 resources:
@@ -16,7 +17,7 @@ set_order: 4
 ---
 ## Introduction
 
-[Medium](https://medium.com) has a nice little feature that shows an estimated reading time on posts. 
+[Medium](https://medium.com) has a nice little feature that shows an estimated reading time on posts.
 
 ![Medium Michael Rose](/images/tutorials/reading-time/medium.jpg){: .screenshot}
 

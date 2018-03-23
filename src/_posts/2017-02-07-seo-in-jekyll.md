@@ -3,6 +3,7 @@ date: 2017-02-07
 title: SEO
 video_id: 7o7DRrCstdo
 description: Search Engine Optimization for Jekyll sites
+category: General
 tags:
   - jekyll-plugins
   - jekyll-front-matter

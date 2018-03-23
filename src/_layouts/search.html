@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<header class="landing">
+	{% include navigation/top.html %}
+
+	<section class="hero">
+		<div class="wrapper">
+			<h1>
+				{% if page.header %}
+					{{ page.header }}
+				{% else %}
+					Tutorial Directory
+				{% endif %}
+			</h1>
+			<p class="sub-text">{{ site.posts | size }} tutorials to help you with Jekyll and CloudCannon</p>
+		</div>
+	</section>
+</header>
+
+{% include search.html %}
+
+{{ content }}

@@ -3,6 +3,7 @@ date: 2017-02-06
 title: Control flow statements in Liquid
 video_id: VFZteTaikNI
 description: Use Liquid to control which content is displayed on the page
+category: Liquid
 tags:
   - jekyll-liquid
 resources:

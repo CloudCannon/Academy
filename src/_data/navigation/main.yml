@@ -1,5 +1,5 @@
-- name: Tutorials
-  link: /
+- name: Directory
+  link: /tutorials/
 - name: Templates
   link: /jekyll-templates/
 - name: Cheat Sheet

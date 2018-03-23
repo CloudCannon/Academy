@@ -6,18 +6,7 @@
 	{% endif %}
 
 	{% for item in include.listings limit: limit %}
-		<li {% if item.url == page.url %}class="active"{% endif %}>
-			<a href="{{ item.url }}">
-				<div class="icon">{% if include.custom_icon and item.icon %}{% include featured-icon.html icon=item.icon %}{% else %}{% include document-icon.html icon=item.type %}{% endif %}</div>
-				<article>
-					<div>
-						<h3>{% if include.numbered %}{{ forloop.index }}. {% endif %}{{ item.title }}</h3>
-						<p class="description">{{ item.description }}</p>
-						{% if include.featured %}<div class="featured">Featured</div>{% endif %}
-					</div>
-				</article>
-			</a>
-		</li>
+		{% include listing.html item=item numbered=include.numbered custom_icon=include.custom_icon %}
 	{% endfor %}
-	<li></li><li></li>
+	<li class="filler-listing"></li><li class="filler-listing"></li>
 </ul>

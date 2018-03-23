@@ -2,6 +2,7 @@
 date: 2017-02-08
 title: YouTube
 description: Embed a responsive YouTube video on your Jekyll site.
+category: General
 tags:
   - jekyll-third-parties
   - jekyll-includes

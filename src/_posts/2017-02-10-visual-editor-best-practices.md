@@ -2,6 +2,7 @@
 date: 2017-02-09
 title: Visual editor best practices
 description: Tips to get the most out of the visual editor
+category: CloudCannon
 tags:
   - jekyll-cloudcannon
 type: Document

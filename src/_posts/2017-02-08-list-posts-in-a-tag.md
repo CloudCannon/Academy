@@ -2,6 +2,7 @@
 date: 2017-02-08
 title: List posts in a tag
 description: List all the posts in a particular tag
+category: Blogging
 tags:
   - jekyll-blogging
   - jekyll-liquid

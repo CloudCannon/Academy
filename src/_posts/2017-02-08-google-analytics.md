@@ -2,6 +2,7 @@
 date: 2017-02-08
 title: Google Analytics
 description: Add Google Analytics to your Jekyll blog
+category: General
 tags:
   - jekyll-third-parties
 type: Document

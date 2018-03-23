@@ -3,6 +3,7 @@ date: 2017-02-06
 title: Gems, Gemfiles and the Bundler
 video_id: zdJln6RBg8A
 description: Overview of the Ruby ecosystem
+category: Setup
 tags:
   - jekyll-setup
   - jekyll-plugins

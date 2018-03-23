@@ -3,6 +3,7 @@ date: 2017-02-06
 title: Introduction to includes
 video_id: GXtx42MOiww
 description: Jekyll includes let you include page fragments on your site
+category: Includes
 tags:
   - jekyll-includes
 resources:

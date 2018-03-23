@@ -1,4 +1,6 @@
 ---
 title: Getting started with Jekyll
-description: If you're new to Jekyll this is the series for you. We'll learn about the world of static site generators, install Jekyll and understand fundamental Jekyll concepts.
+description: Now that you are all set up to build sites, we'll learn about the building static sites. We will cover the fundamentals of Jekyll and work towards a well maintained, client editable static site.
+type: series
+next_set:
 ---

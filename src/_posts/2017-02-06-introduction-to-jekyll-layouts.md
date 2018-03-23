@@ -3,6 +3,7 @@ date: 2017-02-06
 title: Introduction to layouts
 video_id: Gc2d-eGSSdQ
 description: Use Jekyll layouts to reduce repetition on your site
+category: Layouts
 tags:
   - jekyll-layouts
 resources:

@@ -3,6 +3,7 @@ date: 2017-02-06
 title: String filters in Liquid
 video_id: 9co6Qp3ZoWo
 description: Modify string variables in Liquid
+category: Liquid
 tags:
   - jekyll-liquid
 resources:

@@ -1,0 +1,12 @@
+<li {% if include.item.url == page.url %}class="active"{% endif %}>
+	<a href="{{ include.item.url }}">
+		<div class="icon">{% if include.custom_icon and include.item.icon %}{% include featured-icon.html icon=include.item.icon %}{% else %}{% include document-icon.html icon=include.item.type %}{% endif %}</div>
+		<article>
+			<div>
+				<h3>{% if include.numbered %}{{ forloop.index }}. {% endif %}{{ include.item.title }}</h3>
+				<p class="description">{{ include.item.description }}</p>
+				{% if include.featured %}<div class="featured">Featured</div>{% endif %}
+			</div>
+		</article>
+	</a>
+</li>

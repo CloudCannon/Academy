@@ -3,6 +3,7 @@ date: 2017-02-07
 title: Advanced blogging
 video_id: NMeVXMucuuo
 description: Advanced tips and tricks for creating your Jekyll blog
+category: Blogging
 tags:
   - jekyll-blogging
 resources:

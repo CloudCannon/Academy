@@ -3,6 +3,7 @@ date: 2017-02-07
 title: Permalinks
 video_id: hsP70RVJY6M
 description: A flexible way to build your site URLs
+category: Front Matter
 tags:
   - jekyll-front-matter
 resources:

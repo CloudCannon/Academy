@@ -3,6 +3,7 @@ date: 2017-02-07
 title: Photo gallery
 video_id: xdxboa6WUeA
 description: Display photos in a gallery on your Jekyll site
+category: General
 tags:
   - jekyll-liquid
   - jekyll-front-matter

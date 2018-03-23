@@ -3,6 +3,7 @@ date: 2017-02-06
 title: Introduction to collections
 video_id: o7ygmIRgvUA
 description: Learn how to use collections to manage and organize related content
+category: Collections
 tags:
   - jekyll-collections
 resources:

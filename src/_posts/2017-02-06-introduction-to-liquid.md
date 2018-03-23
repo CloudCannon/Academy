@@ -3,6 +3,7 @@ date: 2017-02-06
 title: Introduction to Liquid
 video_id: 6pCdOh_I4EM
 description: Introduction to using Liquid in Jekyll static site generator
+category: Liquid
 tags:
   - jekyll-liquid
 resources:
