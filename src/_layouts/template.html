@@ -25,7 +25,8 @@ layout: short
 </div>
 
 <div class="template-button">
-	<a class="button keep-text-size" target="_blank" href="{{ page.demo_url }}">View Live Demo {% include document-icon.html icon="External Link" %}</a>
+	<a class="button" target="_blank" href="{{ page.demo_url }}">View Live Demo</a>
+	<a class="button light" target="_blank" href="{{ page.repository }}">View on GitHub</a>
 </div>
 
 <ul class="photo-gallery">
@@ -34,8 +35,7 @@ layout: short
 	{% endfor %}
 </ul>
 
-
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="/js/lightslider.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
