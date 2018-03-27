@@ -87,9 +87,10 @@ icons: true
 
 
 {% if set %}
+<section class="cta">
 	<div class="wrapper">
-		<h2>What's next?</h2>
 		<div class="follow-up-options">
+			<h2>What's next?</h2>
 			{% if set.type != "choose-one" and next_index < series_posts_size %}
 				<div class="next-option">
 					<h3>Continue Learning</h3>
@@ -120,13 +121,9 @@ icons: true
 					{% include follow-up/article.html item=item %}
 				</div>
 			{% endif %}
-
-			<div class="discuss-option">
-				<h3>Discuss this article</h3>
-				<p><a href="#comments">Scroll Down</a> and add a comment</p>
-			</div>
 		</div>
 	</div>
+</section>
 {% else %}
 	{% assign display_cta = true %}
 {% endif %}

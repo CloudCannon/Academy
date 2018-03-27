@@ -116,18 +116,21 @@ h1 span {
 	display: flex;
 	flex-wrap: wrap;
 
-	> .blog-post {
+	> li {
 		flex: 1 1 400px;
 		margin: 10px;
 	}
 
 	.feature-image {
-		border-bottom: 1px solid #eee;
-
 		img {
 			border-bottom-right-radius: 0;
 			border-bottom-left-radius: 0;
 		}
+	}
+
+	.post-box {
+		border: 1px solid #f0f0f0;
+		border-top: 0;
 	}
 
 	.title h3 {

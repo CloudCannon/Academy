@@ -8,5 +8,7 @@
 	{% for item in include.listings limit: limit %}
 		{% include listing.html item=item numbered=include.numbered custom_icon=include.custom_icon %}
 	{% endfor %}
-	<li class="filler-listing"></li><li class="filler-listing"></li>
+	{% unless include.no_fillers %}
+		<li class="filler-listing"></li><li class="filler-listing"></li>
+	{% endunless %}
 </ul>

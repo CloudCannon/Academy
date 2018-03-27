@@ -15,15 +15,19 @@ sets:
 		{% assign set = site.sets | where: "path", set_file_name | first %}
 		{% assign series_posts = site.posts | where: "set", set_name | sort: "set_order" %}
 		{% assign series_posts_size = series_posts | size %}
+		{% assign no_fillers = false %}
+		{% if series_posts_size == 1 %}
+			{% assign no_fillers = true %}
+		{% endif %}
 
 		<div class="featured-series listings-{{ set.type }}">
 			<h2>{{ set.title }} <span class="count">({{ series_posts | size }})</span></h2>
 			<p>{{ set.description }}</p>
 
 			{% if set.type == "choose-one" or series_posts_size < 2 %}
-				{% include listings.html listings=series_posts custom_icon=true %}
+				{% include listings.html listings=series_posts custom_icon=true no_fillers=no_fillers %}
 			{% else %}
-				{% include listings.html listings=series_posts custom_icon=true numbered=true %}
+				{% include listings.html listings=series_posts custom_icon=true numbered=true no_fillers=no_fillers %}
 			{% endif %}
 		</div>
 	{% endfor %}
