@@ -111,3 +111,26 @@ h1 span {
 		}
 	}
 }
+
+.templates-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	> .blog-post {
+		flex: 1 1 400px;
+		margin: 10px;
+	}
+
+	.feature-image {
+		border-bottom: 1px solid #eee;
+
+		img {
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	.title h3 {
+		margin-bottom: 10px;
+	}
+}

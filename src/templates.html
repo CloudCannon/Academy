@@ -4,20 +4,30 @@ heading: Jekyll Templates
 subtitle: Sometimes it's hard to know where to start on your next project. That's why we've created these free Jekyll templates to help get you on your way. All the templates use Jekyll best practices and are MIT licensed so feel free to modify and use them however you'd like.
 title: Jekyll Templates
 permalink: /jekyll-templates/
+large_wrapper: true
 ---
 
-<ul class="templates">
+<ul class="blog-posts templates-list">
 	{% assign templates = site.templates | sort: 'order' %}
 	{% for template in templates %}
-		<li>
-			<a href="{{ template.url }}">
-				{% assign first_image = template.images | first %}
-				<h2>{{ template.name }}</h2>
-				<p>{{ template.description }}</p>
-				<div><img class="screenshot" src="{{ first_image.image }}" alt="{{ template.name }} Jekyll template"></div>
-			</a>
+		<li class="blog-post card">
+			{% assign first_image = template.images | first %}
+			<div class="feature-image">
+				<a href="{{ template.url }}">
+					<img src="{{ first_image.image }}" class="screenshot" alt="{{ template.name }} Jekyll template">
+				</a>
+			</div>
+			<div class="post-box">
+				<div class="title">
+					<h3><a href="{{ template.url }}">{{ template.name }}</a></h3>
+				</div>
+
+				<div class="post-summary">
+					{{ template.description }}
+				</div>
+
+				<div class="card-actions"><a class="button light no-border no-padding no-hover" href="{{ template.url }}">Read more &rsaquo;</a></div>
+			</div>
 		</li>
 	{% endfor %}
-	<li></li>
-	<li></li>
 </ul>

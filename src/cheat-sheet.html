@@ -4,7 +4,9 @@ heading: Jekyll Cheat Sheet
 subtitle: There's so many Jekyll variables and filters to remember it can be tricky to keep it all in your head. This cheat sheet serves as a quick reference of everything Jekyll can do.
 title: Jekyll Cheat Sheet
 permalink: /jekyll-cheat-sheet/
+large_wrapper: true
 ---
+
 <style type="text/css">
 	.column { float: left; }
 	.column.size-1of1 { width: 100%; }
@@ -35,6 +37,7 @@ permalink: /jekyll-cheat-sheet/
 		}
 	}
 </style>
+
 {% assign cheats = site.cheat_sheet | sort: "path" %}
 <div class="cheats" id="grid" data-columns>
 	{% assign previous_category = null %}
@@ -61,8 +64,7 @@ permalink: /jekyll-cheat-sheet/
 		</ul>
 	</section>
 </div>
-<script src="/js/main.js"></script>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="/js/salvattore.js" class="cms-no-rewrite"></script>
 <script>
 	$(document).ready(function () {
