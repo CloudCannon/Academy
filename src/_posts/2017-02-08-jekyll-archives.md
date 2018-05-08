@@ -110,11 +110,11 @@ You can output all the categories and links to their archive pages by looping of
 {% raw %}
 ~~~html
 <ul>
-{% for category in categories %}
+{% for category in site.categories %}
   {% assign category_name = category[0] %}
   <li>
     <a href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
-	</li>
+  </li>
 {% endfor %}
 ~~~
 {% endraw %}
