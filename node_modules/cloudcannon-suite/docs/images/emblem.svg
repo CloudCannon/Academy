@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 34 24" style="enable-background:new 0 0 34 24;" xml:space="preserve">
+<style type="text/css">
+	.fronts{fill:#FFFFFF;}
+	.perspective{fill:#ddd;}
+	.inner-perspective{fill:#aaa;}
+</style>
+	<path id="front" class="fronts" d="M4,18v3h3v-3h20v3h3v-6H4V18z M30,12h3v3h-3V12z M1,12h3v3H1V12z"/>
+	<path id="back" class="fronts" d="M26,3.5H8c-0.6,0-1,0.5-1,1v9h20v-9C27,4,26.5,3.5,26,3.5z"/>
+	<polygon class="perspective" id="seat" points="4,15 7,13 27,13 30,15 "/>
+	<polygon class="perspective" id="right-arm" points="30,12 27,10 28,10 33,12 "/>
+	<polygon class="inner-perspective" id="right-arm-inner" points="30,12 27,10 27,13 30,15"/>
+	<polygon class="perspective" id="left-arm" points="4,12 7,10 6,10 1,12 "/>
+	<polygon class="inner-perspective" id="left-arm-inner" points="4,12 7,10 7,13 4,15"/>
+</svg>

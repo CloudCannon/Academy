@@ -1,0 +1,42 @@
+---
+title: Welcome
+show_intro: true
+in_nav: false
+---
+
+<p>Welcome to a new life of maintainable static sites using Jekyll and Gulp. </p>
+
+<ul class="large-boxes">
+	<li><a href="/prerequisites/">
+		<strong>New to the suite?</strong>
+		<small>Install global requirements</small>
+	</a></li>
+	<li><a href="/install/">
+		<strong>Have a new site?</strong>
+		<small>Adding a package.json and gulpfile</small>
+	</a></li>
+	<li><a href="#packages">
+		<strong>Need more?</strong>
+		<small>Choose a package below to add</small>
+	</a></li>
+</ul>
+
+<h3 id="packages">Packages</h3>
+<p>Choose a package to install:</p>
+<ul class="large-boxes">
+	{% for package in site.packages %}
+		<li>
+			<a href="{{ package.url }}">
+				<img src="{{ package.image }}">
+				<strong>{{ package.title }}</strong>
+				<small>{{ package.tagline }}</small>
+			</a>
+		</li>
+	{% endfor %}
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+<p>Don't see what you need? Contact <a href="mailto:george@cloudcannon.com">george@cloudcannon.com</a>.</p>

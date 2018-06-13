@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<p>Now that you have <code>cloudcannon-suite</code> and <code>gulp</code> installed, we have to configure our gulpfile. For a basic setup you can add:</p>
+
+{% highlight javascript %}
+const gulp = require("gulp");
+const suite = require("cloudcannon-suite");
+
+{% if page.required_config %}suite.{{ page.namespace }}(gulp, {{ page.required_config | jsonify }});{% else %}suite.{{ page.namespace }}(gulp);{% endif %}
+{% endhighlight %}
+
+<h3>Usage</h3>
+
+{{ page.output_markdown | markdownify }}
+
+{% highlight sh %}
+$ gulp {{ page.namespace }}
+{{ page.output_code }}
+{% endhighlight %}
+
+{% if page.commands %}
+	<h3>Subtasks</h3>
+	{% for entry in page.commands %}
+		<h4>{{ entry.task }}</h4>
+
+		{{ entry.description_markdown | markdownify }}
+
+		{% highlight sh %}$ gulp {{ page.namespace }}:{{ entry.task }}{% endhighlight %}
+	{% endfor %}
+{% endif %}
+
+{% if page.default_json_code %}
+	<h3>Default Configuration</h3>
+
+	<p>Below is the default configuration for the {{ page.title }} package:</p>
+
+	{% highlight json %}{{ page.default_json_code }}{% endhighlight %}
+{% endif %}
+
+{% if page.config %}
+	<h3>Configuration</h3>
+
+	<p>If you have a more complex set up you can use any of the following options with the {{ page.title }} package.</p>
+
+	{% for entry in page.config %}
+		<h4>{{ entry.key }} {% if entry.required %}<small class="config-label">required</small>{% endif %}</h4>
+
+		{{ entry.description_markdown | markdownify }}
+	{% endfor %}
+{% endif %}
