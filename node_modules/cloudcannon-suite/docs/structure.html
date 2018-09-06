@@ -1,0 +1,25 @@
+---
+title: Structure
+tagline: Keep your folders organised and predictable
+weight: 2
+in_nav: true
+---
+
+<p>The opinionated file structure for all of your sites. This is defined to increase consistency between sites.</p>
+
+{% assign sorted = site.data.structure | sort: 'path' %}
+<ul class="file-structure">
+{% for file in sorted %}
+	{% assign parts = file.path | split: "/" %}
+	{% assign filename = parts | last %}
+
+	<li class="indent-{{ parts | size }}">
+		<strong>
+			<i class="material-icons">{% include file-icon.html filename=filename %}</i>
+			{{ filename }}
+		</strong>
+
+		{{ file.description_markdown | markdownify }}
+</li>
+{% endfor %}
+</ul>
