@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-const suite = require("cloudcannon-suite");
+const suite = require("@cloudcannon/suite");
 
 suite.jekyllDev(gulp, {
 	serve: {
