@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/CloudCannon/jekyll-theme-cloudcannon.git
-  revision: 8bf00a475be25bccaeceac37a9ddcc8c193c2c96
+  revision: cadeabea184c6360d82f5b48323450b0613dd797
   branch: master
   specs:
     jekyll-theme-cloudcannon (0.1.0)
@@ -96,4 +96,4 @@ DEPENDENCIES
   jekyll-theme-cloudcannon!
 
 BUNDLED WITH
-   1.16.1
+   1.16.5
