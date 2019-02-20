@@ -3,7 +3,7 @@
 
 title: CloudCannon Academy
 url: "https://learn.cloudcannon.com"
-google_analytics_key: "UA-37472773-17"
+google_analytics_key: "UA-37472773-1"
 disqus_shortname: "learn-cloudcannon-com"
 newsletter_action: "//cloudcannon.us12.list-manage.com/subscribe/post?u=c2598ec08fca5843b980a7d3f&amp;id=16297bb754"
 theme: jekyll-theme-cloudcannon
