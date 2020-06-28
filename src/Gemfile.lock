@@ -1,12 +1,12 @@
 GIT
-  remote: git://github.com/CloudCannon/jekyll-theme-cloudcannon.git
-  revision: deb9987359901f33c6c1cce5f03e0805fd1c3c97
-  branch: master
+  remote: https://github.com/CloudCannon/jekyll-theme-cloudcannon.git
+  revision: 2540cb1d5a1acedec071fcff21fa7eefd35e6fe7
+  ref: 2540c
   specs:
-    jekyll-theme-cloudcannon (0.1.0)
+    jekyll-theme-cloudcannon (0.1.1)
       jekyll (~> 3.6)
       jekyll-data (~> 1.0)
-      jekyll-feed (= 0.9.2)
+      jekyll-feed (> 0.9.2)
       jekyll-include-cache (= 0.1.0)
       jekyll-seo-tag (= 2.3.0)
       jekyll-sitemap (= 1.1.1)
@@ -42,13 +42,13 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
-    jekyll-data (1.0.0)
-      jekyll (~> 3.3)
+    jekyll-data (1.1.0)
+      jekyll (>= 3.3, < 5.0.0)
     jekyll-extract-element (0.0.7)
       jekyll (~> 3.3)
       nokogiri (= 1.8.2)
-    jekyll-feed (0.9.2)
-      jekyll (~> 3.3)
+    jekyll-feed (0.14.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-include-cache (0.1.0)
       jekyll (~> 3.3)
     jekyll-paginate (1.1.0)
@@ -99,4 +99,4 @@ DEPENDENCIES
   jekyll-theme-cloudcannon!
 
 BUNDLED WITH
-   2.0.1
+   2.1.4

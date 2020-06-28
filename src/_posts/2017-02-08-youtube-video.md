@@ -19,15 +19,15 @@ YouTube is a great way to host video your Jekyll site. It's free, loads quickly,
 2.  Copy the embed code to a new include `_includes/youtube.html`.
 3.  Replace the end part of the iframe src url with a variable `youtube_id`:
     ~~~html
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.youtube_id}}" frameborder="0" allowfullscreen></iframe>
+    {% raw %}<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.youtube_id}}" frameborder="0" allowfullscreen></iframe>{% endraw %}
     ~~~
 
 Now you can use this include anywhere in your site by passing it the id of the YouTube video
 
 ~~~html
-...
+{% raw %}...
 {% include youtube.html youtube_id=_OBlgSz8sSM %}
-...
+...{% endraw %}
 ~~~
 
 ## Responsive YouTube video
@@ -37,9 +37,9 @@ The include above works fine but the videos are always the same size. If you hav
 With a few tweaks to the include script you can achieve this. We'll add a `div` around the iframe and remove the width and height. I've also added `?rel=0&modestbranding=1&showinfo=0` to the src URL which removes some of the YouTube branding and makes it display cleaner:
 
 ~~~html
-<div class="video_wrapper">
+{% raw %}<div class="video_wrapper">
   <iframe src="https://www.youtube.com/embed/{{ include.youtube_id}}?rel=0&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-</div>
+</div>{% endraw %}
 ~~~
 
 To finish off we'll add some CSS. This forces the video to always be the full width of is container and to maintain a particular aspect ratio. In this case we have a ratio of 16:9 which gives us `padding-bottom: 56.25%;` (9/16):
