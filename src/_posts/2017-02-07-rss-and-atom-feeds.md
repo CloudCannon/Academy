@@ -1,5 +1,5 @@
 ---
-date: 2017-02-07
+date: 2017-02-07 00:00:00
 title: RSS and Atom feeds
 video_id: 5LYMioN1Qmc
 description: Add a RSS or Atom feed to your Jekyll site
@@ -10,7 +10,7 @@ tags:
   - jekyll-plugins
 resources:
   - name: Source code
-    link: https://github.com/CloudCannon/bakery-store/tree/navigation
+    link: 'https://github.com/CloudCannon/bakery-store/tree/navigation'
 type: Video
 set: intermediate
 set_order: 7
@@ -61,7 +61,7 @@ Using Liquid we can output an XML file with this format for our site. First we'l
 {% raw %}
 ~~~xml
 ---
-layout: null
+layout: none
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
