@@ -1,0 +1,1 @@
+/jekyll/rss-feed/ /jekyll/rss-and-atom-feeds/
