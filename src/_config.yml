@@ -43,9 +43,6 @@ exclude:
 
 collections:
   sets:
-  cheat_sheet:
-  templates:
-    output: true
 
 
 jekyll-archives:
@@ -66,11 +63,6 @@ defaults:
       type: "sets"
     values:
       _hide_content: true
-  -
-    scope:
-      type: "templates"
-    values:
-      layout: "template"
 # -----------
 # CloudCannon
 

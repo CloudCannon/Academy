@@ -1,6 +1,6 @@
+- name: New Community Site
+  link: https://cloudcannon.com/community/
+- name: Legacy Courses
+  link: /legacy/
 - name: Directory
   link: /tutorials/
-- name: Templates
-  link: /jekyll-templates/
-- name: Cheat Sheet
-  link: /jekyll-cheat-sheet/
