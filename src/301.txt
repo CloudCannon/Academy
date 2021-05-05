@@ -1,7 +1,4 @@
 /jekyll/rss-feed/ /jekyll/rss-and-atom-feeds/
-/jekyll-templates/ https://cloudcannon.com/community/themes/
-/jekyll-cheat-sheet/ https://cloudcannon.com/community/jekyll-cheat-sheet/
-/jekyll/why-use-a-static-site-generator/ https://cloudcannon.com/why-static/
 /templates/hydra https://cloudcannon.com/community/themes/hydra/
 /templates/justice https://cloudcannon.com/community/themes/justice/
 /templates/urban https://cloudcannon.com/community/themes/urban/
@@ -15,4 +12,7 @@
 /templates/aperture https://cloudcannon.com/community/themes/aperture/
 /templates/cause https://cloudcannon.com/community/themes/cause/
 /templates/malt https://cloudcannon.com/community/themes/malt/
+/jekyll-templates/ https://cloudcannon.com/community/themes/
+/jekyll-cheat-sheet/ https://cloudcannon.com/community/jekyll-cheat-sheet/
+/jekyll/why-use-a-static-site-generator/ https://cloudcannon.com/why-static/
 * https://cloudcannon.com/community/learn/
